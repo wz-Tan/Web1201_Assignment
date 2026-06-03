@@ -1,0 +1,7 @@
+/* This File For Specific Elements - Non Native Classes and IDs */
+
+/* Wrap this for all content aside for header and footer */
+.container {
+    margin: 0 20px;
+    padding: 20px;
+}

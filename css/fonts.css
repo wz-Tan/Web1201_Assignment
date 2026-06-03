@@ -1,0 +1,39 @@
+/* File For Font Related Styles*/
+/* Font Style */
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    font-weight: normal;
+    color: var(--color-text);
+}
+
+/* Font Color */
+.text-accent {
+    color: var(--color-accent);
+}
+
+/* Font Sizes */
+.text-large {
+    font-size: 32px;
+}
+
+.text-medium {
+    font-size: 24px;
+}
+
+.text-small {
+    font-size: 16px;
+}
+
+/* Font Weights */
+.text-bold {
+    font-weight: 800;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.text-light {
+    font-weight: 300;
+}

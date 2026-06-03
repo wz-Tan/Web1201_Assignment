@@ -1,0 +1,59 @@
+/*Padding - 8 px*/
+/*Rounding - 15px*/
+
+/* Removing Defaults*/
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Accent Color - For Highlighting Texts or Special Context */
+:root {
+    --color-text: #000000;
+    --color-background: #f3f3f3;
+    --color-accent: #2563eb;
+}
+
+/* Body - Background Color */
+body {
+    background-color: var(--color-background);
+}
+
+/* Header */
+header {
+    background-color: var(--color-background);
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header nav li {
+    display: inline;
+    margin: 0px 12px;
+    position: relative;
+}
+
+header nav li:hover {
+    cursor: pointer;
+}
+
+/* Underline Effect */
+header nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+/* On Hover Set With to Full */
+header nav a:hover::after {
+    width: 100%;
+}
