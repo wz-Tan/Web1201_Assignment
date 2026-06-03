@@ -4,6 +4,7 @@
 /* Removing Defaults*/
 * {
     box-sizing: border-box;
+    list-style: none;
     padding: 0px;
     margin: 0px;
 }
@@ -22,13 +23,16 @@ body {
 
 /* Header */
 header {
-    background-color: var(--color-background);
     width: 100%;
+    background-color: var(--color-background);
     padding: 15px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header nav li {
@@ -37,12 +41,25 @@ header nav li {
     position: relative;
 }
 
-header nav li:hover {
-    cursor: pointer;
+/* Footer */
+footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 50px;
+    display: flex;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--color-accent);
 }
 
+footer nav li {
+    margin: 10px 0;
+    position: relative;
+}
+
+/* Shared Underline Effect for Header and Footer */
 /* Underline Effect */
-header nav a::after {
+header nav a::after,
+footer nav a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -53,7 +70,12 @@ header nav a::after {
     transition: width 0.3s ease;
 }
 
+footer nav a::after {
+    background-color: #f3f3f3;
+}
+
 /* On Hover Set With to Full */
-header nav a:hover::after {
+header nav a:hover::after,
+footer nav a:hover::after {
     width: 100%;
 }

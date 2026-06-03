@@ -4,6 +4,9 @@
     font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
     font-weight: normal;
+}
+
+a {
     color: var(--color-text);
 }
 
@@ -36,4 +39,10 @@
 
 .text-light {
     font-weight: 300;
+}
+
+/* Footer Behaviour */
+footer,
+footer a {
+    color: #f3f3f3;
 }
