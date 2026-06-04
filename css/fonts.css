@@ -16,6 +16,10 @@ a {
 }
 
 /* Font Sizes */
+.text-extra-large {
+    font-size: 40px;
+}
+
 .text-large {
     font-size: 32px;
 }

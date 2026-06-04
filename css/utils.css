@@ -19,3 +19,24 @@ footer .right {
     flex: 1;
 }
 
+/* Products Page Grid */
+.product-grid {
+    display: grid;
+    padding: 5px 0;
+    grid-template-columns: 9fr 1fr;
+    gap: 20px;
+}
+
+/* Grid for Items */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background-color: blue;
+    border-radius: 5px;
+}
