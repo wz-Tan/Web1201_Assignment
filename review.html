@@ -20,8 +20,20 @@
             </nav>
             <h1 class="text-medium">Sign Out</h1>
         </header>
-        <main class="container">
-            <h1 class="text-medium">Your Content Here</h1>
+
+
+        <main class="container review-grid">
+            <section> <!--left column -->
+                <h2 class="text-medium text-bold text-accent">Submit a Review</h2>
+                <form class="review-form">
+                    <div class="input-form">
+                        <label class="text-small text-semibold">Select Product</label>
+                        <select name="product" class="product-input" required>
+                            <option value="Select a product"></option>
+                        </select>
+                    </div>
+                </form>
+            </section>
         </main>
         <footer>
             <div class="left">
@@ -48,5 +60,8 @@
                 </nav>
             </div>
         </footer>
+
+        <script src="./js/products.js"></script>
+        <script src="./js/review.js"></script>
     </body>
 </html>
