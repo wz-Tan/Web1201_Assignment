@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="./css/fonts.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/registration.css" />
+</head>
+
+<body>
+  <div class="fullscreen-container registration-flexbox">
+    <div class="registration-card">
+      <div class="login-side">
+        <h2 class="text-large text-bold">Welcome Back to Sigma Store!</h2>
+        <p class="text-small">Already have an account? Log in now!</p>
+
+        <button class="btn-primary login-button text-semibold">Log in</button>
+      </div>
+      <div class="create-side">
+        <div class="home">
+          <button class="btn-primary">&#8962;</button>
+          <span>Home Page</span>
+        </div>
+        <h2 class="text-large text-bold create-text">Create new account</h2>
+        <div class="progress-bar">
+
+          <div class="steps active">
+            <div class="steps-circle">1</div>
+            <span>Username</span>
+          </div>
+
+          <div class="steps">
+            <div class="steps-circle">2</div>
+            <span>Email</span>
+          </div>
+
+          <div class="steps">
+            <div class="steps-circle">3</div>
+            <span>Password</span>
+          </div>
+
+          <div class="steps">
+            <div class="steps-circle">✓</div>
+            <span>Done</span>
+          </div>
+
+        </div>
+        <div class="userinfo">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+            <span class="validation">*username must be at least 4 characters without space</span>
+          </div>
+        </div>
+        <button class="btn-primary next-button">Next</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
