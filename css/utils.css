@@ -65,4 +65,31 @@ footer .right {
 
 .item h1, .item h2, .item p{
     line-height: 1.4;
+    
+/* Grid for Review */
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.review.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+product-input {
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid white;
+    background-color: white;
+    width: 100%;
 }
