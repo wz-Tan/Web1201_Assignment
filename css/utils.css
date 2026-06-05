@@ -64,7 +64,7 @@ footer .right {
     opacity: 0.6;
 }
 
-.item .product-price{
+.item .product-price {
     text-align: right;
 }
 
@@ -72,6 +72,12 @@ footer .right {
 .item h2,
 .item p {
     line-height: 1.4;
+}
+
+.items-query {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 /* Grid for Review */

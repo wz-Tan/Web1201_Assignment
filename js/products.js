@@ -1,5 +1,5 @@
 // Products have 4 fields: name, price, category, and image path
-const products = [
+const allProducts = [
   {
     name: "Vintage Levi's 501 Jeans",
     price: 28.0,
@@ -92,25 +92,64 @@ const products = [
   },
 ];
 
-const mens = products.filter((p) => p.category === "Men's");
-const womens = products.filter((p) => p.category === "Women's");
-const unisex = products.filter((p) => p.category === "Unisex");
+// Datasets
+const mens = allProducts.filter((p) => p.category === "Men's");
+const womens = allProducts.filter((p) => p.category === "Women's");
+const unisex = allProducts.filter((p) => p.category === "Unisex");
 
-const itemsGrid = document.querySelector(".items-grid");
+// Radio Button to Choose Categories
+const radios = document.querySelectorAll("input[name='category']");
 
-itemsGrid.innerHTML = products
-  .map((product) => {
-    return `<div class="item">
-      <img src=${product.image_src} />
-      <h1 class="text-medium text-bold product-name">
-          ${product.name}
-      </h1>
-      <p class="text-medium product-description">
-        ${product.category}
-      </p>
-      <h2 class="text-medium text-bold product-price">
-      RM ${product.price.toFixed(2)}
-      </h2>
-  </div>`;
-  })
-  .join("");
+// Logic to Filter Out
+radios.forEach((radio) => {
+  radio.addEventListener("change", (e) => {
+    const selectedCategory = e.target.value;
+    let filteredProducts;
+    switch (selectedCategory) {
+      case "Men's":
+        filteredProducts = mens;
+        break;
+      case "Women's":
+        filteredProducts = womens;
+        break;
+      case "Unisex":
+        filteredProducts = unisex;
+        break;
+      case "All":
+        filteredProducts = allProducts;
+        break;
+    }
+    changeTitle(selectedCategory);
+    mapProducts(filteredProducts);
+  });
+});
+
+// Helper Function that Takes in JSONs and Maps Them
+function mapProducts(products) {
+  const itemsGrid = document.querySelector(".items-grid");
+  itemsGrid.innerHTML = products
+    .map((product) => {
+      return `<div class="item">
+        <img src=${product.image_src} />
+        <h1 class="text-medium text-bold product-name">
+            ${product.name}
+        </h1>
+        <p class="text-medium product-description">
+          ${product.category}
+        </p>
+        <h2 class="text-medium text-bold product-price">
+        RM ${product.price.toFixed(2)}
+        </h2>
+    </div>`;
+    })
+    .join("");
+}
+
+function changeTitle(categorySelected) {
+  const title = document.querySelector("#title");
+  title.textContent = `${categorySelected} Apparels`;
+}
+
+// Init With All
+changeTitle("All");
+mapProducts(allProducts);
