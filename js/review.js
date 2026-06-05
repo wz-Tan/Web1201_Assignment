@@ -6,7 +6,7 @@ function dropdownlist() {
     list.innerHTML = '';
 
 
-    allProducts.forEach(p =>{
+    products.forEach(p =>{
         const item = document.createElement('div');
         item.className = 'dropdown-item';
         item.innerText = p.name;

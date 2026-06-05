@@ -22,9 +22,9 @@ footer .right {
 /* Products Page Grid */
 .product-grid {
     display: grid;
-    padding: 5px 0;
-    grid-template-columns: 9fr 1fr;
-    gap: 20px;
+    padding: 20px 0;
+    grid-template-columns: 8fr 2fr;
+    gap: 30px;
 }
 
 /* Grid for Items */
@@ -36,9 +36,37 @@ footer .right {
 
 .item {
     width: 100%;
-    aspect-ratio: 3/2;
-    background-color: blue;
+    aspect-ratio: 1/1;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(var(--color-accent-rgb), 0.15);
+    padding: 15px 10px;
+    box-shadow: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.item:hover {
+    box-shadow: 0 4px 20px rgba(var(--color-accent-rgb), 0.5);
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.item .product-name {
+    margin-top: 10px;
+}
+
+.item .product-description {
+    opacity: 0.6;
+}
+
+.item h1,
+.item h2,
+.item p {
+    line-height: 1.4;
 }
 
 /* Grid for Review */
