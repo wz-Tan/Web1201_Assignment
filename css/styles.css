@@ -10,10 +10,14 @@
 }
 
 /* Accent Color - For Highlighting Texts or Special Context */
+/* RGB values for opacity related operations */
 :root {
     --color-text: #000000;
     --color-background: #f3f3f3;
     --color-accent: #2563eb;
+    --color-text-rgb: 0, 0, 0;
+    --color-background-rgb: 243, 243, 243;
+    --color-accent-rgb: 37, 99, 235;
 }
 
 /* Body - Background Color */
