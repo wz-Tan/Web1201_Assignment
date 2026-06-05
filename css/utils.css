@@ -46,7 +46,7 @@ footer .right {
     transition: box-shadow 0.2s ease;
 }
 
-.item:hover{
+.item:hover {
     box-shadow: 0 4px 20px rgba(var(--color-accent-rgb), 0.5);
 }
 
@@ -55,17 +55,20 @@ footer .right {
     aspect-ratio: 1/1;
 }
 
-.item .product-name{
+.item .product-name {
     margin-top: 10px;
 }
 
-.item .product-description{
+.item .product-description {
     opacity: 0.6;
 }
 
-.item h1, .item h2, .item p{
+.item h1,
+.item h2,
+.item p {
     line-height: 1.4;
-    
+}
+
 /* Grid for Review */
 .review-grid {
     display: grid;
