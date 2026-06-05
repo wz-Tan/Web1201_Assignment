@@ -23,14 +23,16 @@
 
 
         <main class="container review-grid">
-            <section> <!--left column -->
+            <!--left column -->
+            <section>
                 <h2 class="text-medium text-bold text-accent">Submit a Review</h2>
                 <form class="review-form">
-                    <div class="input-form">
-                        <label class="text-small text-semibold">Select Product</label>
-                        <select name="product" class="product-input" required>
-                            <option value="Select a product"></option>
-                        </select>
+
+                    <!--dropdown-->
+                    <div class="input-form dropdown-container">
+                        <label class="text-small text-semibold">Search Product</label>
+                        <input type="text" id="product-input" placeholder="Type to search" class="input-box" autocomplete="off" required>
+                        <div id="dropdown" class="dropdown-menu"></div>
                     </div>
                 </form>
             </section>
