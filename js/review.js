@@ -38,3 +38,17 @@ document.addEventListener('click', (e) => {
         list.style.display = 'none';
     }
 });
+
+// ratings
+let stars = document.querySelectorAll(".ratings span");
+let userRatings = 0;
+
+for(let star of stars){
+    star.addEventListener("click", function(){
+        stars.forEach(s => s.removeAttribute("data-clicked"));
+        this.setAttribute("data-clicked", "true");
+        userRatings = this.dataset.rating;
+        //test
+        console.log(userRatings)
+    });
+}
