@@ -23,16 +23,30 @@
 
 
         <main class="container review-grid">
-            <!--left column -->
+            <!--left side -->
             <section>
                 <h2 class="text-medium text-bold text-accent">Submit a Review</h2>
                 <form class="review-form">
 
                     <!--dropdown-->
-                    <div class="input-form dropdown-container">
+                    <div class="input-group dropdown-container">
                         <label class="text-small text-semibold">Search Product</label>
                         <input type="text" id="product-input" placeholder="Type to search" class="input-box" autocomplete="off" required>
                         <div id="dropdown" class="dropdown-menu"></div>
+                    </div>
+
+                    <!--ratings-->
+                    <div class="input-group">
+                        <label class="text-small text-semibold">Your Rating</label>
+                        <div class="ratings-wrapper">
+                            <div class="ratings">
+                            <span data-rating="5">&#9733;</span>
+                            <span data-rating="4">&#9733;</span>
+                            <span data-rating="3">&#9733;</span>
+                            <span data-rating="2">&#9733;</span>
+                            <span data-rating="1">&#9733;</span>
+                        </div>
+                        </div>
                     </div>
                 </form>
             </section>

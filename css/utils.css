@@ -99,14 +99,14 @@ footer .right {
     gap: 15px;
 }
 
-.input-form {
+.input-group {
     display: flex;
     flex-direction: column;
     gap: 5px;
     position: relative;
 }
 
-.input-box {
+.input-box, .ratings-wrapper{
     padding: 8px;
     border-radius: 15px;
     border: 1px solid white;
@@ -126,4 +126,34 @@ footer .right {
     max-height: 200px;
     overflow-y: auto;
     border-radius: 15px;
+}
+
+/* ratings */
+.ratings-wrapper{
+    border : thin solid #555;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    width: fit-content;
+}
+
+.ratings{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.ratings span{
+    color: #555;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color .2s, transform .2s;
+}
+
+.ratings span:hover{
+    color: orange;
+    transform: scale(1.3);
+}
+
+.ratings span:hover ~ span {
+    color: orange;
 }
