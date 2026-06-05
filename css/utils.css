@@ -59,12 +59,22 @@ footer .right {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    position: relative;
 }
 
-product-input {
+.input-box {
     padding: 8px;
     border-radius: 15px;
     border: 1px solid white;
     background-color: white;
     width: 100%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 105%; left: 0; width: 100%;
+    background: white; border: 1px solid lightgray;
+    z-index: 100; display: none;
+    max-height: 200px; overflow-y: auto;
+    border-radius: 15px;
 }
