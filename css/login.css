@@ -46,6 +46,27 @@
   color: white;
 }
 
+.login-fail-message {
+  display: none;
+}
+
+.login-fail-message.show {
+  display: flex;
+  color: rgb(128, 7, 7);
+  background-color: rgb(236, 178, 178);
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.login-fail-message button {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  color: rgb(128, 7, 7);
+  cursor: pointer;
+  font-size: 17px;
+}
+
 .login-side {
   flex: 3;
   padding: 50px;
