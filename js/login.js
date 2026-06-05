@@ -11,6 +11,37 @@ const accounts = [{
 ];
 
 
+const passwordInput = document.getElementById("password");
+const showPasswordButton = document.querySelector(".js-show-password-button")
+
+
+//show password
+
+showPasswordButton.addEventListener("click", () => {
+  changeButtonText(showPasswordButton);
+  showPassword(passwordInput);
+});
+
+function changeButtonText(buttonElement) {
+  let buttonText = buttonElement.innerHTML;
+  if (buttonText.trim() === "Show") {
+    buttonText = "Hide";
+  } else {
+    buttonText = "Show";
+  }
+  buttonElement.innerHTML = buttonText;
+}
+
+function showPassword(password) {
+  if (password.type === "password") {
+    password.type = "text";
+  } else {
+    password.type = "password";
+  };
+}
+
+////////
+
 const homeButton = document.querySelector(".js-home-button");
 homeButton.addEventListener("click", () => {
   window.location.href = "index.html";
@@ -51,4 +82,10 @@ form.addEventListener("submit", (event) => {
 
 });
 
+document.querySelector(".userinfo")
+  .scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  }
+  )
 
