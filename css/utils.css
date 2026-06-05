@@ -77,7 +77,12 @@ footer .right {
 .items-query {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    accent-color: var(--color-accent);
+}
+
+/*Query Selections*/
+.items-query h2 {
+    margin-top: 15px;
 }
 
 /* Grid for Review */
