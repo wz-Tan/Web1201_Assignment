@@ -22,21 +22,108 @@ footer .right {
 /* Products Page Grid */
 .product-grid {
     display: grid;
-    padding: 5px 0;
-    grid-template-columns: 9fr 1fr;
-    gap: 20px;
+    padding: 20px 0;
+    grid-template-columns: 8fr 2fr;
+    gap: 30px;
 }
 
 /* Grid for Items */
 .items-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
 }
 
 .item {
     width: 100%;
-    aspect-ratio: 3/2;
-    background-color: blue;
+    aspect-ratio: 1/1;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(var(--color-accent-rgb), 0.15);
+    padding: 15px 10px;
+    box-shadow: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.item:hover {
+    box-shadow: 0 4px 20px rgba(var(--color-accent-rgb), 0.5);
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.item .product-name {
+    margin-top: 10px;
+}
+
+.item .product-description {
+    opacity: 0.6;
+}
+
+.item .product-price {
+    text-align: right;
+}
+
+.item h1,
+.item h2,
+.item p {
+    line-height: 1.4;
+}
+
+.items-query {
+    display: flex;
+    flex-direction: column;
+    accent-color: var(--color-accent);
+}
+
+/*Query Selections*/
+.items-query h2 {
+    margin-top: 15px;
+}
+
+/* Grid for Review */
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.review.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+.input-box {
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid white;
+    background-color: white;
+    width: 100%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid lightgray;
+    z-index: 100;
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 15px;
 }

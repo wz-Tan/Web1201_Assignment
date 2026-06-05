@@ -21,15 +21,46 @@
             <h1 class="text-medium">Sign Out</h1>
         </header>
         <main class="container">
-            <h1 class="text-bold text-extra-large">Featured Products</h1>
+            <h1 id="title" class="text-bold text-extra-large">All Products</h1>
             <!--Grid that splits left for sorting and right for products-->
             <div class="product-grid">
-                <section class="items-grid">
-                    <div class="text-medium item">Item 1
+                <section class="items-grid"></section>
+                <section class="items-query">
+                    <!--Sort By Pricing-->
+                    <h2 class="text-large text-bold">Sort By</h2>
+                    <div class="pricing-radio text-medium">
+                        <input
+                            type="radio"
+                            name="pricing"
+                            value="ascending"
+                            checked
+                        />
+                        <label>Price Ascending</label><br />
+
+                        <input type="radio" name="pricing" value="ascending" />
+                        <label>Price Descending</label><br />
                     </div>
-                </section>
-                <section>
-                    <h2>Sort Things Here</h2>
+
+                    <!--Sort By Categories-->
+                    <h2 class="text-large text-bold">Categories</h2>
+                    <div class="category-radio text-medium">
+                        <input
+                            type="radio"
+                            name="category"
+                            value="All"
+                            checked
+                        />
+                        <label>All</label><br />
+
+                        <input type="radio" name="category" value="Men's" />
+                        <label>Men's</label><br />
+
+                        <input type="radio" name="category" value="Women's" />
+                        <label>Women's</label><br />
+
+                        <input type="radio" name="category" value="Unisex" />
+                        <label>Unisex</label><br />
+                    </div>
                 </section>
             </div>
         </main>
@@ -58,5 +89,6 @@
                 </nav>
             </div>
         </footer>
+        <script src="./js/products.js" />
     </body>
 </html>

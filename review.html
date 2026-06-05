@@ -20,9 +20,24 @@
             </nav>
             <h1 class="text-medium">Sign Out</h1>
         </header>
-        <main class="container">
-            <h1 class="text-medium">Your Content Here</h1>
+
+
+        <main class="container review-grid">
+            <!--left column -->
+            <section>
+                <h2 class="text-medium text-bold text-accent">Submit a Review</h2>
+                <form class="review-form">
+
+                    <!--dropdown-->
+                    <div class="input-form dropdown-container">
+                        <label class="text-small text-semibold">Search Product</label>
+                        <input type="text" id="product-input" placeholder="Type to search" class="input-box" autocomplete="off" required>
+                        <div id="dropdown" class="dropdown-menu"></div>
+                    </div>
+                </form>
+            </section>
         </main>
+        
         <footer>
             <div class="left">
                 <!-- Main Text -->
@@ -48,5 +63,8 @@
                 </nav>
             </div>
         </footer>
+
+        <script src="./js/products.js"></script>
+        <script src="./js/review.js"></script>
     </body>
 </html>
