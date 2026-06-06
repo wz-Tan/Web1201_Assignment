@@ -74,15 +74,21 @@ footer .right {
     line-height: 1.4;
 }
 
-.items-query {
+.items-filter {
     display: flex;
     flex-direction: column;
     accent-color: var(--color-accent);
 }
 
-/*Query Selections*/
-.items-query h2 {
+/* Query Selections */
+.items-filter h2 {
     margin-top: 15px;
+}
+
+.items-filter #item-query {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 0.5px var(--color-accent) solid;
 }
 
 /* Grid for Review */
@@ -106,7 +112,8 @@ footer .right {
     position: relative;
 }
 
-.input-box, .ratings-wrapper{
+.input-box,
+.ratings-wrapper {
     padding: 8px;
     border-radius: 15px;
     border: 1px solid white;
@@ -129,8 +136,8 @@ footer .right {
 }
 
 /* ratings */
-.ratings-wrapper{
-    border : 1px solid #555;
+.ratings-wrapper {
+    border: 1px solid #555;
     display: flex;
     margin-bottom: 20px;
     padding: 8px;
@@ -138,23 +145,27 @@ footer .right {
     border-radius: 15px;
 }
 
-.ratings{
+.ratings {
     display: flex;
     flex-direction: row-reverse;
 }
 
-.ratings span{
+.ratings span {
     color: #555;
     font-size: 24px;
     cursor: pointer;
-    transition: color .2s, transform .2s;
+    transition:
+        color 0.2s,
+        transform 0.2s;
 }
 
-.ratings span:hover, .ratings span:hover ~ span {
+.ratings span:hover,
+.ratings span:hover ~ span {
     color: orange;
     transform: scale(1.3);
 }
 
-.ratings span[data-clicked], .ratings span[data-clicked] ~ span{
-    color:orange;
+.ratings span[data-clicked],
+.ratings span[data-clicked] ~ span {
+    color: orange;
 }

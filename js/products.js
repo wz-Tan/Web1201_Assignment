@@ -100,31 +100,50 @@ const unisex = allProducts.filter((p) => p.category === "Unisex");
 // Radio Button to Choose Categories
 const categoryRadio = document.querySelectorAll("input[name='category']");
 const pricingRadio = document.querySelectorAll("input[name='pricing']");
+const itemQuery = document.querySelector("#item-query");
 
 // Currently Active Product List and Pricing Filter
 let currentProducts = allProducts;
+let currentCategory = "All";
 let currentPricing = "ascending";
+let queriedProducts = null;
+
+// Search for An Item
+itemQuery.addEventListener("input", (e) => {
+  const input = e.target.value.toLowerCase();
+  let filteredProducts;
+  // Reset on Empty Input
+  if (!input || input === undefined) {
+    queriedProducts = null;
+  }
+  // User Input
+  else {
+    filteredProducts = currentProducts.filter((product) =>
+      product.name.toLowerCase().includes(input),
+    );
+
+    // There Are Products
+    if (filteredProducts.length > 0) {
+      queriedProducts = filteredProducts;
+    }
+
+    // No Products Found (Blank Products + No Apparels Found)
+    else {
+      document.querySelector(".items-grid").innerHTML =
+        `<h2 class="text-medium text-bold">No Products Found.</h2>`;
+      return; // Early Exit
+    }
+  }
+
+  applyFilters(currentCategory, currentPricing);
+});
 
 // Logic to Filter Out Category
 categoryRadio.forEach((radio) => {
   radio.addEventListener("change", (e) => {
     const selectedCategory = e.target.value;
-    switch (selectedCategory) {
-      case "Men's":
-        currentProducts = mens;
-        break;
-      case "Women's":
-        currentProducts = womens;
-        break;
-      case "Unisex":
-        currentProducts = unisex;
-        break;
-      case "All":
-        currentProducts = allProducts;
-        break;
-    }
-    changeTitle(selectedCategory);
-    mapProducts(currentProducts, currentPricing);
+    currentCategory = selectedCategory;
+    applyFilters(currentCategory, currentPricing);
   });
 });
 
@@ -133,29 +152,54 @@ pricingRadio.forEach((radio) => {
   radio.addEventListener("change", (e) => {
     const selectedPricing = e.target.value;
     currentPricing = selectedPricing;
-    mapProducts(currentProducts, currentPricing);
+    applyFilters(currentCategory, currentPricing);
   });
 });
 
-// Sort Products Before Mapping
-function sortProducts(products, pricing) {
-  // Swap if the difference is positive, ascending shifts the value to the right and vice versa
-  if (pricing === "ascending") {
-    return products.sort((a, b) => a.price - b.price);
-  } else {
-    return products.sort((a, b) => b.price - a.price);
+// Change Title of the Webpage
+function changeTitle() {
+  const title = document.querySelector("#title");
+  const textContent = queriedProducts ? "Queried" : currentCategory;
+
+  title.textContent = `${textContent} Apparels`;
+}
+
+// Sort Products Based on Category
+function sortProductCategory(category) {
+  // Reset to All Products
+  if (category === "All") {
+    currentProducts = allProducts;
+  }
+  // Filter To The Selected Category
+  else {
+    currentProducts = allProducts.filter((p) => p.category === category);
   }
 }
 
-// Maps Products and Filters By Pricing
-function mapProducts(products, pricing) {
+// Sort Products Based on Pricing
+function sortProductPricing(pricing) {
+  // Display Queried Products if Present, Else Stick With Current
+  const displayedProducts = queriedProducts ? queriedProducts : currentProducts;
+
+  // Swap if the difference is positive, ascending shifts the value to the right and vice versa
+  if (pricing === "ascending") {
+    return displayedProducts.sort((a, b) => a.price - b.price);
+  } else {
+    return displayedProducts.sort((a, b) => b.price - a.price);
+  }
+}
+
+// Redraws Products, Basically a setState Redraw
+function redrawProducts() {
   const itemsGrid = document.querySelector(".items-grid");
-  console.log("Pricing is ", pricing);
-  products = sortProducts(products, pricing);
-  itemsGrid.innerHTML = products
+
+  // Display Queried Products if Present, Else Stick With Current
+  const displayedProducts = queriedProducts ? queriedProducts : currentProducts;
+
+  itemsGrid.innerHTML = displayedProducts
     .map((product) => {
       return `<div class="item">
-        <img src=${product.image_src} />
+        <img src=${product.image_src} alt=${product.name}/>
         <h1 class="text-medium text-bold product-name">
             ${product.name}
         </h1>
@@ -170,11 +214,14 @@ function mapProducts(products, pricing) {
     .join("");
 }
 
-function changeTitle(categorySelected) {
-  const title = document.querySelector("#title");
-  title.textContent = `${categorySelected} Apparels`;
+// Core Function, Slaps Category and Pricing
+function applyFilters(category, pricing) {
+  sortProductCategory(category);
+  sortProductPricing(pricing);
+  changeTitle(category);
+  redrawProducts();
 }
 
 // Init With All
 changeTitle("All");
-mapProducts(currentProducts, currentPricing);
+redrawProducts(currentProducts, currentPricing);
