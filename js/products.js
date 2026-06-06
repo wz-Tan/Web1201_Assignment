@@ -130,7 +130,7 @@ itemQuery.addEventListener("input", (e) => {
     // No Products Found (Blank Products + No Apparels Found)
     else {
       document.querySelector(".items-grid").innerHTML =
-        `<h2 class="text-medium text-bold">No Products Found.</h2>`;
+        `<h2 class="text-medium">No Products Found.</h2>`;
       return; // Early Exit
     }
   }

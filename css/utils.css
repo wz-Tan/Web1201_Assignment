@@ -7,7 +7,28 @@
     min-height: 100vh;
 }
 
-/* Footer Specialised Divs */
+/* Header */
+header .right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header .right button {
+    padding: 4px 10px;
+    border-radius: 30px;
+    border: 1px var(--color-text) solid;
+    background-color: var(--color-background);
+}
+
+header .right button:hover {
+    color: var(--color-background);
+    background-color: var(--color-text);
+    border-color: var(--color-background);
+    cursor: pointer;
+}
+
+/* Footer */
 footer .left {
     flex: 3;
     display: flex;
@@ -40,7 +61,7 @@ footer .right {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    background-color: rgba(var(--color-accent-rgb), 0.15);
+    background-color: rgba(var(--color-accent-rgb), 0.3);
     padding: 15px 10px;
     box-shadow: none;
     transition: box-shadow 0.2s ease;
@@ -86,9 +107,11 @@ footer .right {
 }
 
 .items-filter #item-query {
+    color: var(--color-text);
     padding: 5px 10px;
     border-radius: 5px;
     border: 0.5px var(--color-accent) solid;
+    background-color: var(--color-background);
 }
 
 /* Grid for Review */

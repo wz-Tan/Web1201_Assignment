@@ -5,6 +5,7 @@
     text-decoration: none;
     font-weight: normal;
     line-height: 1.5;
+    color: var(--color-text);
 }
 
 a {
@@ -48,6 +49,10 @@ a {
 
 /* Footer Behaviour */
 footer,
-footer a {
+footer a,
+footer h1,
+footer h2,
+footer p,
+footer em{
     color: #f3f3f3;
 }
