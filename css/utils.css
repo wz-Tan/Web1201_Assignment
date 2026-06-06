@@ -99,7 +99,7 @@ footer .right {
     margin-top: 20px;
 }
 
-.review.form {
+.review-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -168,4 +168,14 @@ footer .right {
 .ratings span[data-clicked],
 .ratings span[data-clicked] ~ span {
     color: orange;
+}
+
+/*button*/
+.button {
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--color-accent);
+    color: whitesmoke;
+    cursor: pointer;
 }
