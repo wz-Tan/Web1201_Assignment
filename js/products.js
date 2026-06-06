@@ -98,35 +98,60 @@ const womens = allProducts.filter((p) => p.category === "Women's");
 const unisex = allProducts.filter((p) => p.category === "Unisex");
 
 // Radio Button to Choose Categories
-const radios = document.querySelectorAll("input[name='category']");
+const categoryRadio = document.querySelectorAll("input[name='category']");
+const pricingRadio = document.querySelectorAll("input[name='pricing']");
 
-// Logic to Filter Out
-radios.forEach((radio) => {
+// Currently Active Product List and Pricing Filter
+let currentProducts = allProducts;
+let currentPricing = "ascending";
+
+// Logic to Filter Out Category
+categoryRadio.forEach((radio) => {
   radio.addEventListener("change", (e) => {
     const selectedCategory = e.target.value;
-    let filteredProducts;
     switch (selectedCategory) {
       case "Men's":
-        filteredProducts = mens;
+        currentProducts = mens;
         break;
       case "Women's":
-        filteredProducts = womens;
+        currentProducts = womens;
         break;
       case "Unisex":
-        filteredProducts = unisex;
+        currentProducts = unisex;
         break;
       case "All":
-        filteredProducts = allProducts;
+        currentProducts = allProducts;
         break;
     }
     changeTitle(selectedCategory);
-    mapProducts(filteredProducts);
+    mapProducts(currentProducts, currentPricing);
   });
 });
 
-// Helper Function that Takes in JSONs and Maps Them
-function mapProducts(products) {
+// Logic to Sort Items
+pricingRadio.forEach((radio) => {
+  radio.addEventListener("change", (e) => {
+    const selectedPricing = e.target.value;
+    currentPricing = selectedPricing;
+    mapProducts(currentProducts, currentPricing);
+  });
+});
+
+// Sort Products Before Mapping
+function sortProducts(products, pricing) {
+  // Swap if the difference is positive, ascending shifts the value to the right and vice versa
+  if (pricing === "ascending") {
+    return products.sort((a, b) => a.price - b.price);
+  } else {
+    return products.sort((a, b) => b.price - a.price);
+  }
+}
+
+// Maps Products and Filters By Pricing
+function mapProducts(products, pricing) {
   const itemsGrid = document.querySelector(".items-grid");
+  console.log("Pricing is ", pricing);
+  products = sortProducts(products, pricing);
   itemsGrid.innerHTML = products
     .map((product) => {
       return `<div class="item">
@@ -152,4 +177,4 @@ function changeTitle(categorySelected) {
 
 // Init With All
 changeTitle("All");
-mapProducts(allProducts);
+mapProducts(currentProducts, currentPricing);
