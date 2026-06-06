@@ -1,5 +1,6 @@
 const input = document.getElementById('product-input');
 const list = document.getElementById('dropdown');
+const productImage = document.getElementById('product-image');
 
 //dropdown menu
 function dropdownlist() {
@@ -13,6 +14,8 @@ function dropdownlist() {
         item.onclick = () => {
             input.value =p.name;
             list.style.display = 'none';
+            productImage.src = p.image_src;
+            productImage.style.display = 'block';
         };
         list.appendChild(item);
     });
@@ -63,6 +66,7 @@ reviewForm.onsubmit = function(e){
     const username = document.getElementById('username').value;
     const rating = userRatings;
     const review = document.getElementById('review').value;
+    const imgSrc = document.getElementById('product-image').src;
 
     const starRate = "\u2605".repeat(rating) + "\u2606".repeat(5-rating);
 
@@ -70,9 +74,12 @@ reviewForm.onsubmit = function(e){
     newReview.className = 'review-card';
 
     newReview.innerHTML = `
-        <div class="review-card-header">
-            <h3 class="text-small text-bold text-accent">${product}</h3>
-            <div class="review-card-star">${starRate}</div>
+        <div class="review-card-header" style="display: flex; gap: 15px; align-items: center;">
+            <img src="${imgSrc}" class="review-item-img">
+            <div>
+                <h3 class="text-small text-bold text-accent">${product}</h3>
+                <div class="review-card-star">${starRate}</div>
+            </div>
         </div>
         <span class="review-card-user text-small">Reviewed by: ${username}</span>
         <p class="review-card-text">${review}</p>`;
@@ -82,6 +89,8 @@ reviewForm.onsubmit = function(e){
     reviewForm.reset();
     userRatings=0;
     stars.forEach(s => s.removeAttribute("data-clicked"));
+    productImage.style.display = 'none';
+    productImage.src ="";
 
     //test
     const formTest = {
