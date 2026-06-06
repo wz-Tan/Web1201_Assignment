@@ -141,8 +141,13 @@ itemQuery.addEventListener("input", (e) => {
 // Logic to Filter Out Category
 categoryRadio.forEach((radio) => {
   radio.addEventListener("change", (e) => {
+    // Reset on Category Selection
+    queriedProducts = null;
+    itemQuery.value = "";
+
     const selectedCategory = e.target.value;
     currentCategory = selectedCategory;
+
     applyFilters(currentCategory, currentPricing);
   });
 });
