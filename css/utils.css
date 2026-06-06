@@ -158,6 +158,11 @@ footer .right {
     border-radius: 15px;
 }
 
+.dropdown-container {
+    position: relative;
+    width: 100%;
+}
+
 #reviews-list {
     display: flex;
     flex-direction: column;
@@ -201,9 +206,10 @@ footer .right {
     height: 300px;
     object-fit: cover;
     border-radius: 15px;
-    border: 2px;
+    border: 2px solid black;
     margin-top: 10px;
     display: none;
+    z-index: 1;
 }
 
 .review-item-img {
