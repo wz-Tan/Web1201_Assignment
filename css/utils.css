@@ -172,7 +172,7 @@ footer .right {
 
 .review-card {
     background-color: white;
-    border-radius: 15px ;
+    border-radius: 15px;
     padding: 20px;
 }
 
@@ -257,7 +257,7 @@ footer .right {
 }
 
 /*button*/
-.button {
+.review-grid button {
     padding: 8px;
     border-radius: 15px;
     border: none;
