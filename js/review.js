@@ -1,12 +1,16 @@
+//initialize
 const input = document.getElementById('product-input');
 const list = document.getElementById('dropdown');
 const productImage = document.getElementById('product-image');
+const reviewForm = document.getElementById('review-form');
+const reviewsList = document.getElementById('reviews-list');
+const stars = document.querySelectorAll(".ratings span");
+
+let userRatings = 0;
 
 //dropdown menu
 function dropdownlist() {
     list.innerHTML = '';
-
-
     allProducts.forEach(p =>{
         const item = document.createElement('div');
         item.className = 'dropdown-item';
@@ -22,18 +26,16 @@ function dropdownlist() {
 }
 dropdownlist();
 
+//search bar
 input.onfocus = () => list.style.display = 'block';
-
 input.oninput = (e) => {
     const val = e.target.value.toLowerCase();
     const items = list.querySelectorAll('.dropdown-item');
-
     list.style.display = 'block';
-
     items.forEach(item => {
     let match = item.innerText.toLowerCase().includes(val);
     item.style.display = match ? 'block' : 'none';
-});
+    });
 };
 
 document.addEventListener('click', (e) => {
@@ -43,9 +45,6 @@ document.addEventListener('click', (e) => {
 });
 
 // ratings
-let stars = document.querySelectorAll(".ratings span");
-let userRatings = 0;
-
 for(let star of stars){
     star.addEventListener("click", function(){
         stars.forEach(s => s.removeAttribute("data-clicked"));
@@ -55,10 +54,7 @@ for(let star of stars){
         console.log(userRatings);
     });
 }
-// form
-const reviewForm = document.getElementById('review-form');
-const reviewsList = document.getElementById('reviews-list');
-
+// form submission
 reviewForm.onsubmit = function(e){
     e.preventDefault(); //this prevent website reset DO NOT REMOVE AGAIN
 
@@ -86,18 +82,10 @@ reviewForm.onsubmit = function(e){
 
     reviewsList.prepend(newReview);
 
+    //reset form
     reviewForm.reset();
     userRatings=0;
     stars.forEach(s => s.removeAttribute("data-clicked"));
     productImage.style.display = 'none';
     productImage.src ="";
-
-    //test
-    const formTest = {
-        product: document.getElementById('product-input').value,
-        rating: userRatings,
-        username: document.getElementById('username').value,
-        review: document.getElementById('review').value
-    };
-    console.log(formTest);
 };
