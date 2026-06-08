@@ -122,10 +122,8 @@ footer .right {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
-    margin-top: 20px;
+    margin: 20px auto 40px auto;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .review-form {
@@ -257,7 +255,7 @@ footer .right {
 }
 
 .ratings span {
-    color: {var(--color-star);}
+    color: var(--color-star);
     font-size: 24px;
     cursor: pointer;
     transition:
