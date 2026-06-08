@@ -14,17 +14,16 @@ header .right {
     align-items: center;
 }
 
-header .right button {
-    padding: 4px 10px;
+/* Theme Switch Button */
+header .right .btn-theme {
+    padding: 5px 15px;
     border-radius: 30px;
-    border: 1px var(--color-text) solid;
-    background-color: var(--color-background);
+    background-color: var(--color-text);
+    transition: opacity 0.1s ease-in-out;
 }
 
-header .right button:hover {
-    color: var(--color-background);
-    background-color: var(--color-text);
-    border-color: var(--color-background);
+header .right .btn-theme:hover {
+    opacity: 0.75;
     cursor: pointer;
 }
 
