@@ -86,7 +86,7 @@ footer nav a::after {
 }
 
 footer nav a::after {
-    background-color: #f3f3f3;
+    background-color: var(--color-text);
 }
 
 /* On Hover Set With to Full */
@@ -94,3 +94,14 @@ header nav a:hover::after,
 footer nav a:hover::after {
     width: 100%;
 }
+
+/* Footer Behaviour */
+footer,
+footer a,
+footer h1,
+footer h2,
+footer p,
+footer em {
+    color: var(--color-text);
+}
+

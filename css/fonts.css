@@ -46,13 +46,3 @@ a {
 .text-light {
     font-weight: 300;
 }
-
-/* Footer Behaviour */
-footer,
-footer a,
-footer h1,
-footer h2,
-footer p,
-footer em{
-    color: #f3f3f3;
-}

@@ -25,22 +25,22 @@
         <main class="container review-grid">
             <!--left side -->
             <section>
-                <h2 class="text-medium text-bold text-accent">Submit a Review</h2>
+                <h2 class="text-extra-large text-bold text-accent">Submit a Review</h2>
                 <form class="review-form" id="review-form">
 
                     <!--dropdown-->
                     <div class="input-group">
-                        <label class="text-small text-semibold">Search Product</label>
-                        <div class="dropdown-container" style="position: relative;">
-                            <input type="text" id="product-input" placeholder="Type to search" class="input-box" autocomplete="off" required>
+                        <label class="text-large text-semibold">Search Product</label>
+                        <div class="dropdown-container">
+                            <input type="text" id="product-input" placeholder="Type to search" class="input-box text-medium" required>
                             <div id="dropdown" class="dropdown-menu"></div>
                         </div>
-                        <img id="product-image" src="">
+                        <img id="product-image">
                     </div>
 
                     <!--ratings-->
                     <div class="input-group">
-                        <label class="text-small text-semibold">Your Rating</label>
+                        <label class="text-medium text-semibold">Your Rating</label>
                         <div class="ratings-wrapper">
                             <div class="ratings">
                                 <span data-rating="5">&#9733;</span>
@@ -54,24 +54,24 @@
 
                     <!--Username-->
                     <div class="input-group">
-                        <label class="text-small text-semibold">Username</label>
-                        <input class="input-box" type="text" id="username" spellcheck="false" placeholder="Enter your username" required>
+                        <label class="text-medium text-semibold">Username</label>
+                        <input class="input-box text-medium" type="text" id="username" spellcheck="false" placeholder="Enter your username" required>
                     </div>
 
                     <!--comment-->
                     <div class="input-group">
-                        <label class="text-small text-semibold">Review</label>
-                        <textarea class="input-box" id="review" rows="4" placeholder="Type your review..."></textarea>
+                        <label class="text-medium text-semibold">Review</label>
+                        <textarea class="input-box text-medium" id="review" rows="4" placeholder="Type your review..."></textarea>
                     </div>
 
                     <!--button-->
-                    <button type="submit" class="button text-small text-bold">Submit</button>
+                    <button type="submit" class="text-medium text-bold">Submit</button>
                 </form>
             </section>
 
             <!--right side-->
             <section>
-                <h2 class="text-medium text-bold">Recent Reviews</h2>
+                <h2 class="text-extra-large text-bold">Recent Reviews</h2>
                 <div id="reviews-list"></div>
             </section>
         </main>
