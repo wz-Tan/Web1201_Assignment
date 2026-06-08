@@ -18,29 +18,42 @@
                     <li><a href="about-us.html">About Us</a></li>
                 </ul>
             </nav>
-            <h1 class="text-medium">Sign Out</h1>
+            <div class="right">
+                <button class="text-medium btn-theme">Switch Theme</button>
+                <h1 class="text-medium">Sign Out</h1>
+            </div>
         </header>
-
 
         <main class="container review-grid">
             <!--left side -->
             <section>
-                <h2 class="text-extra-large text-bold text-accent">Submit a Review</h2>
+                <h2 class="text-extra-large text-bold text-accent">
+                    Submit a Review
+                </h2>
                 <form class="review-form" id="review-form">
-
                     <!--dropdown-->
                     <div class="input-group">
-                        <label class="text-large text-semibold">Search Product</label>
+                        <label class="text-large text-semibold"
+                            >Search Product</label
+                        >
                         <div class="dropdown-container">
-                            <input type="text" id="product-input" placeholder="Type to search" class="input-box text-medium" required>
+                            <input
+                                type="text"
+                                id="product-input"
+                                placeholder="Type to search"
+                                class="input-box text-medium"
+                                required
+                            />
                             <div id="dropdown" class="dropdown-menu"></div>
                         </div>
-                        <img id="product-image">
+                        <img id="product-image" />
                     </div>
 
                     <!--ratings-->
                     <div class="input-group">
-                        <label class="text-medium text-semibold">Your Rating</label>
+                        <label class="text-medium text-semibold"
+                            >Your Rating</label
+                        >
                         <div class="ratings-wrapper">
                             <div class="ratings">
                                 <span data-rating="5">&#9733;</span>
@@ -54,18 +67,34 @@
 
                     <!--Username-->
                     <div class="input-group">
-                        <label class="text-medium text-semibold">Username</label>
-                        <input class="input-box text-medium" type="text" id="username" spellcheck="false" placeholder="Enter your username" required>
+                        <label class="text-medium text-semibold"
+                            >Username</label
+                        >
+                        <input
+                            class="input-box text-medium"
+                            type="text"
+                            id="username"
+                            spellcheck="false"
+                            placeholder="Enter your username"
+                            required
+                        />
                     </div>
 
                     <!--comment-->
                     <div class="input-group">
                         <label class="text-medium text-semibold">Review</label>
-                        <textarea class="input-box text-medium" id="review" rows="4" placeholder="Type your review..."></textarea>
+                        <textarea
+                            class="input-box text-medium"
+                            id="review"
+                            rows="4"
+                            placeholder="Type your review..."
+                        ></textarea>
                     </div>
 
                     <!--button-->
-                    <button type="submit" class="text-medium text-bold">Submit</button>
+                    <button type="submit" class="text-medium text-bold">
+                        Submit
+                    </button>
                 </form>
             </section>
 
@@ -75,7 +104,7 @@
                 <div id="reviews-list"></div>
             </section>
         </main>
-        
+
         <footer>
             <div class="left">
                 <!-- Main Text -->
@@ -104,5 +133,6 @@
 
         <script src="./js/products.js"></script>
         <script src="./js/review.js"></script>
+        <script src="./js/theme.js"></script>
     </body>
 </html>
