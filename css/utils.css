@@ -209,14 +209,15 @@ footer .right {
 }
 
 .review-card-user {
-    color: #999;
+    color: var(--color-text);
+    opacity: 0.7; 
     margin-bottom: 8px;
     display: block;
 }
 
 .review-card-text {
     line-height: 1.6;
-    color: #333;
+    color: var(--color-text);
 }
 
 /* image */
@@ -225,7 +226,7 @@ footer .right {
     height: 300px;
     object-fit: cover;
     border-radius: 15px;
-    border: 2px solid black;
+    border: 1px solid var(--color-ui-border);
     margin-top: 10px;
     display: none;
     z-index: 1;
@@ -236,7 +237,7 @@ footer .right {
     height: 100px;
     object-fit: cover;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 1px solid var(--color-ui-border);
     flex-shrink: 0;
 }
 
