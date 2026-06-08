@@ -160,6 +160,7 @@ footer .right {
     max-height: 200px;
     overflow-y: auto;
     border-radius: 15px;
+    padding: 10px;
 }
 
 .dropdown-container {
@@ -227,7 +228,6 @@ footer .right {
 
 /* ratings */
 .ratings-wrapper {
-    border: 1px solid #555;
     display: flex;
     margin-bottom: 20px;
     padding: 8px;
