@@ -1,53 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Log In</title>
-        <link rel="stylesheet" href="./css/styles.css" />
-        <link rel="stylesheet" href="./css/fonts.css" />
-        <link rel="stylesheet" href="./css/utils.css" />
-    </head>
-    <body>
-        <header>
-            <h1 class="text-large text-bold text-accent">SigmaStore</h1>
-            <nav>
-                <ul class="text-medium">
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="review.html">Review</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                </ul>
-            </nav>
-            <h1 class="text-medium">Sign Out</h1>
-        </header>
-        <main class="container">
-            <section></section>
-        </main>
-        <footer>
-            <div class="left">
-                <!-- Main Text -->
-                <div>
-                    <h1 class="text-large text-bold">SigmaStore</h1>
-                    <h2 class="text-medium">
-                        Bringing you the best products since 2020.
-                    </h2>
-                </div>
 
-                <!-- Copyright -->
-                <p class="text-small text-light">
-                    <em>&copy; SigmaStore, 2026</em>
-                </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in</title>
+  <link rel="stylesheet" href="./css/fonts.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/login.css" />
+</head>
+
+<body>
+  <div class="fullscreen-container registration-flexbox">
+    <div class="registration-card">
+      <div class="welcome-side">
+        <h2 class="text-large text-bold">Welcome Back to Sigma Store!</h2>
+        <p class="text-small">Your next favorite find is here!</p>
+
+      </div>
+      <div class="login-side">
+        <div class="home">
+          <button class="btn-primary js-home-button">&#8962;</button>
+          <span>Home Page</span>
+        </div>
+        <h2 class="text-large text-bold create-text">Login to your account</h2>
+        <div class="js-login-fail-message login-fail-message">
+          <span>Incorrect email or password</span>
+          <button class="js-login-fail-button" type="button">×</button>
+        </div>
+        <form class="userinfo" id="login-form">
+          <div class="input-group">
+            <label for="username-email">Username or Email</label>
+            <input type="text" id="username-email" name="username-email" placeholder="Enter your username or email">
+          </div>
+          <div class="input-group">
+            <div class="password-container">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password">
+              <button type="button" class="show-password-button js-show-password-button">Show</button>
             </div>
-            <div class="right">
-                <nav>
-                    <ul class="text-large">
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="review.html">Review</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
-        <script src="js/auth.js"></script>
-    </body>
+          </div>
+          <button type="submit" class="btn-primary login-button">Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/login.js"></script>
+</body>
+
 </html>
