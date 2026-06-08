@@ -59,6 +59,12 @@ reviewForm.onsubmit = function(e){
     e.preventDefault(); //this prevent website reset DO NOT REMOVE AGAIN
 
     const product = document.getElementById('product-input').value;
+    const exist = allProducts.some(p => p.name === product);
+        if (!exist){
+            alert("please select a valid option");
+            return;
+        }
+
     const username = document.getElementById('username').value;
     const rating = userRatings;
     const review = document.getElementById('review').value;
