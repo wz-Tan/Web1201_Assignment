@@ -18,6 +18,9 @@
     --color-text-rgb: 0, 0, 0;
     --color-background-rgb: 243, 243, 243;
     --color-accent-rgb: 37, 99, 235;
+    --color-ui-bg: #ffffff;
+    --color-ui-border: #cccccc;
+    --color-star: #555555;
 }
 
 /*Dark Mode*/
@@ -26,6 +29,9 @@
     --color-background: #1e1e1e;
     --color-text-rgb: 209, 209, 209;
     --color-background-rgb: 30, 30, 30;
+    --color-ui-bg: #2d2d2d;
+    --color-ui-border: #444444;
+    --color-star: #999999;
 }
 
 /* Class for Transitions - Use JS to load so first run doesnt happen*/

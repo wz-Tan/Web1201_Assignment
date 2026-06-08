@@ -120,9 +120,12 @@ footer .right {
 /* Grid for Review */
 .review-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
     margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .review-form {
@@ -142,9 +145,9 @@ footer .right {
 .ratings-wrapper {
     padding: 8px;
     border-radius: 15px;
-    border: 1px solid white;
-    background-color: white;
     width: 100%;
+    background-color: var(--color-ui-bg);
+    border: 1px solid var(--color-ui-border); 
 }
 
 .dropdown-menu {
@@ -152,14 +155,15 @@ footer .right {
     top: 105%;
     left: 0;
     width: 100%;
-    background: white;
-    border: 1px solid lightgray;
     z-index: 100;
     display: none;
     max-height: 200px;
     overflow-y: auto;
     border-radius: 15px;
     padding: 10px;
+    background-color: var(--color-ui-bg);
+    color: var(--color-text);
+    border: 1px solid var(--color-ui-border);
 }
 
 .dropdown-container {
@@ -175,9 +179,10 @@ footer .right {
 }
 
 .review-card {
-    background-color: white;
     border-radius: 15px;
     padding: 20px;
+    background-color: var(--color-ui-bg);
+    border: 1px solid var(--color-ui-border);
 }
 
 .review-card-header {
@@ -240,7 +245,7 @@ footer .right {
 }
 
 .ratings span {
-    color: #555;
+    color: {var(--color-star);}
     font-size: 24px;
     cursor: pointer;
     transition:
