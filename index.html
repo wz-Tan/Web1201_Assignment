@@ -1,52 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Log in</title>
+        <link rel="stylesheet" href="./css/fonts.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/login.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in</title>
-  <link rel="stylesheet" href="./css/fonts.css" />
-  <link rel="stylesheet" href="./css/styles.css" />
-  <link rel="stylesheet" href="./css/login.css" />
-</head>
-
-<body>
-  <div class="fullscreen-container registration-flexbox">
-    <div class="registration-card">
-      <div class="welcome-side">
-        <h2 class="text-large text-bold">Welcome Back to Sigma Store!</h2>
-        <p class="text-small">Your next favorite find is here!</p>
-
-      </div>
-      <div class="login-side">
-        <div class="home">
-          <button class="btn-primary js-home-button">&#8962;</button>
-          <span>Home Page</span>
-        </div>
-        <h2 class="text-large text-bold create-text">Login to your account</h2>
-        <div class="js-login-fail-message login-fail-message">
-          <span>Incorrect email or password</span>
-          <button class="js-login-fail-button" type="button">×</button>
-        </div>
-        <form class="userinfo" id="login-form">
-          <div class="input-group">
-            <label for="username-email">Username or Email</label>
-            <input type="text" id="username-email" name="username-email" placeholder="Enter your username or email">
-          </div>
-          <div class="input-group">
-            <div class="password-container">
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="Enter your password">
-              <button type="button" class="show-password-button js-show-password-button">Show</button>
+    <body>
+        <div class="fullscreen-container registration-flexbox">
+            <div class="registration-card">
+                <div class="welcome-side">
+                    <h2 class="text-large text-bold">
+                        Welcome Back to Sigma Store!
+                    </h2>
+                    <p class="text-small">Your next favorite find is here!</p>
+                </div>
+                <div class="login-side">
+                    <div class="home">
+                        <a
+                            class="btn-primary js-home-button"
+                            href="/products.html"
+                        >
+                            &#8962;
+                        </a>
+                        <span>Home Page</span>
+                    </div>
+                    <h2 class="text-large text-bold create-text">
+                        Login to your account
+                    </h2>
+                    <div class="js-login-fail-message login-fail-message">
+                        <span>Incorrect email or password</span>
+                        <button class="js-login-fail-button" type="button">
+                            ×
+                        </button>
+                    </div>
+                    <form class="userinfo" id="login-form">
+                        <div class="input-group">
+                            <label for="username-email"
+                                >Username or Email</label
+                            >
+                            <input
+                                type="text"
+                                id="username-email"
+                                name="username-email"
+                                placeholder="Enter your username or email"
+                            />
+                        </div>
+                        <div class="input-group">
+                            <div class="password-container">
+                                <label for="password">Password</label>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                />
+                                <button
+                                    type="button"
+                                    class="show-password-button js-show-password-button"
+                                >
+                                    Show
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary login-button">
+                            Log in
+                        </button>
+                    </form>
+                </div>
             </div>
-          </div>
-          <button type="submit" class="btn-primary login-button">Log in</button>
-        </form>
-      </div>
-    </div>
-  </div>
+        </div>
 
-  <script src="./js/login.js"></script>
-</body>
-
+        <script src="./js/login.js"></script>
+    </body>
 </html>

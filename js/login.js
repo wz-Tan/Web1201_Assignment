@@ -1,19 +1,19 @@
 // dummy data
-const accounts = [{
-  username: "username",
-  email: "email@gmail.com",
-  password: "1234"
-}, {
-  username: "username2",
-  email: "email@yahoo.com",
-  password: "1234"
-}
+const accounts = [
+  {
+    username: "username",
+    email: "email@gmail.com",
+    password: "1234",
+  },
+  {
+    username: "username2",
+    email: "email@yahoo.com",
+    password: "1234",
+  },
 ];
 
-
 const passwordInput = document.getElementById("password");
-const showPasswordButton = document.querySelector(".js-show-password-button")
-
+const showPasswordButton = document.querySelector(".js-show-password-button");
 
 //show password
 
@@ -37,15 +37,10 @@ function showPassword(password) {
     password.type = "text";
   } else {
     password.type = "password";
-  };
+  }
 }
 
 ////////
-
-const homeButton = document.querySelector(".js-home-button");
-homeButton.addEventListener("click", () => {
-  window.location.href = "index.html";
-})
 
 // compare data
 const form = document.getElementById("login-form");
@@ -58,16 +53,15 @@ form.addEventListener("submit", (event) => {
   const usernameEmail = formData.get("username-email").trim();
   const password = formData.get("password").trim();
 
-
-  const account = accounts.find((user) =>
-    (user.username === usernameEmail || user.email === usernameEmail) &&
-    user.password === password
+  const account = accounts.find(
+    (user) =>
+      (user.username === usernameEmail || user.email === usernameEmail) &&
+      user.password === password,
   );
-
 
   if (account) {
     console.log("success");
-    window.location.replace("index.html");
+    window.location.replace("products.html");
   } else {
     console.log("fail");
     const loginFailMessage = document.querySelector(".js-login-fail-message");
@@ -75,17 +69,13 @@ form.addEventListener("submit", (event) => {
     const loginFailButton = document.querySelector(".js-login-fail-button");
     loginFailButton.addEventListener("click", () => {
       loginFailMessage.classList.remove("show");
-    })
+    });
 
     form.reset();
   }
-
 });
 
-document.querySelector(".userinfo")
-  .scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  }
-  )
-
+document.querySelector(".userinfo").scrollIntoView({
+  behavior: "smooth",
+  block: "start",
+});
