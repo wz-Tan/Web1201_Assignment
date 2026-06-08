@@ -40,16 +40,6 @@ footer .right {
     flex: 1;
 }
 
-/* Footer Behaviour */
-footer,
-footer a,
-footer h1,
-footer h2,
-footer p,
-footer em {
-    color: var(--color-background);
-}
-
 /* Products Page Grid */
 .products .product-grid {
     display: grid;
