@@ -7,6 +7,15 @@
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/fonts.css" />
         <link rel="stylesheet" href="./css/utils.css" />
+
+        <!--Avoid Flash of Incorrect Theme-->
+        <script>
+            // Load saved theme on page load (carry between pages)
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -19,7 +28,7 @@
                 </ul>
             </nav>
             <div class="right">
-                <button class="text-medium btn-theme">Switch Theme</button>
+                <button class="text-medium btn-theme">🌙</button>
                 <h1 class="text-medium">Sign Out</h1>
             </div>
         </header>
