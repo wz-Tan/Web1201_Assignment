@@ -197,14 +197,20 @@ footer .right {
 
 .review-card-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 20px;
     align-items: center;
     margin-bottom: 10px;
 }
 
+.review-card-header h3 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
 .review-card-star {
     color: orange;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
 }
 

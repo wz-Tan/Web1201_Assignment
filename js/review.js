@@ -40,10 +40,10 @@ function addReview(username, product, rating, review, imgSrc){
   newReview.className = "review-card";
 
   newReview.innerHTML = `
-        <div class="review-card-header" style="display: flex; gap: 15px; align-items: center;">
+        <div class="review-card-header">
             <img src="${imgSrc}" class="review-item-img">
             <div>
-                <h3 class="text-small text-bold text-accent">${product}</h3>
+                <h3 class="text-semibold text-accent">${product}</h3>
                 <div class="review-card-star">${starRate}</div>
             </div>
         </div>
