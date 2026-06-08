@@ -171,6 +171,18 @@ footer .right {
     width: 100%;
 }
 
+.dropdown-item {
+    padding: 2px;
+    cursor: pointer;
+    transition: background-color 0.2 ease, color 0.2 ease;
+    color:var(--color-text);
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-accent);
+    color:white;
+}
+
 #reviews-list {
     display: flex;
     flex-direction: column;
