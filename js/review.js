@@ -8,6 +8,55 @@ const stars = document.querySelectorAll(".ratings span");
 
 let userRatings = 0;
 
+//dummy data for review
+const dummyData = [
+    {
+        username: "Alan_Tan",
+        product: "Vintage Levi's 501 Jeans",
+        rating: 5,
+        text: "I like jeans its cool",
+        image: "./assets/images/levi_jeans.jpg"
+    },
+    {
+        username: "Joe",
+        product: "Y2K Cargo Pants",
+        rating: 4,
+        text: "Cool pants with pockets",
+        image: "./assets/images/cargo_pants.jpg"
+    },
+    {
+        username: "Qi Wen",
+        product: "Vintage Band Tee",
+        rating: 5,
+        text: "Cheap shirt",
+        image: "./assets/images/vintage_band_tee.jpg"
+    }
+]
+
+function addReview(username, product, rating, review, imgSrc){
+    const starRate = "\u2605".repeat(rating) + "\u2606".repeat(5 - rating);
+
+  const newReview = document.createElement("div");
+  newReview.className = "review-card";
+
+  newReview.innerHTML = `
+        <div class="review-card-header" style="display: flex; gap: 15px; align-items: center;">
+            <img src="${imgSrc}" class="review-item-img">
+            <div>
+                <h3 class="text-small text-bold text-accent">${product}</h3>
+                <div class="review-card-star">${starRate}</div>
+            </div>
+        </div>
+        <span class="review-card-user text-small">Reviewed by: ${username}</span>
+        <p class="review-card-text">${review}</p>`;
+
+  reviewsList.prepend(newReview);
+}
+
+dummyData.forEach(item => {
+    addReview(item.username, item.product, item.rating, item.text, item.image)
+})
+
 //dropdown menu
 function dropdownlist() {
   list.innerHTML = "";
@@ -70,23 +119,7 @@ reviewForm.onsubmit = function (e) {
     const review = document.getElementById('review').value;
     const imgSrc = document.getElementById('product-image').src;
 
-  const starRate = "\u2605".repeat(rating) + "\u2606".repeat(5 - rating);
-
-  const newReview = document.createElement("div");
-  newReview.className = "review-card";
-
-  newReview.innerHTML = `
-        <div class="review-card-header" style="display: flex; gap: 15px; align-items: center;">
-            <img src="${imgSrc}" class="review-item-img">
-            <div>
-                <h3 class="text-small text-bold text-accent">${product}</h3>
-                <div class="review-card-star">${starRate}</div>
-            </div>
-        </div>
-        <span class="review-card-user text-small">Reviewed by: ${username}</span>
-        <p class="review-card-text">${review}</p>`;
-
-  reviewsList.prepend(newReview);
+  addReview(username, product, rating, review, imgSrc);
 
   //reset form
   reviewForm.reset();
