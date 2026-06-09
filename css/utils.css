@@ -45,7 +45,6 @@ footer .right {
     padding: 20px 0;
     grid-template-columns: 8fr 2fr;
     gap: 30px;
-    width: 100%;
 }
 
 .products #title {
@@ -70,6 +69,7 @@ footer .right {
     padding: 15px 10px;
     box-shadow: none;
     transition: box-shadow 0.2s ease;
+    min-width: 0;
 }
 
 .products .item:hover {
