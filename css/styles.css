@@ -21,6 +21,7 @@
     --color-ui-bg: #ffffff;
     --color-ui-border: #cccccc;
     --color-star: #555555;
+    --color-button: #f5f5f5;
 }
 
 /*Dark Mode*/
@@ -32,6 +33,7 @@
     --color-ui-bg: #2d2d2d;
     --color-ui-border: #444444;
     --color-star: #999999;
+     --color-button: #d1d1d1;
 }
 
 /* Class for Transitions - Use JS to load so first run doesnt happen*/
