@@ -1,156 +1,150 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About Us</title>
-        <link rel="stylesheet" href="./css/styles.css" />
-        <link rel="stylesheet" href="./css/fonts.css" />
-        <link rel="stylesheet" href="./css/utils.css" />
-        <!--Avoid Flash of Incorrect Theme-->
-        <script>
-            // Load saved theme on page load (carry between pages)
-            const savedTheme = localStorage.getItem("theme");
-            if (savedTheme === "dark") {
-                document.documentElement.classList.add("dark");
-            }
-        </script>
-    </head>
-    <body>
-        <header>
-            <h1 class="text-large text-bold text-accent">SigmaStore</h1>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/utils.css" />
+    <!--Avoid Flash of Incorrect Theme-->
+    <script>
+        // Load saved theme on page load (carry between pages)
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-large text-bold text-accent">SigmaStore</h1>
+        <nav>
+            <ul class="text-medium">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="right">
+            <button class="text-medium btn-theme">🌙</button>
+            <h1 class="text-medium">Sign Out</h1>
+        </div>
+    </header>
+    <main class="container about-container">
+        <h1 class="text-bold text-extra-large text-accent">
+            About SigmaStore
+        </h1>
+        <br />
+        <section>
+            <h2 class="text-large text-bold">Our Story</h2>
+            <p class="text-small">
+                Founded in Malaysia in 2026, SigmaStore was created with a
+                simple goal: to make sustainable and affordable shopping
+                accessible to everyone. We noticed that many communities
+                lacked convenient access to thrift stores and
+                budget-friendly alternatives, while consumerism continued to
+                contribute to unnecessary waste and environmental impact. At
+                SigmaStore, we believe that quality products should not come
+                at the expense of either your wallet or the planet. By
+                giving pre-loved and reusable items a second life, we help
+                customers save money while reducing waste. Our platform is
+                built on the principles of the three R's: Reduce, Reuse, and
+                Recycle. This encourages smarter consumption habits and
+                promoting a more sustainable future for generations to come.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-large text-bold">Our Mission</h2>
+            <p class="text-small">
+                Our mission is to provide affordable, quality products
+                through sustainable shopping practices that benefit both
+                people and the environment. We strive to reduce waste,
+                extend the lifecycle of usable goods, and make eco-conscious
+                choices more accessible to everyday consumers. Through every
+                item sold, we aim to foster a culture of responsible
+                consumption, empower communities to embrace sustainability,
+                and contribute to a greener future—one purchase at a time.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-large text-bold">Our vision</h2>
+            <p class="text-small">
+                To become Malaysia's trusted destination for sustainable
+                shopping, where affordability, quality, and environmental
+                responsibility come together to create lasting positive
+                impact for our communities and the planet.
+            </p>
+        </section>
+        <section>
+            <h2 class="text-large text-bold">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <a href="./portfolio/wenzhe.html">
+                        <h3 class="text-medium text-bold">
+                            Tan Wen Zhe<span class="student-id">25103599</span>
+                        </h3>
+                    </a>
+                    <p class="text-small">later add</p>
+                </div>
+                <div class="team-member">
+                    <a href="./portfolio/joe.html">
+                        <h3 class="text-medium text-bold">
+                            Ow Ji Joe<span class="student-id">24069981</span>
+                        </h3>
+                    </a>
+                    <p class="text-small">later add</p>
+                </div>
+                <div class="team-member">
+                    <a href="./portfolio/qiwen.html">
+                        <h3 class="text-medium text-bold">
+                            Jen Qi Wen<span class="student-id">25123373</span>
+                        </h3>
+                    </a>
+                    <p class="text-small">later add</p>
+                </div>
+                <div class="team-member">
+                    <a href="./portfolio/lincoln.html">
+                        <h3 class="text-medium text-bold">
+                            Lincoln Cheng Guang Liang<span class="student-id">24055774</span>
+                        </h3>
+                    </a>
+                    <p class="text-small">later add</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="left">
+            <!-- Main Text -->
+            <div>
+                <h1 class="text-large text-bold">SigmaStore</h1>
+                <h2 class="text-medium">
+                    Bringing you the best products since 2020.
+                </h2>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-small text-light">
+                <em>&copy; SigmaStore, 2026</em>
+            </p>
+        </div>
+        <div class="right">
             <nav>
-                <ul class="text-medium">
+                <ul class="text-large">
                     <li><a href="products.html">Products</a></li>
                     <li><a href="review.html">Review</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                 </ul>
             </nav>
-            <div class="right">
-                <button class="text-medium btn-theme">🌙</button>
-                <h1 class="text-medium">Sign Out</h1>
-            </div>
-        </header>
-        <main class="container about-container">
-            <h1 class="text-bold text-extra-large text-accent">
-                About SigmaStore
-            </h1>
-            <br />
-            <section>
-                <h2 class="text-large text-bold">Our Story</h2>
-                <p class="text-small">
-                    Founded in Malaysia in 2026, SigmaStore was created with a
-                    simple goal: to make sustainable and affordable shopping
-                    accessible to everyone. We noticed that many communities
-                    lacked convenient access to thrift stores and
-                    budget-friendly alternatives, while consumerism continued to
-                    contribute to unnecessary waste and environmental impact. At
-                    SigmaStore, we believe that quality products should not come
-                    at the expense of either your wallet or the planet. By
-                    giving pre-loved and reusable items a second life, we help
-                    customers save money while reducing waste. Our platform is
-                    built on the principles of the three R's: Reduce, Reuse, and
-                    Recycle. This encourages smarter consumption habits and
-                    promoting a more sustainable future for generations to come.
-                </p>
-            </section>
+        </div>
+    </footer>
+    <script src="./js/theme.js"></script>
+</body>
 
-            <section>
-                <h2 class="text-large text-bold">Our Mission</h2>
-                <p class="text-small">
-                    Our mission is to provide affordable, quality products
-                    through sustainable shopping practices that benefit both
-                    people and the environment. We strive to reduce waste,
-                    extend the lifecycle of usable goods, and make eco-conscious
-                    choices more accessible to everyday consumers. Through every
-                    item sold, we aim to foster a culture of responsible
-                    consumption, empower communities to embrace sustainability,
-                    and contribute to a greener future—one purchase at a time.
-                </p>
-            </section>
-
-            <section>
-                <h2 class="text-large text-bold">Our vision</h2>
-                <p class="text-small">
-                    To become Malaysia's trusted destination for sustainable
-                    shopping, where affordability, quality, and environmental
-                    responsibility come together to create lasting positive
-                    impact for our communities and the planet.
-                </p>
-            </section>
-            <section>
-                <h2 class="text-large text-bold">Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <a href="./portfolio/wenzhe.html">
-                            <h3 class="text-medium text-bold">
-                                Tan Wen Zhe<span class="student-id"
-                                    >25103599</span
-                                >
-                            </h3>
-                        </a>
-                        <p class="text-small">later add</p>
-                    </div>
-                    <div class="team-member">
-                        <a href="./portfolio/joe.html">
-                            <h3 class="text-medium text-bold">
-                                Ow Ji Joe<span class="student-id"
-                                    >24069981</span
-                                >
-                            </h3>
-                        </a>
-                        <p class="text-small">later add</p>
-                    </div>
-                    <div class="team-member">
-                        <a href="./portfolio/qiwen.html">
-                            <h3 class="text-medium text-bold">
-                                Jen Qi Wen<span class="student-id"
-                                    >25123353</span
-                                >
-                            </h3>
-                        </a>
-                        <p class="text-small">later add</p>
-                    </div>
-                    <div class="team-member">
-                        <a href="./portfolio/lincoln.html">
-                            <h3 class="text-medium text-bold">
-                                Lincoln Cheng Guang Liang<span
-                                    class="student-id"
-                                    >24055774</span
-                                >
-                            </h3>
-                        </a>
-                        <p class="text-small">later add</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="left">
-                <!-- Main Text -->
-                <div>
-                    <h1 class="text-large text-bold">SigmaStore</h1>
-                    <h2 class="text-medium">
-                        Bringing you the best products since 2020.
-                    </h2>
-                </div>
-
-                <!-- Copyright -->
-                <p class="text-small text-light">
-                    <em>&copy; SigmaStore, 2026</em>
-                </p>
-            </div>
-            <div class="right">
-                <nav>
-                    <ul class="text-large">
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="review.html">Review</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
-        <script src="./js/theme.js"></script>
-    </body>
 </html>
