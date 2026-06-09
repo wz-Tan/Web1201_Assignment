@@ -40,6 +40,11 @@ footer .right {
 }
 
 /* Hero Section */
+.hero-container {
+    min-height: 80vh;
+    width: 100%;
+}
+
 .hero-section {
     position: relative;
     color: white;
