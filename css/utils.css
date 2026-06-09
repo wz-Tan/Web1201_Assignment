@@ -369,7 +369,7 @@ footer .right {
     border-radius: 15px;
     border: none;
     background-color: var(--color-accent);
-    color: whitesmoke;
+    color: var(--color-button);
     cursor: pointer;
 }
 
