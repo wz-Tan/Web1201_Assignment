@@ -301,6 +301,7 @@ footer .right {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 30px;
+    background-color: var(--color-background);
 }
 
 .about-container>h1 {
@@ -321,13 +322,14 @@ footer .right {
     display: block;
     width: 100%;
     text-align: center;
+    color: black;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-container section p {
-    color: #333;
+    color: var(--color-text);
     word-spacing: 0.05em;
     padding: 8px;
     text-align: justify;
@@ -346,16 +348,21 @@ footer .right {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
 }
 
-.team-member h3 {
+.team-member a h3 {
     margin-bottom: 10px;
     /*color: var(--color-accent);*/
 }
 
-.team-member p {
-    color: #333;
+.team-member a p {
+    color: black;
     line-height: 1.6;
+}
+
+.team-member a h3 {
+    color: var(--color-accent);
 }
 
 .student-id {
@@ -363,14 +370,6 @@ footer .right {
     font-weight: 300;
     color: #999;
     margin-left: 10px;
-}
-
-.team-member {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.2s ease;
 }
 
 .team-member:hover {
