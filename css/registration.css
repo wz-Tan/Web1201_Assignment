@@ -1,3 +1,4 @@
+/*
 .btn-primary {
   font-size: 15px;
   padding: 12px 24px;
@@ -11,14 +12,15 @@
   min-height: 100vh;
 }
 
-.registration-flexbox {
+*/
+.registration .registration-flexbox {
   display: flex;
   min-height: 100vh;
   justify-content: center;
   align-items: stretch;
 }
 
-.registration-card {
+.registration .registration-card {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -28,7 +30,7 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-.login-side {
+.registration .login-side {
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -46,20 +48,20 @@
   background-position: center;
 }
 
-.login-side h2,
-.login-side p {
+.registration .login-side h2,
+.registration .login-side p {
   margin-bottom: 20px;
   margin-left: 10px;
   color: white;
 }
 
-.login-button {
+.registration .login-button {
   background-color: transparent;
   color: white;
   border: 2px solid white;
 }
 
-.login-button:hover {
+.registration .login-button:hover {
   background-color: white;
   color: var(--color-accent);
 }
@@ -69,6 +71,7 @@
   padding: 50px;
 }
 
+/*
 .home button {
   border: none;
   border-radius: 5px;
@@ -85,10 +88,10 @@
   font-size: 12px;
 }
 
-
 .create-side h2 {
   margin-bottom: 50px;
 }
+*/
 
 .progress-bar {
   display: flex;
@@ -147,6 +150,7 @@
   background-color: lightgreen;
 }
 
+/*
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -154,13 +158,16 @@
   margin-top: 10px;
 }
 
+
 .input-group {
   margin-bottom: 20px;
 }
 
+
 .password-container {
   position: relative;
 }
+
 
 .password-container input {
   padding-right: 60px;
@@ -178,6 +185,7 @@
   cursor: pointer;
 }
 
+*/
 .user-step {
   display: none;
 }
@@ -199,6 +207,7 @@
   }
 }
 
+/*
 .input-group label {
   display: block;
   margin-bottom: 5px;
@@ -223,6 +232,8 @@
   outline: none;
   border-color: var(--color-accent);
 }
+*/
+
 
 .hide {
   display: none;
@@ -254,6 +265,8 @@
   padding: 60px 20px;
 }
 
+
+/*
 @media (max-width: 900px) {
   .registration-card {
     flex-direction: column;
@@ -268,3 +281,4 @@
     height: auto;
   }
 }
+*/
