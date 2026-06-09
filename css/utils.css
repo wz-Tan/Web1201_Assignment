@@ -2,8 +2,7 @@
 
 /* Wrap this for all content aside for header and footer */
 .container {
-    margin: 0 20px;
-    padding: 20px;
+    padding: 20px 40px;
     min-height: 100vh;
     width: 100%;
 }
@@ -46,6 +45,7 @@ footer .right {
     padding: 20px 0;
     grid-template-columns: 8fr 2fr;
     gap: 30px;
+    width: 100%;
 }
 
 .products #title {
@@ -58,7 +58,6 @@ footer .right {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     min-width: 0;
-    overflow: hidden;
 }
 
 .products .item {
@@ -176,7 +175,9 @@ footer .right {
 .dropdown-item {
     padding: 2px;
     cursor: pointer;
-    transition: background-color 0.2 ease, color 0.2 ease;
+    transition:
+        background-color 0.2 ease,
+        color 0.2 ease;
     color: var(--color-text);
 }
 
@@ -275,13 +276,13 @@ footer .right {
 }
 
 .ratings span:hover,
-.ratings span:hover~span {
+.ratings span:hover ~ span {
     color: orange;
     transform: scale(1.3);
 }
 
 .ratings span[data-clicked],
-.ratings span[data-clicked]~span {
+.ratings span[data-clicked] ~ span {
     color: orange;
 }
 
@@ -302,7 +303,7 @@ footer .right {
     padding: 40px 30px;
 }
 
-.about-container>h1 {
+.about-container > h1 {
     text-align: center;
     margin-bottom: 50px;
     padding-bottom: 10px;
