@@ -1,8 +1,6 @@
 let currentStep = 1;
 const previousButton = document.querySelector(".js-previous-button");
 const nextButton = document.querySelector(".js-next-button");
-const loginButton = document.querySelector(".js-login-button");
-const homeButton = document.querySelector(".js-home-button");
 const progressFill = document.querySelector(".progress-fill");
 const usernameInput = document.getElementById("username");
 const emailInput = document.getElementById("email");
@@ -88,13 +86,6 @@ function validatePassword() {
 
 ///////////////////////
 
-loginButton.addEventListener("click", () => {
-  window.location.href = "login.html";
-});
-
-homeButton.addEventListener("click", () => {
-  window.location.href = "index.html";
-});
 
 
 function showPreviousButton() {

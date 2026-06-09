@@ -35,7 +35,7 @@
 }
 
 /* Class for Transitions - Use JS to load so first run doesnt happen*/
-.transition-allowed *{
+.transition-allowed * {
     transition:
         background-color 0.3s ease,
         color 0.3s ease;

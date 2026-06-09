@@ -7,21 +7,26 @@
   <title>Register</title>
   <link rel="stylesheet" href="./css/fonts.css" />
   <link rel="stylesheet" href="./css/styles.css" />
-  <link rel="stylesheet" href="./css/registration.css" />
+  <link rel="stylesheet" href="./css/utils.css" />
 </head>
 
 <body>
-  <div class="fullscreen-container registration-flexbox">
-    <div class="registration-card">
-      <div class="login-side">
+  <div class="fullscreen-container registration-flexbox registration">
+    <div class="registration-card registration">
+      <div class="login-side registration">
         <h2 class="text-large text-bold">Welcome to Sigma Store!</h2>
         <p class="text-small">Already have an account? Log in now!</p>
-
-        <button class="btn-primary login-button text-semibold js-login-button">Log in</button>
+        <a href="index.html">
+          <button class="btn-primary login-button registration text-semibold js-login-button">Log in</button>
+        </a>
       </div>
       <div class="create-side">
         <div class="home">
-          <button class="btn-primary js-home-button">&#8962;</button>
+          <a href="/products.html">
+            <button class="btn-primary js-home-button">
+              &#8962;
+            </button>
+          </a>
           <span>Home Page</span>
         </div>
         <h2 class="text-large text-bold create-text">Create new account</h2>
