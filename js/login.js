@@ -61,7 +61,7 @@ form.addEventListener("submit", (event) => {
 
   if (account) {
     console.log("success");
-    window.location.replace("products.html");
+    window.location.replace("home.html");
   } else {
     console.log("fail");
     const loginFailMessage = document.querySelector(".js-login-fail-message");

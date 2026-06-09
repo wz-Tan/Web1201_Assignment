@@ -7,10 +7,17 @@
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/fonts.css" />
         <link rel="stylesheet" href="./css/utils.css" />
+        <script>
+            // Load saved theme on page load (carry between pages)
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        </script>
     </head>
     <body>
         <header>
-            <a href="./products.html" class="text-large text-bold text-accent"
+            <a href="./home.html" class="text-large text-bold text-accent"
                 >SigmaStore</a
             >
             <nav>
@@ -53,5 +60,6 @@
                 </nav>
             </div>
         </footer>
+        <script src="./js/theme.js"></script>
     </body>
 </html>
