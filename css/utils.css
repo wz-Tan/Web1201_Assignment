@@ -39,6 +39,11 @@ footer .right {
     flex: 1;
 }
 
+/* Home Page */
+.home {
+
+}
+
 /* Products Page Grid */
 .products .product-grid {
     display: grid;
