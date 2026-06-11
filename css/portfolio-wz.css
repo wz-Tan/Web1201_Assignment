@@ -1,7 +1,13 @@
+.container {
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
 .hero {
     display: grid;
     grid-template-columns: 4fr 6fr;
-    padding: 150px;
     gap: 100px;
 }
 
@@ -11,17 +17,23 @@
 }
 
 .hero .portrait img {
-    border-radius: 15px;
+    border-radius: 50px 25px;
     box-shadow: 0px 3px 5px var(--color-text);
     flex: 8;
     object-fit: cover;
     width: 100%;
+    aspect-ratio: 1/1;
 }
 
 .hero .portrait figcaption {
     flex: 1;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+    transition: color 0.2s ease-in-out;
+}
+
+.hero .portrait figcaption:hover {
+    color: var(--color-text);
 }
 
 .hero .description {
@@ -65,3 +77,39 @@
 .hero .description .links img:hover {
     opacity: 0.5;
 }
+
+/* Education */
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education .education-container-divider {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 3px;
+    border: 2px solid var(--color-text);
+    padding: 15px 20px;
+    border-radius: 15px;
+    width: 100%;
+    transition: transform 0.2s ease-out;
+}
+
+
+.education-container:hover {
+    transform: scale(1.02);
+}
+
+.education-container h3{
+    opacity: 0.7;
+}
+

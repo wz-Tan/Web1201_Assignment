@@ -46,3 +46,20 @@ a {
 .text-light {
     font-weight: 300;
 }
+
+/* Positioning */
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.text-end {
+    text-align: end;
+}
