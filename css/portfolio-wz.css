@@ -2,7 +2,7 @@
     padding: 150px;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
 }
 
 .hero {
@@ -43,12 +43,12 @@
 }
 
 /* Underline Effect Again */
-.hero .description h1 {
+.underline-effect {
     position: relative;
     width: fit-content;
 }
 
-.hero .description h1::after {
+.underline-effect::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -59,7 +59,7 @@
     transition: width 0.3s ease;
 }
 
-.hero .description h1:hover::after {
+.underline-effect:hover::after {
     width: 100%;
 }
 
@@ -79,10 +79,15 @@
 }
 
 /* Education */
-.education {
+.education,
+.technical {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+}
+
+.education .underline-effect {
+    align-self: center;
 }
 
 .education .education-container-divider {
@@ -104,12 +109,12 @@
     transition: transform 0.2s ease-out;
 }
 
-
 .education-container:hover {
     transform: scale(1.02);
 }
 
-.education-container h3{
+.education-container h3 {
     opacity: 0.7;
 }
 
+/* Technical Skills*/
