@@ -42,27 +42,6 @@
     gap: 30px;
 }
 
-/* Underline Effect Again */
-.underline-effect {
-    position: relative;
-    width: fit-content;
-}
-
-.underline-effect::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: var(--color-accent);
-    transition: width 0.3s ease;
-}
-
-.underline-effect:hover::after {
-    width: 100%;
-}
-
 .hero .description .links {
     display: flex;
     gap: 15px;
