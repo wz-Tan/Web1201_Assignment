@@ -57,6 +57,20 @@
     opacity: 0.5;
 }
 
+.hero .description button {
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: fit-content;
+    height: fit-content;
+    transition: border-radius 0.1s linear;
+    background-color: var(--color-background);
+    border-color: var(--color-text);
+}
+
+.hero .description button:hover {
+    border-radius: 15px;
+}
+
 /* Education */
 .education,
 .technical {
