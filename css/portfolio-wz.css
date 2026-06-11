@@ -1,0 +1,67 @@
+.hero {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    padding: 150px;
+    gap: 100px;
+}
+
+.hero .portrait {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.hero .portrait img {
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px var(--color-text);
+    flex: 8;
+    object-fit: cover;
+    width: 100%;
+}
+
+.hero .portrait figcaption {
+    flex: 1;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.hero .description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Underline Effect Again */
+.hero .description h1 {
+    position: relative;
+    width: fit-content;
+}
+
+.hero .description h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+.hero .description h1:hover::after {
+    width: 100%;
+}
+
+.hero .description .links {
+    display: flex;
+    gap: 15px;
+}
+
+.hero .description .links img {
+    width: 75px;
+    height: 75px;
+    transition: opacity 0.15s ease-in;
+}
+
+.hero .description .links img:hover {
+    opacity: 0.5;
+}

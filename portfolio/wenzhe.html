@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About Us - Tan Wen Zhe</title>
+        <title>Tan Wen Zhe</title>
         <link rel="stylesheet" href="../css/styles.css" />
         <link rel="stylesheet" href="../css/fonts.css" />
         <link rel="stylesheet" href="../css/utils.css" />
+        <link rel="stylesheet" href="../css/portfolio-wz.css" />
         <script>
             // Load saved theme on page load (carry between pages)
             const savedTheme = localStorage.getItem("theme");
@@ -33,7 +34,51 @@
             </div>
         </header>
         <main class="container">
-            <h1 class="text-large">About Me - Tan Wen Zhe</h1>
+            <section class="hero">
+                <figure class="portrait">
+                    <img
+                        alt="Professional Portrait of Wen Zhe"
+                        src="../assets/images/wz.JPG"
+                    />
+                    <figcaption class="text-extra-large text-bold text-accent">
+                        Tan Wen Zhe
+                    </figcaption>
+                </figure>
+                <div class="description">
+                    <h1 class="text-extra-large text-bold">
+                        Student Developer
+                    </h1>
+                    <p class="text-medium">
+                        I'm Wen Zhe, a Computer Science student at Sunway
+                        University. <br /><br />
+                        I build across the full stack — React and Next.js on the
+                        front, Python and Flask on the back, Flutter for mobile
+                        — sharpened through hackathons and real open-source
+                        contributions like Omni-Tools. <br /><br />Always
+                        chasing the next interesting problem to build.
+                    </p>
+                    <div class="links">
+                        <a href="https://github.com/wz-Tan" target="_blank">
+                            <img
+                                alt="Github Link"
+                                src="../assets/icons/github.png"
+                            />
+                        </a>
+                        <a href="https://github.com/wz-Tan" target="_blank">
+                            <img
+                                alt="LinkedIn Link"
+                                src="../assets/icons/linkedin.png"
+                            />
+                        </a>
+                        <a href="mailto:wztan.dev@gmail.com" target="_blank">
+                            <img
+                                alt="Email Link"
+                                src="../assets/icons/gmail.webp"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div class="left">
@@ -60,6 +105,6 @@
                 </nav>
             </div>
         </footer>
-        <script src="./js/theme.js"></script>
+        <script src="../js/theme.js"></script>
     </body>
 </html>
