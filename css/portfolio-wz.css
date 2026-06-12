@@ -197,3 +197,14 @@
     width: 70%;
     background-color: #ff9800;
 }
+
+/*Projects*/
+.projects .underline-effect {
+    margin: 0 auto;
+}
+
+.projects .container-divisor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
