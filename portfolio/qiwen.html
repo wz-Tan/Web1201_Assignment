@@ -1,11 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Jen Qi Wen</title>
+	<link rel="stylesheet" href="../css/styles.css" />
+	<link rel="stylesheet" href="../css/fonts.css" />
+	<link rel="stylesheet" href="../css/utils.css" />
+	<link rel="stylesheet" href="../css/portfolio-qw.css	" />
+	<script>
+		// Load saved theme on page load (carry between pages)
+		const savedTheme = localStorage.getItem("theme");
+		if (savedTheme === "dark") {
+			document.documentElement.classList.add("dark");
+		}
+	</script>
 </head>
+
 <body>
-	
+	<header>
+		<a href="./home.html" class="text-large text-bold text-accent">SigmaStore</a>
+		<nav>
+			<ul class="text-medium">
+				<li><a href="products.html">Products</a></li>
+				<li><a href="review.html">Review</a></li>
+				<li><a href="about-us.html">About Us</a></li>
+			</ul>
+		</nav>
+		<div class="right">
+			<button class="text-medium btn-theme">🌙</button>
+			<h1 class="text-medium">Sign Out</h1>
+		</div>
+	</header>
+	<main class="container">
+
+		<div class="personal-bio-container">
+
+			<div class="profile">
+				<div class="name">
+					<h1 class="text-bold">Jen Qi Wen</h1>
+				</div>
+				<div class="profile-picture">
+					<img src="../assets/images/qw.jpg" class="qw-image" />
+				</div>
+			</div>
+
+			<div class="personal-bio">
+				<div class="bio">
+					<h2 class="text-large">Greetings, it' me</h2>
+					<h1 class="text-large text-semibold">Jen Qi Wen</h1>
+					<h2 class="text-large">And I am a <span class="text-semibold">Computer Science Student</span></h2>
+					<p class="text-medium">Recently, I am learning HTML, CSS and JavaScript which helping me in web development.
+						While free, I am
+						diving into React as well. I really enjoy turning idea into functional application!</p>
+				</div>
+				<div class="download-cv">
+					<button class="download-cv-button btn-primary">Download CV</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="education-level-container">
+			<div class="education-level">
+				<div class="secondary">
+					<h1>
+						Certificate: SPM
+					</h1>
+					<h1>
+						School: SMK Layang-Layang
+					</h1>
+					<h1>
+						Resutls: 5A+ 3A 2A-
+					</h1>
+				</div>
+				<div class="logo">
+					<img src="../assets/images/smk_layang-layang.jpg" class="school-logo" />
+				</div>
+			</div>
+			<div class="education-level">
+				<div class="foundation">
+					<h1>
+						Programme: MUFY
+					</h1>
+					<h1>
+						School: Sunway College JB
+					</h1>
+					<h1>
+						Resutls: 91.50% / CGPA 4.00
+					</h1>
+				</div>
+				<div class="logo">
+					<img src="../assets/images/sunway_college_jb_logo.jpg" class="school-logo" />
+				</div>
+			</div>
+			<div class="education-level">
+				<div class="degree">
+					<h1>
+						Course: Bachelor Degree in Computer Science
+					</h1>
+					<h1>
+						School: Sunway University
+					</h1>
+					<h1>
+						Resutls: CGPA 3.94
+					</h1>
+				</div>
+				<div class="logo"><img src="../assets/images/sunway_university.png" class="school-logo"></div>
+			</div>
+		</div>
+
+		<div class="technical-skills-container">
+			<div class="technical-skill">
+				<div class="progress-bar">
+					<div class="progress-fill"></div>
+					<div class="circles">
+						<div class=" circle active">1</div>
+						<div class="circle">2</div>
+						<div class="circle">3</div>
+						<div class="circle">4</div>
+					</div>
+				</div>
+				<div class="next-previous-buttons">
+					<button class="previous-button btn-primary">Previous</button>
+					<button class="next-button btn-primary">Next</button>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<footer>
+		<div class="left">
+			<!-- Main Text -->
+			<div>
+				<a href="../home.html" class="text-large text-bold">SigmaStore</a>
+				<h2 class="text-medium">
+					Bringing you the best products since 2020.
+				</h2>
+			</div>
+
+			<!-- Copyright -->
+			<p class="text-small text-light">
+				<em>&copy; SigmaStore, 2026</em>
+			</p>
+		</div>
+		<div class="right">
+			<nav>
+				<ul class="text-large">
+					<li><a href="products.html">Products</a></li>
+					<li><a href="review.html">Review</a></li>
+					<li><a href="about-us.html">About Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+	<script src="../js/theme.js"></script>
 </body>
+
 </html>
