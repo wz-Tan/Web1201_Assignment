@@ -258,17 +258,84 @@
         display: none;
     }
 
+    /* Avoid Choppy Elements */
+    .education-container,
+    .technical-container,
+    .project-container {
+        page-break-inside: avoid;
+    }
+
+    /*Project Highlights header is clean now*/
+    .projects h1 {
+        page-break-before: always;
+    }
+
+    /* Font Sizes */
+    .text-extra-large {
+        font-size: 24px;
+    }
+
+    .text-large {
+        font-size: 18px;
+    }
+
+    .text-medium {
+        font-size: 14px;
+    }
+
+    .text-small {
+        font-size: 12px;
+    }
+
     .container {
         padding: 20px;
     }
 
-    * {
-        page-break-inside: avoid;
-        gap: 5px;
+    .education,
+    .technical,
+    .projects {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    section {
-        page-break-before: auto;
-        page-break-after: auto;
+    /* hero */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero figcaption {
+        display: none;
+    }
+
+    .hero .portrait img {
+        flex: 1;
+        width: 400px;
+        height: 400px;
+    }
+
+    /* Technicals */
+    .progress {
+        print-color-adjust: exact;
+    }
+
+    .progress-fill {
+        print-color-adjust: exact;
+    }
+
+    /* Project Highlights */
+    .projects .container-divisor .project-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+    }
+
+    /* Remove the github image*/
+    .projects .description .links img {
+        display: none;
     }
 }
