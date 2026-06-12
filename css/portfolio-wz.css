@@ -69,6 +69,7 @@
 
 .hero .description button:hover {
     border-radius: 15px;
+    cursor: pointer;
 }
 
 /* Education */
@@ -83,7 +84,7 @@
     align-self: center;
 }
 
-.education .education-container-divider {
+.education .container-divisor {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -111,3 +112,88 @@
 }
 
 /* Technical Skills*/
+.technical .container-divisor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.technical .technical-container {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 10px var(--color-text);
+    transition: transform 0.1s linear;
+}
+
+.technical .technical-container:hover {
+    transform: translateY(-20px);
+}
+
+.technical .technical-container .skill {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.technical .technical-container .skill .proficiency-tag {
+    display: flex;
+    justify-content: space-between;
+}
+
+.technical .technical-container .skill .progress {
+    width: 100%;
+    border-radius: 30px;
+    height: 10px;
+    background-color: rgba(var(--color-text-rgb), 0.9);
+}
+
+.technical .technical-container .skill .progress .progress-fill {
+    height: 100%;
+    border-radius: 30px;
+}
+
+/*languages */
+#typescript {
+    width: 70%;
+    background-color: #3178c6;
+}
+
+#javascript {
+    width: 80%;
+    background-color: #f7df1e;
+}
+
+#kotlin {
+    width: 60%;
+    background-color: #7f52ff;
+}
+
+/* framework */
+#react {
+    width: 80%;
+    background-color: #61dafb;
+}
+#tailwind {
+    width: 75%;
+    background-color: #06b6d4;
+}
+#fastapi {
+    width: 70%;
+    background-color: #009688;
+}
+/* tools */
+#github {
+    width: 90%;
+    background-color: #6e40c9;
+}
+#docker {
+    width: 50%;
+    background-color: #2496ed;
+}
+#firebase {
+    width: 70%;
+    background-color: #ff9800;
+}
