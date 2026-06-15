@@ -20,7 +20,6 @@ main.container {
 /*  Section label  */
 .eyebrow {
     display: inline-block;
-    font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -53,7 +52,6 @@ main.container {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
-    font-size: 40px;
     font-weight: 800;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -219,7 +217,6 @@ main.container {
 }
 
 .skill-group-title {
-    font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-text);
@@ -238,7 +235,6 @@ main.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.875rem;
     padding: 4px 8px;
     border-radius: 4px;
     transition: background 0.3s ease, transform 0.2s ease;
