@@ -17,21 +17,18 @@ a {
     color: var(--color-accent);
 }
 
-/* Font Sizes */
+/* Font Sizes (Default is Mobile) */
 .text-extra-large {
-    font-size: 40px;
-}
-
-.text-large {
-    font-size: 32px;
-}
-
-.text-medium {
     font-size: 24px;
 }
-
-.text-small {
+.text-large {
+    font-size: 20px;
+}
+.text-medium {
     font-size: 16px;
+}
+.text-small {
+    font-size: 13px;
 }
 
 /* Font Weights */
@@ -62,4 +59,36 @@ a {
 
 .text-end {
     text-align: end;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .text-extra-large {
+        font-size: 32px;
+    }
+    .text-large {
+        font-size: 26px;
+    }
+    .text-medium {
+        font-size: 20px;
+    }
+    .text-small {
+        font-size: 14px;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    .text-extra-large {
+        font-size: 40px;
+    }
+    .text-large {
+        font-size: 32px;
+    }
+    .text-medium {
+        font-size: 24px;
+    }
+    .text-small {
+        font-size: 16px;
+    }
 }

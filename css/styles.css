@@ -87,6 +87,17 @@ header .right .btn-theme:hover {
     cursor: pointer;
 }
 
+/* Sign Out Effect */
+header .sign-out {
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+}
+
+header .sign-out:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
 /* Footer */
 footer {
     width: 100%;
