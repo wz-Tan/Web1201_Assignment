@@ -152,14 +152,16 @@
 .technical-skills {
   display: grid;
   grid-template-rows: auto 1fr;
-  border: 2px dotted black;
   row-gap: 20px;
 }
 
 .technical-skills-header {
   display: flex;
+  padding-left: 20px;
   gap: 20px;
   align-items: center;
+  background-color: rgb(27, 155, 149);
+  border-radius: 20px;
 }
 
 .coding-text {
@@ -175,8 +177,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  border: red solid 1px;
-  row-gap: 100px;
+  row-gap: 40px;
 }
 
 .technical-skill img {
@@ -184,20 +185,86 @@
   width: 100px;
 }
 
-.progress-bar {
-  width: 200px;
-  height: 20px;
-  border: black 1px solid;
-  /* remove default border */
+.programming-language {
+  width: 90%;
+  display: flex;
+  border-radius: 10px;
+  gap: 20px;
+  padding: 30px;
+  box-shadow: 2px 5px 5px rgba(90, 241, 3, 0.471);
+}
+
+.programming-language:hover .level-progress-fill {
+  clip-path: inset(0 0 0 0);
+}
+
+.level-progress-section {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+}
+
+
+.level-progress-bar {
+  overflow: hidden;
+  width: 80%;
+  height: 35%;
+  border: 2px solid black;
   border-radius: 20px;
 }
 
-.progress-fill {
+.level-progress-fill {
   height: 100%;
   border-radius: 20px;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.5s ease;
 }
 
+.level-progress-fill.html {
+  width: 75%;
+  background-color: #E34F26;
+}
 
+.level-progress-fill.css {
+  width: 60%;
+  background-color: #1572B6;
+}
+
+.level-progress-fill.javascript {
+  width: 80%;
+  background-color: #F7DF1E;
+}
+
+.level-progress-fill.react {
+  width: 55%;
+  background-color: #61DAFB;
+}
+
+.level-progress-fill.typescript {
+  width: 50%;
+  background-color: #3178C6;
+}
+
+.level-progress-fill.git {
+  width: 75%;
+  background-color: #F05032;
+}
+
+.level-progress-fill.python {
+  width: 88%;
+  background-color: #3776AB;
+}
+
+.level-progress-fill.java {
+  width: 45%;
+  background-color: #ED8B00;
+}
+
+.level-progress-fill.cpp {
+  width: 30%;
+  background-color: #00599C;
+}
 
 /*//////////////////////////////////*/
 
