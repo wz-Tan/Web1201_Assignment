@@ -102,25 +102,21 @@ header .sign-out:hover {
 footer {
     width: 100%;
     margin-top: auto;
-    padding: 50px;
+    padding: 30px;
     display: flex;
+    flex-direction: column;
     box-shadow: 0 -4px 10px rgba(var(--color-accent-rgb), 0.5);
     background-color: var(--color-accent);
 }
 
-footer .left {
-    flex: 3;
+footer .company-tag {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-footer .right {
-    flex: 1;
+    margin-top: 10px;
 }
 
 footer nav li {
-    margin: 10px 0;
+    margin: 5px 0;
     position: relative;
 }
 
@@ -156,4 +152,30 @@ footer h2,
 footer p,
 footer em {
     color: var(--color-text);
+}
+
+/* Media Query */
+@media (min-width: 768px) {
+    /* Footer */
+    footer {
+        flex-direction: row-reverse;
+        padding: 50px;
+    }
+
+    footer nav {
+        flex: 1;
+    }
+
+    footer nav li {
+        margin: 10px 0;
+    }
+
+    footer .company-tag {
+        flex: 3;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1024px) {
 }

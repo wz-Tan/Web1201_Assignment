@@ -19,16 +19,16 @@ a {
 
 /* Font Sizes (Default is Mobile) */
 .text-extra-large {
-    font-size: 24px;
-}
-.text-large {
     font-size: 20px;
 }
+.text-large {
+    font-size: 18px;
+}
 .text-medium {
-    font-size: 16px;
+    font-size: 14px;
 }
 .text-small {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 /* Font Weights */
