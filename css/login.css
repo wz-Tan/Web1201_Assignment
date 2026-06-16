@@ -11,6 +11,8 @@
   min-height: 100vh;
 }
 
+/* left part */
+
 .registration-flexbox {
   display: flex;
   min-height: 80vh;
@@ -52,6 +54,26 @@
   color: white;
 }
 
+.sign-in-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.sign-in-button:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+/*///////////////////////////////////////////*/
+/* right part */
+
+.login-side {
+  flex: 3;
+  padding: 50px;
+}
+
 .login-fail-message {
   display: none;
 }
@@ -73,10 +95,6 @@
   font-size: 17px;
 }
 
-.login-side {
-  flex: 3;
-  padding: 50px;
-}
 
 .home button {
   border: none;
@@ -160,21 +178,35 @@
   border: none;
 }
 
-.index .login-button:hover {
+.index.login-button:hover {
   opacity: 0.8;
 }
 
+/*///////////////////////////////////////////*/
+
+/* responsive */
 @media (max-width: 900px) {
+  body {
+    height: 100%;
+  }
+
+  .welcome-side {
+    position: relative;
+    min-height: 40vh;
+  }
+
   .registration-card {
     flex-direction: column;
   }
 
-  .login-side,
-  .welcome-side {
+  .login-side {
+    display: flex;
+    flex-direction: column;
     padding: 30px;
+    min-height: 60vh;
+    justify-content: center;
   }
 
-  .login-side {
-    height: auto;
-  }
 }
+
+/*///////////////////////////////////////////*/
