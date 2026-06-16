@@ -1,0 +1,84 @@
+/* About us Page */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background-color: var(--color-background);
+}
+
+.about-container > h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.about-container section {
+    margin-bottom: 60px;
+    line-height: 1.8;
+}
+
+.about-container section h2 {
+    margin-bottom: 15px;
+    padding: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container section p {
+    color: var(--color-text);
+    word-spacing: 0.05em;
+    padding: 8px;
+    text-align: justify;
+}
+
+/* About us page - Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.team-member a h3 {
+    margin-bottom: 10px;
+    /*color: var(--color-accent);*/
+}
+
+.team-member a p {
+    color: black;
+    line-height: 1.6;
+}
+
+.team-member a h3 {
+    color: var(--color-accent);
+}
+
+.student-id {
+    font-size: 12px;
+    font-weight: 300;
+    color: #999;
+    margin-left: 10px;
+}
+
+.team-member:hover {
+    box-shadow: 0 4px 20px rgba(var(--color-accent-rgb), 0.5);
+    cursor: pointer;
+}
+
+.team-member a h3 {
+    color: var(--color-accent);
+}
