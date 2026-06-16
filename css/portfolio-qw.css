@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 100px;
-  box-shadow: 10px 2px 25px rgba(124, 215, 70, 0.2);
+  box-shadow: 10px 2px 25px rgba(69, 152, 247, 0.2);
 }
 
 
@@ -113,11 +113,11 @@
   /* background-color: lightgray; */
   display: flex;
   position: relative;
-  box-shadow: 2px 2px 10px rgba(124, 215, 70, 0.2);
+  box-shadow: 2px 2px 10px rgba(69, 152, 247, 0.2);
 }
 
 .education-level:hover {
-  background-color: rgba(90, 241, 3, 0.471);
+  background-color: var(--color-accent);
   transform: translateY(-5%);
   transition: transform ease 0.3s;
 }
@@ -191,25 +191,25 @@
   border-radius: 10px;
   gap: 20px;
   padding: 30px;
-  box-shadow: 2px 5px 5px rgba(90, 241, 3, 0.471);
+  box-shadow: 2px 5px 5px rgba(69, 152, 247, 0.2);
 }
 
-.programming-language:hover .level-progress-fill {
-  clip-path: inset(0 0 0 0);
+.programming-language:hover {
+  color: black;
+
 }
 
 .level-progress-section {
   width: 100%;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr 1fr;
   align-items: center;
 }
-
 
 .level-progress-bar {
   overflow: hidden;
   width: 80%;
-  height: 35%;
+  height: 65%;
   border: 2px solid black;
   border-radius: 20px;
 }
@@ -218,7 +218,13 @@
   height: 100%;
   border-radius: 20px;
   clip-path: inset(0 100% 0 0);
-  transition: clip-path 0.5s ease;
+  animation: fillBar 1s ease forwards;
+}
+
+@keyframes fillBar {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .level-progress-fill.html {
