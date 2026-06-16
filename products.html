@@ -53,7 +53,6 @@
             <h1 id="title" class="text-bold text-extra-large">All Products</h1>
             <!--Grid that splits left for sorting and right for products-->
             <div class="product-grid">
-                <section class="items-grid"></section>
                 <section class="items-filter">
                     <!--Search for An Item-->
                     <input
@@ -64,41 +63,63 @@
                     />
 
                     <!--Sort By Pricing-->
-                    <h2 class="text-large text-bold">Sort By</h2>
-                    <div class="pricing-radio text-medium">
-                        <input
-                            type="radio"
-                            name="pricing"
-                            value="ascending"
-                            checked
-                        />
-                        <label>Price Ascending</label><br />
+                    <div class="radio-div">
+                        <div class="category-filter">
+                            <!--Sort By Categories-->
+                            <h2 class="text-large text-bold">Categories</h2>
+                            <div class="category-radio text-medium">
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="All"
+                                    checked
+                                />
+                                <label>All</label><br />
 
-                        <input type="radio" name="pricing" value="descending" />
-                        <label>Price Descending</label><br />
-                    </div>
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="Men's"
+                                />
+                                <label>Men's</label><br />
 
-                    <!--Sort By Categories-->
-                    <h2 class="text-large text-bold">Categories</h2>
-                    <div class="category-radio text-medium">
-                        <input
-                            type="radio"
-                            name="category"
-                            value="All"
-                            checked
-                        />
-                        <label>All</label><br />
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="Women's"
+                                />
+                                <label>Women's</label><br />
 
-                        <input type="radio" name="category" value="Men's" />
-                        <label>Men's</label><br />
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="Unisex"
+                                />
+                                <label>Unisex</label><br />
+                            </div>
+                        </div>
+                        <div class="price-filter">
+                            <h2 class="text-large text-bold">Sort By</h2>
+                            <div class="pricing-radio text-medium">
+                                <input
+                                    type="radio"
+                                    name="pricing"
+                                    value="ascending"
+                                    checked
+                                />
+                                <label>Price Ascending</label><br />
 
-                        <input type="radio" name="category" value="Women's" />
-                        <label>Women's</label><br />
-
-                        <input type="radio" name="category" value="Unisex" />
-                        <label>Unisex</label><br />
+                                <input
+                                    type="radio"
+                                    name="pricing"
+                                    value="descending"
+                                />
+                                <label>Price Descending</label><br />
+                            </div>
+                        </div>
                     </div>
                 </section>
+                <section class="items-grid"></section>
             </div>
         </main>
         <footer>
