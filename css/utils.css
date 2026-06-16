@@ -24,8 +24,10 @@
     transition: width 0.3s ease;
 }
 
-.underline-effect:hover::after {
-    width: 100%;
+@media (min-width: 1024px) {
+    .underline-effect:hover::after {
+        width: 100%;
+    }
 }
 
 /* Hero Section */
@@ -368,7 +370,6 @@
     color: var(--color-accent);
 }
 
-
 /* animations */
 @keyframes fadeInUp {
     from {
@@ -415,12 +416,12 @@
 }
 
 @keyframes slide-right {
-  from {
-    margin-left: -100%;
-  }
-  to {
-    margin-left: 0%;
-  }
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
 }
 
 @keyframes slideInBar {

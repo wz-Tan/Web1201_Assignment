@@ -120,30 +120,6 @@ footer nav li {
     position: relative;
 }
 
-/* Shared Underline Effect for Header and Footer */
-/* Underline Effect */
-header nav a::after,
-footer nav a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-accent);
-    transition: width 0.3s ease;
-}
-
-footer nav a::after {
-    background-color: var(--color-text);
-}
-
-/* On Hover Set With to Full */
-header nav a:hover::after,
-footer nav a:hover::after {
-    width: 100%;
-}
-
 /* Footer Behaviour */
 footer,
 footer a,
@@ -174,6 +150,10 @@ footer em {
         flex: 3;
         justify-content: space-between;
         margin-top: 0;
+    }
+
+    footer .underline-effect:after {
+        background-color: var(--color-text);
     }
 }
 
