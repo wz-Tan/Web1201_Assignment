@@ -14,3 +14,6 @@ window.addEventListener("load", () => {
   const savedTheme = localStorage.getItem("theme");
   themeButton.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 });
+
+//  For Header Usage 
+const headerButton = document.querySelector(".btn-header")

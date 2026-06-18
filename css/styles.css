@@ -50,52 +50,61 @@ body {
 
 /* Header */
 header {
-    width: 100%;
-    background-color: var(--color-background);
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 4px 10px rgba(var(--color-accent-rgb), 0.5);
+    width: 100vw;
+    height: fit-content;
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 100;
 }
 
-header nav li {
-    display: inline;
-    margin: 0px 12px;
-    position: relative;
-}
-
-header .right {
-    display: flex;
-    gap: 24px;
+header .main-compartment {
+    background-color: var(--color-background);
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 10px rgba(var(--color-accent-rgb), 0.5);
 }
 
 /* Theme Switch Button */
-header .right .btn-theme {
+header .btn-theme {
+    width: fit-content;
+    height: fit-content;
     padding: 5px 15px;
     border-radius: 30px;
     background-color: var(--color-text);
+    margin: 0 auto;
     transition: opacity 0.1s ease-in-out;
 }
 
-header .right .btn-theme:hover {
-    opacity: 0.75;
-    cursor: pointer;
+/* Trigger Button */
+header .btn-header {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-left: auto;
+    border: 1px solid var(--color-text);
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
-/* Sign Out Effect */
-header .sign-out {
-    opacity: 1;
-    transition: opacity 0.1s ease-in;
+/* Dropdown */
+header .dropdown {
+    position: relative;
+    top: 5px;
 }
 
-header .sign-out:hover {
-    cursor: pointer;
-    opacity: 0.5;
+header .dropdown ul {
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(var(--color-background-rgb), 0.7);
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Footer */
@@ -132,6 +141,56 @@ footer em {
 
 /* Media Query */
 @media (min-width: 768px) {
+    /*Header*/
+    header {
+        width: 100%;
+        background-color: var(--color-background);
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 10px rgba(var(--color-accent-rgb), 0.5);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    header nav li {
+        display: inline;
+        margin: 0px 12px;
+        position: relative;
+    }
+
+    header .right {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+
+    /* Theme Switch Button */
+    header .right .btn-theme {
+        padding: 5px 15px;
+        border-radius: 30px;
+        background-color: var(--color-text);
+        transition: opacity 0.1s ease-in-out;
+    }
+
+    header .right .btn-theme:hover {
+        opacity: 0.75;
+        cursor: pointer;
+    }
+
+    /* Sign Out Effect */
+    header .sign-out {
+        opacity: 1;
+        transition: opacity 0.1s ease-in;
+    }
+
+    header .sign-out:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
     /* Footer */
     footer {
         flex-direction: row-reverse;
