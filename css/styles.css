@@ -57,7 +57,15 @@ header {
     z-index: 100;
 }
 
-header .main-compartment {
+header .mobile {
+    display: block;
+}
+
+header .non-mobile {
+    display: none;
+}
+
+header .mobile .main-compartment {
     background-color: var(--color-background);
     position: relative;
     z-index: 100;
@@ -71,7 +79,7 @@ header .main-compartment {
 }
 
 /* Theme Switch Button */
-header .btn-theme {
+header .mobile .btn-theme {
     width: fit-content;
     height: fit-content;
     padding: 5px 15px;
@@ -82,7 +90,7 @@ header .btn-theme {
 }
 
 /* Trigger Button */
-header .btn-header {
+header .mobile .btn-header {
     width: fit-content;
     height: fit-content;
     padding: 5px 10px;
@@ -94,11 +102,11 @@ header .btn-header {
 }
 
 /* Dropdown */
-header .header-dropdown {
+header .mobile .header-dropdown {
     display: none;
 }
 
-header .header-dropdown.active {
+header .mobile .header-dropdown.active {
     display: block;
     position: absolute;
     width: 100%;
@@ -106,7 +114,7 @@ header .header-dropdown.active {
     animation: nav-dropdown 0.2s linear;
 }
 
-header .header-dropdown ul {
+header .mobile .header-dropdown ul {
     padding: 20px;
     width: 100%;
     background-color: var(--color-background);
@@ -118,7 +126,7 @@ header .header-dropdown ul {
     box-shadow: 0 4px 10px rgba(var(--color-accent-rgb), 0.5);
 }
 
-header .header-dropdown ul li {
+header .mobile .header-dropdown ul li {
     padding: 5px;
 }
 
@@ -167,7 +175,16 @@ footer em {
 /* Media Query */
 @media (min-width: 768px) {
     /*Header*/
-    header {
+
+    header .mobile {
+        display: none;
+    }
+
+    header .non-mobile {
+        display: block;
+    }
+
+    header .non-mobile {
         width: 100%;
         background-color: var(--color-background);
         padding: 15px 30px;
@@ -180,38 +197,38 @@ footer em {
         z-index: 100;
     }
 
-    header nav li {
+    header .non-mobile nav li {
         display: inline;
         margin: 0px 12px;
         position: relative;
     }
 
-    header .right {
+    header .non-mobile .right {
         display: flex;
         gap: 24px;
         align-items: center;
     }
 
     /* Theme Switch Button */
-    header .right .btn-theme {
+    header .non-mobile .right .btn-theme {
         padding: 5px 15px;
         border-radius: 30px;
         background-color: var(--color-text);
         transition: opacity 0.1s ease-in-out;
     }
 
-    header .right .btn-theme:hover {
+    header .non-mobile .right .btn-theme:hover {
         opacity: 0.75;
         cursor: pointer;
     }
 
     /* Sign Out Effect */
-    header .sign-out {
+    header .non-mobile .sign-out {
         opacity: 1;
         transition: opacity 0.1s ease-in;
     }
 
-    header .sign-out:hover {
+    header .non-mobile .sign-out:hover {
         cursor: pointer;
         opacity: 0.5;
     }

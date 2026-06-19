@@ -17,17 +17,83 @@
     </head>
     <body>
         <header>
-            <a href="../home.html" class="text-large text-bold text-accent">SigmaStore</a>
-            <nav>
-                <ul class="text-medium">
-                    <li><a href="../products.html">Products</a></li>
-                    <li><a href="../review.html">Review</a></li>
-                    <li><a href="../about-us.html">About Us</a></li>
-                </ul>
-            </nav>
-            <div class="right">
-                <button class="text-medium btn-theme">🌙</button>
-                <h1 class="text-medium">Sign Out</h1>
+            <!--Mobile Version-->
+            <div class="mobile">
+                <div class="main-compartment">
+                    <a
+                        href="../home.html"
+                        class="store-name text-large text-bold text-accent"
+                        >SigmaStore</a
+                    >
+                    <button class="text-medium btn-theme">🌙</button>
+                    <!--Trigger Button on Mobile-->
+                    <button class="btn-header text-large text-bold">☰</button>
+                </div>
+
+                <nav class="header-dropdown">
+                    <ul class="text-large">
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../products.html"
+                                >Products</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../review.html"
+                                >Review</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../about-us.html"
+                                >About Us</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../index.html"
+                                >Sign Out</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Tablet + Laptop-->
+            <div class="non-mobile">
+                <a href="../home.html" class="text-large text-bold text-accent"
+                    >SigmaStore</a
+                >
+                <nav>
+                    <ul class="text-medium">
+                        <li>
+                            <a class="underline-effect" href="../products.html"
+                                >Products</a
+                            >
+                        </li>
+                        <li>
+                            <a class="underline-effect" href="../review.html"
+                                >Review</a
+                            >
+                        </li>
+                        <li>
+                            <a class="underline-effect" href="../about-us.html"
+                                >About Us</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <div class="right">
+                    <button class="text-medium btn-theme">🌙</button>
+                    <a href="../index.html" class="text-medium sign-out"
+                        >Sign Out</a
+                    >
+                </div>
             </div>
         </header>
 
@@ -38,20 +104,35 @@
                 </div>
                 <!-- Profile picture -->
                 <figure class="pfp">
-                    <img src="../assets/images/joe.png" alt="Joe's profile picture" width="100px" />
+                    <img
+                        src="../assets/images/joe.png"
+                        alt="Joe's profile picture"
+                        width="100px"
+                    />
                 </figure>
 
                 <!-- Body text on the right -->
                 <div class="profile-body">
                     <p class="profile-bio text-small">
-                        I am currently pursuing a degree in Computer Science at Sunway University.
-                        My interests lie in C and C++ programming, particularly in low-level systems development
-                        and performance-oriented software projects. Beyond systems programming, I also build websites
-                        and enjoy exploring various areas of software engineering.
+                        I am currently pursuing a degree in Computer Science at
+                        Sunway University. My interests lie in C and C++
+                        programming, particularly in low-level systems
+                        development and performance-oriented software projects.
+                        Beyond systems programming, I also build websites and
+                        enjoy exploring various areas of software engineering.
                     </p>
                     <div class="contact-tags">
-                        <span><a href="https://github.com/joeow06">GitHub</a></span>
-                        <span><a href="https://www.linkedin.com/in/ow-ji-joe-a3b11b343/">LinkedIn</a></span>
+                        <span
+                            ><a href="https://github.com/joeow06"
+                                >GitHub</a
+                            ></span
+                        >
+                        <span
+                            ><a
+                                href="https://www.linkedin.com/in/ow-ji-joe-a3b11b343/"
+                                >LinkedIn</a
+                            ></span
+                        >
                     </div>
                 </div>
             </section>
@@ -61,11 +142,16 @@
             <section>
                 <p class="eyebrow text-semibold text-large">Education</p>
                 <div class="edu-list">
-
                     <div class="edu-row">
                         <div>
-                            <p class="edu-institution text-medium text-semibold">Sunway University</p>
-                            <p class="edu-programme">Bachelor of Computer Science (Hons)</p>
+                            <p
+                                class="edu-institution text-medium text-semibold"
+                            >
+                                Sunway University
+                            </p>
+                            <p class="edu-programme">
+                                Bachelor of Computer Science (Hons)
+                            </p>
                             <p class="edu-result">CGPA 3.96</p>
                         </div>
                         <div class="edu-year">2025 – Present</div>
@@ -73,7 +159,11 @@
 
                     <div class="edu-row">
                         <div>
-                            <p class="edu-institution text-medium text-semibold">42KL</p>
+                            <p
+                                class="edu-institution text-medium text-semibold"
+                            >
+                                42KL
+                            </p>
                             <p class="edu-programme">42 Core Program</p>
                             <p class="edu-result"></p>
                         </div>
@@ -82,8 +172,14 @@
 
                     <div class="edu-row">
                         <div>
-                            <p class="edu-institution text-medium text-semibold">Sunway College</p>
-                            <p class="edu-programme">Foundation in Science and Technology (FIST)</p>
+                            <p
+                                class="edu-institution text-medium text-semibold"
+                            >
+                                Sunway College
+                            </p>
+                            <p class="edu-programme">
+                                Foundation in Science and Technology (FIST)
+                            </p>
                             <p class="edu-result">CGPA 4.00</p>
                         </div>
                         <div class="edu-year">2024 – 2025</div>
@@ -91,13 +187,18 @@
 
                     <div class="edu-row">
                         <div>
-                            <p class="edu-institution text-medium text-semibold">Kuen Cheng High School</p>
-                            <p class="edu-programme">Sijil Pelajaran Malaysia (SPM)</p>
+                            <p
+                                class="edu-institution text-medium text-semibold"
+                            >
+                                Kuen Cheng High School
+                            </p>
+                            <p class="edu-programme">
+                                Sijil Pelajaran Malaysia (SPM)
+                            </p>
                             <p class="edu-result">5A+ &nbsp;2A &nbsp;2B</p>
                         </div>
                         <div class="edu-year">Completed 2024</div>
                     </div>
-
                 </div>
             </section>
 
@@ -106,73 +207,143 @@
             <section>
                 <p class="eyebrow text-large">Technical Skills</p>
                 <div class="skills-grid">
-
                     <div class="skill-group">
-                        <p class="skill-group-title text-bold text-small">Languages</p>
+                        <p class="skill-group-title text-bold text-small">
+                            Languages
+                        </p>
                         <ul class="skill-items">
                             <li class="skill-item">
                                 <span>HTML &amp; CSS</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:70%; background: orange;"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 70%; background: orange"
+                                    ></div>
+                                </div>
                             </li>
                             <li class="skill-item">
                                 <span>JavaScript</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:60%; background:yellow"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 60%; background: yellow"
+                                    ></div>
+                                </div>
                             </li>
                             <li class="skill-item">
                                 <span>C/C++</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%; background: royalblue"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="
+                                            width: 95%;
+                                            background: royalblue;
+                                        "
+                                    ></div>
+                                </div>
                             </li>
                             <li class="skill-item">
                                 <span>Python</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%; background: #ffcc00"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 90%; background: #ffcc00"
+                                    ></div>
+                                </div>
                             </li>
                             <li class="skill-item">
                                 <span>Java</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:60%; background: red"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 60%; background: red"
+                                    ></div>
+                                </div>
                             </li>
                         </ul>
                     </div>
 
                     <div class="skill-group">
-                        <p class="skill-group-title text-bold text-small">Backend &amp; Tools</p>
+                        <p class="skill-group-title text-bold text-small">
+                            Backend &amp; Tools
+                        </p>
                         <ul class="skill-items">
                             <li class="skill-item">
                                 <span>Node.js</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:55% ; background: green"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 55%; background: green"
+                                    ></div>
+                                </div>
                             </li>
                             <li class="skill-item">
                                 <span>React</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:55% ; background: cyan"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 55%; background: cyan"
+                                    ></div>
+                                </div>
                             </li>
                             <li class="skill-item">
                                 <span>SQL</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:70%; background: blue"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 70%; background: blue"
+                                    ></div>
+                                </div>
                             </li>
                             <li class="skill-item">
                                 <span>Git</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%; background: #f05032"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 95%; background: #f05032"
+                                    ></div>
+                                </div>
                             </li>
                         </ul>
                     </div>
 
                     <div class="skill-group">
-                        <p class="skill-group-title text-bold text-small">Currently Learning</p>
+                        <p class="skill-group-title text-bold text-small">
+                            Currently Learning
+                        </p>
                         <ul class="skill-items">
                             <li class="skill-item">
                                 <span>Rust</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:40%; background: #f05032"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 40%; background: #f05032"
+                                    ></div>
+                                </div>
                             </li>
                             <li class="skill-item">
                                 <span>Ruby</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:30%; background: red"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="width: 30%; background: red"
+                                    ></div>
+                                </div>
                             </li>
                             <li class="skill-item">
                                 <span>Docker</span>
-                                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:20%; background: steelblue"></div></div>
+                                <div class="skill-bar-track">
+                                    <div
+                                        class="skill-bar-fill"
+                                        style="
+                                            width: 20%;
+                                            background: steelblue;
+                                        "
+                                    ></div>
+                                </div>
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </section>
 
@@ -181,14 +352,15 @@
             <section>
                 <p class="eyebrow text-large">Projects</p>
                 <div class="projects-grid">
-
                     <div class="project-card">
                         <p class="project-name">LoCor AI</p>
                         <p class="project-desc">
-                            An AI-powered business intelligence platform built for SMEs. Upload your sales sheets,
-                            inventory logs, and company description — and get actionable insights,
-                            competitive pricing strategies, automated Word/Excel reports,
-                            and a live AI consultant, all in one place.
+                            An AI-powered business intelligence platform built
+                            for SMEs. Upload your sales sheets, inventory logs,
+                            and company description — and get actionable
+                            insights, competitive pricing strategies, automated
+                            Word/Excel reports, and a live AI consultant, all in
+                            one place.
                         </p>
                         <div class="project-stack">
                             <span class="tag">NextJS</span>
@@ -196,7 +368,11 @@
                             <span class="tag">SQLite</span>
                             <span class="tag">ChromaDB</span>
                         </div>
-                        <a class="project-link" href="https://github.com/wz-Tan/LoCor_AI" target="_blank">
+                        <a
+                            class="project-link"
+                            href="https://github.com/wz-Tan/LoCor_AI"
+                            target="_blank"
+                        >
                             View on GitHub &rarr;
                         </a>
                     </div>
@@ -204,39 +380,57 @@
                     <div class="project-card">
                         <p class="project-name">Cub3d</p>
                         <p class="project-desc">
-                            Cub3D is a raycasting project where we simulate a 3D view using a 2D grid map,
-                            recreating the style of Wolfenstein 3D.
+                            Cub3D is a raycasting project where we simulate a 3D
+                            view using a 2D grid map, recreating the style of
+                            Wolfenstein 3D.
                         </p>
                         <div class="project-stack">
                             <span class="tag">C</span>
                         </div>
-                        <a class="project-link" href="https://github.com/brianyeap/cube3d" target="_blank">View on GitHub &rarr;</a>
+                        <a
+                            class="project-link"
+                            href="https://github.com/brianyeap/cube3d"
+                            target="_blank"
+                            >View on GitHub &rarr;</a
+                        >
                     </div>
 
                     <div class="project-card">
                         <p class="project-name">Minishell</p>
                         <p class="project-desc">
-                            Minishell is a project that recreates a basic shell program using C. It implements redirections and pipes,
-                            as well as environment variable expansions and the cd, echo, env, exit, export, pwd and unset builtin commands.
+                            Minishell is a project that recreates a basic shell
+                            program using C. It implements redirections and
+                            pipes, as well as environment variable expansions
+                            and the cd, echo, env, exit, export, pwd and unset
+                            builtin commands.
                         </p>
                         <div class="project-stack">
                             <span class="tag">C</span>
                         </div>
-                        <a class="project-link" href="https://github.com/colin-woon/4.1_minishell" target="_blank">View on GitHub &rarr;</a>
+                        <a
+                            class="project-link"
+                            href="https://github.com/colin-woon/4.1_minishell"
+                            target="_blank"
+                            >View on GitHub &rarr;</a
+                        >
                     </div>
-
                 </div>
             </section>
-
         </main>
 
         <footer>
             <div class="left">
                 <div>
-                    <a href="./home.html" class="text-large text-bold">SigmaStore</a>
-                    <h2 class="text-medium">Bringing you the best products since 2020.</h2>
+                    <a href="./home.html" class="text-large text-bold"
+                        >SigmaStore</a
+                    >
+                    <h2 class="text-medium">
+                        Bringing you the best products since 2020.
+                    </h2>
                 </div>
-                <p class="text-small text-light"><em>&copy; SigmaStore, 2026</em></p>
+                <p class="text-small text-light">
+                    <em>&copy; SigmaStore, 2026</em>
+                </p>
             </div>
             <div class="right">
                 <nav>
