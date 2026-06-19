@@ -15,5 +15,11 @@ window.addEventListener("load", () => {
   themeButton.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 });
 
-//  For Header Usage 
-const headerButton = document.querySelector(".btn-header")
+//  For Header Usage
+const headerButton = document.querySelector(".btn-header");
+const headerDropdown = document.querySelector(".header-dropdown");
+
+headerButton.addEventListener("click", () => {
+  console.log("Clicked button");
+  headerDropdown.classList.toggle("active");
+});
