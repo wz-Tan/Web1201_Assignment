@@ -1,17 +1,20 @@
 // dummy data
-const accounts = [
-  {
-    username: "username",
-    email: "email@gmail.com",
-    password: "1234",
-  },
-  {
-    username: "username2",
-    email: "email@yahoo.com",
-    password: "1234",
-  },
-];
+const accounts =
+  JSON.parse(localStorage.getItem('accounts')) || [
+    {
+      username: "username",
+      email: "email@gmail.com",
+      password: "1234",
+    },
+    {
+      username: "username2",
+      email: "email@yahoo.com",
+      password: "1234",
+    },
+  ];
 
+
+console.log(accounts);
 const passwordInput = document.getElementById("password");
 const showPasswordButton = document.querySelector(".js-show-password-button");
 

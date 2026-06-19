@@ -6,9 +6,10 @@ const usernameInput = document.getElementById("username");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirm-password");
-const showPasswordButton = document.querySelector(".js-show-password-button")
-const showConfirmPasswordButton = document.querySelector(".js-show-confirm-password-button")
+const showPasswordButton = document.querySelector(".js-show-password-button");
+const showConfirmPasswordButton = document.querySelector(".js-show-confirm-password-button");
 
+const accounts = JSON.parse(localStorage.getItem('accounts')) || [];
 
 //show password
 
@@ -52,20 +53,24 @@ function validateUsername() {
   const username = usernameInput.value.trim();
 
   return (
-    username.length >= 4 &&
-    !username.includes(" ")
+    (username.length >= 4 &&
+      !username.includes(" "))
+      ? username
+      : false
   );
 };
 
 function validateEmail() {
   const email = emailInput.value.trim();
 
-  return (
+  return ((
     !email.includes(" ") &&
     !email.startsWith("@") &&
     email.includes("@") &&
     (email.endsWith(".com") ||
-      email.endsWith(".sunway.edu.my"))
+      email.endsWith(".sunway.edu.my")))
+    ? email
+    : false
   );
 };
 
@@ -79,14 +84,17 @@ function validatePassword() {
     /[0-9]/.test(password) &&
     /[^a-zA-Z0-9]/.test(password);
 
-  return (strongPassword &&
-    password === confirm
+  return ((strongPassword &&
+    password === confirm)
+    ? password
+    : false
   );
 };
 
 ///////////////////////
 
 
+//show previous button
 
 function showPreviousButton() {
   if (currentStep === 1) {
@@ -96,9 +104,10 @@ function showPreviousButton() {
   };
 };
 
+//////////////////////
 
 
-//for user input
+//for user input steps
 
 function removeActiveStep() {
   const activeStepProgress = document.querySelector(`.step-${currentStep}`)
@@ -136,6 +145,9 @@ function updateProgressBar() {
 
 //////////////////////
 
+
+//rendering the page
+
 function nextStep() {
   if (currentStep >= 4) return;
 
@@ -166,7 +178,10 @@ function nextStep() {
   showPreviousButton();
   updateProgressBar();
   updateNextButton();
+  retrieveUserInput();
 }
+
+
 
 function previousStep() {
   if (currentStep <= 1) return;
@@ -189,25 +204,22 @@ function previousStep() {
   updateNextButton();
 }
 
-function createAccount() {
-  window.location.replace("index.html");
-};
-
+function getCurrentStepValue() {
+  switch (currentStep) {
+    case 1:
+      return validateUsername();
+    case 2:
+      return validateEmail();
+    case 3:
+      return validatePassword();
+    default:
+      return true;
+  }
+}
 
 function updateNextButton() {
-  let isValid;
-  if (currentStep === 1) {
-    isValid = validateUsername();
-  }
-  else if (currentStep === 2) {
-    isValid = validateEmail();
-  }
-  else if (currentStep === 3) {
-    isValid = validatePassword();
-  } else {
-    isValid = true;
-  }
-  nextButton.disabled = !isValid;
+  getCurrentStepValue();
+  nextButton.disabled = !getCurrentStepValue();
 };
 
 function scrollToInput() {
@@ -225,7 +237,8 @@ scrollToInput();
 
 nextButton.addEventListener("click", () => {
   if (currentStep === 4) {
-    createAccount();
+    localStorage.setItem('accounts', JSON.stringify(accounts));
+    window.location.replace("home.html")
   } else {
     nextStep();
   }
@@ -234,3 +247,25 @@ nextButton.addEventListener("click", () => {
 previousButton.addEventListener("click", () => {
   previousStep();
 });
+
+
+////////////
+
+
+//creating an new account
+
+function retrieveUserInput() {
+  const username = validateUsername();
+  const email = validateEmail();
+  const password = validatePassword();
+  createAccount(username, email, password)
+}
+
+function createAccount(username, email, password) {
+  let account = {};
+  if (username && email && password) {
+    account = { username, email, password };
+    accounts.push(account);
+  }
+}
+///
