@@ -8,8 +8,25 @@ const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirm-password");
 const showPasswordButton = document.querySelector(".js-show-password-button");
 const showConfirmPasswordButton = document.querySelector(".js-show-confirm-password-button");
+const usernameRepeatedMessage = document.querySelector(".js-repeated-message-username");
+const emailRepeatedMessage = document.querySelector(".js-repeated-message-email");
 
-const accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+//accounts = { username, email, password }
+
+const accounts = JSON.parse(localStorage.getItem('accounts')) || [
+  {
+    username: "username",
+    email: "email@gmail.com",
+    password: "1234",
+  },
+  {
+    username: "username2",
+    email: "email@yahoo.com",
+    password: "1234",
+  },
+];
+
+console.log(accounts);
 
 //show password
 
@@ -48,12 +65,27 @@ emailInput.addEventListener("input", updateNextButton);
 passwordInput.addEventListener("input", updateNextButton);
 confirmPasswordInput.addEventListener("input", updateNextButton)
 
+function checkRepeated(inputValue) {
+  return accounts.some(account =>
+    inputValue === account.username ||
+    inputValue === account.email
+  );
+}
 
 function validateUsername() {
+  let isRepeat;
   const username = usernameInput.value.trim();
-
+  isRepeat = checkRepeated(username)
+  if (isRepeat) {
+    usernameRepeatedMessage.classList.remove('hide');
+    usernameRepeatedMessage.innerHTML = `
+    '${username}' has been used
+    `
+  } else {
+    usernameRepeatedMessage.classList.add('hide');
+  }
   return (
-    (username.length >= 4 &&
+    (!isRepeat && username.length >= 4 &&
       !username.includes(" "))
       ? username
       : false
@@ -61,9 +93,19 @@ function validateUsername() {
 };
 
 function validateEmail() {
+  let isRepeat;
   const email = emailInput.value.trim();
-
+  isRepeat = checkRepeated(email);
+  if (isRepeat) {
+    emailRepeatedMessage.classList.remove('hide');
+    emailRepeatedMessage.innerHTML = `
+    '${email}' has been used
+    `
+  } else {
+    emailRepeatedMessage.classList.add('hide');
+  }
   return ((
+    !isRepeat &&
     !email.includes(" ") &&
     !email.startsWith("@") &&
     email.includes("@") &&
@@ -178,7 +220,6 @@ function nextStep() {
   showPreviousButton();
   updateProgressBar();
   updateNextButton();
-  retrieveUserInput();
 }
 
 
@@ -218,7 +259,6 @@ function getCurrentStepValue() {
 }
 
 function updateNextButton() {
-  getCurrentStepValue();
   nextButton.disabled = !getCurrentStepValue();
 };
 
@@ -237,8 +277,12 @@ scrollToInput();
 
 nextButton.addEventListener("click", () => {
   if (currentStep === 4) {
-    localStorage.setItem('accounts', JSON.stringify(accounts));
-    window.location.replace("home.html")
+    retrieveUserInput();
+    localStorage.setItem(
+      "accounts",
+      JSON.stringify(accounts)
+    );
+    window.location.replace("home.html");
   } else {
     nextStep();
   }
@@ -258,14 +302,16 @@ function retrieveUserInput() {
   const username = validateUsername();
   const email = validateEmail();
   const password = validatePassword();
-  createAccount(username, email, password)
+  createAccount(username, email, password);
 }
 
 function createAccount(username, email, password) {
-  let account = {};
   if (username && email && password) {
-    account = { username, email, password };
-    accounts.push(account);
+    accounts.push({
+      username,
+      email,
+      password
+    });
   }
 }
-///
+///////////////////////////

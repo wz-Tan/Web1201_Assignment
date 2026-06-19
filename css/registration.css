@@ -255,9 +255,18 @@
   cursor: not-allowed;
 }
 
-.validation {
+.validation,
+.repeated-message {
   font-size: 12px;
   padding-bottom: 40px;
+}
+
+.repeated-message {
+  color: red;
+}
+
+.repeated-message .hide {
+  display: none;
 }
 
 .create-account-message {
