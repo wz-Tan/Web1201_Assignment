@@ -28,9 +28,19 @@
                         class="store-name text-large text-bold text-accent"
                         >SigmaStore</a
                     >
-                    <button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
-   <!--Trigger Button on Mobile-->
-<button class="btn-header text-large text-bold" aria-label="Open navigation menu">☰</button>
+                    <button
+                        class="text-medium btn-theme"
+                        aria-label="Toggle dark mode"
+                    >
+                        🌙
+                    </button>
+                    <!--Trigger Button on Mobile-->
+                    <button
+                        class="btn-header text-large text-bold"
+                        aria-label="Open navigation menu"
+                    >
+                        ☰
+                    </button>
                 </div>
 
                 <nav class="header-dropdown">
@@ -92,7 +102,12 @@
                     </ul>
                 </nav>
                 <div class="right">
-                   <button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
+                    <button
+                        class="text-medium btn-theme"
+                        aria-label="Toggle dark mode"
+                    >
+                        🌙
+                    </button>
                     <a href="../index.html" class="text-medium sign-out"
                         >Sign Out</a
                     >
@@ -121,31 +136,37 @@
                                 <input
                                     type="radio"
                                     name="category"
+                                    id="category-all"
                                     value="All"
                                     checked
                                 />
-                                <label>All</label><br />
+                                <label for="category-all">All</label><br />
 
                                 <input
                                     type="radio"
                                     name="category"
                                     value="Men's"
+                                    id="category-mens"
                                 />
-                                <label>Men's</label><br />
+                                <label for="category-mens">Men's</label><br />
 
                                 <input
                                     type="radio"
                                     name="category"
+                                    id="category-womens"
                                     value="Women's"
                                 />
-                                <label>Women's</label><br />
+                                <label for="category-womens">Women's</label
+                                ><br />
 
                                 <input
                                     type="radio"
                                     name="category"
                                     value="Unisex"
+                                    id="category-unisex"
                                 />
-                                <label>Unisex</label><br />
+                                <label for="category-unisex">Unisex</label
+                                ><br />
                             </div>
                         </div>
                         <div class="price-filter">
@@ -155,16 +176,22 @@
                                     type="radio"
                                     name="pricing"
                                     value="ascending"
+                                    id="price-ascending"
                                     checked
                                 />
-                                <label>Price Ascending</label><br />
+                                <label for="price-ascending"
+                                    >Price Ascending</label
+                                ><br />
 
                                 <input
                                     type="radio"
                                     name="pricing"
                                     value="descending"
+                                    id="price-descending"
                                 />
-                                <label>Price Descending</label><br />
+                                <label for="price-descending"
+                                    >Price Descending</label
+                                ><br />
                             </div>
                         </div>
                     </div>
