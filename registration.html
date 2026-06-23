@@ -71,10 +71,13 @@
                                 name="username"
                                 placeholder="Enter your username"
                             />
-                            <span class="validation"
-                                >*username must be at least 4 characters without
-                                space</span
-                            >
+                            <span class="validation">
+                                *username must be at least 4 characters without
+                                space
+                            </span>
+                            <br />
+                            <span class="repeated-message js-repeated-message-username hide">
+                            </span>
                         </div>
                         <div class="input-group user-step" id="step-2">
                             <label for="email">Email</label>
@@ -88,6 +91,9 @@
                                 >*email addresses must include an '@' symbol and
                                 a valid domain extension like '.com</span
                             >
+                            <br />
+                            <span class="repeated-message js-repeated-message-email hide">
+                            </span>
                         </div>
                         <div class="input-group user-step" id="step-3">
                             <label for="password">Password</label>
