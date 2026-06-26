@@ -26,7 +26,6 @@ const accounts = JSON.parse(localStorage.getItem('accounts')) || [
   },
 ];
 
-console.log(accounts);
 
 //show password
 
