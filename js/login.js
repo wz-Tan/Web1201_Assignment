@@ -14,7 +14,6 @@ const accounts =
   ];
 
 
-console.log(accounts);
 const passwordInput = document.getElementById("password");
 const showPasswordButton = document.querySelector(".js-show-password-button");
 

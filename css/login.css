@@ -15,7 +15,6 @@
 
 .registration-flexbox {
   display: flex;
-  min-height: 80vh;
   justify-content: center;
   align-items: center;
 }
@@ -23,18 +22,16 @@
 .registration-card {
   width: 100%;
   display: flex;
+  flex-direction: column;
   background: white;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .welcome-side {
-  flex: 2;
-  position: sticky;
-  top: 0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  flex: 2;
+  padding: 10%;
   background-color: var(--color-accent);
   justify-content: center;
   align-items: center;
@@ -71,7 +68,7 @@
 
 .login-side {
   flex: 3;
-  padding: 50px;
+  padding: 5%;
 }
 
 .login-fail-message {
@@ -185,25 +182,21 @@
 /*///////////////////////////////////////////*/
 
 /* responsive */
-@media (max-width: 900px) {
-  body {
-    height: 100%;
-  }
-
+@media (min-width: 900px) {
   .welcome-side {
+    flex-direction: column;
     position: relative;
-    min-height: 40vh;
   }
 
   .registration-card {
-    flex-direction: column;
+    height: 100vh;
+    flex-direction: row;
   }
 
   .login-side {
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    min-height: 60vh;
+    padding: 5%;
     justify-content: center;
   }
 
