@@ -1,1 +1,366 @@
- 
+.profile-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+    align-items: center;
+}
+
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.profile-content .underline-effect {
+    display: block;
+    width: fit-content;
+    margin-left: auto;  
+    margin-right: auto; 
+    padding-bottom: 5px;
+}
+
+/*CV Button*/
+.cv-button {
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 30px;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    border-radius: 15px;
+    text-decoration: none;
+    margin: 20px auto 0 auto;
+    font-weight: 800;
+    animation: fadeInUp 0.8s ease-out;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.3s ease, 
+                background-color 0.3s ease;
+}
+
+.cv-button:hover {
+    transform: scale(1.05); 
+    background-color: #1d4ed8;
+    box-shadow: 0 10px 20px rgba(var(--color-accent-rgb), 0.4);
+}
+
+.cv-button:active {
+    transform: scale(0.95);
+}
+
+/*Education Section*/
+.education-section {
+    margin-top: 50px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.section-title {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.section-title.underline-effect{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+}
+
+.education-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.education-card {
+    background-color: var(--color-ui-bg);
+    border: 1px solid var(--color-ui-border);
+    padding: 25px 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.3s ease, 
+                border-color 0.3s ease;
+}
+
+.education-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-accent);
+}
+
+.education-header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--color-ui-border);
+    padding-bottom: 10px;
+}
+
+.education-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*Skills*/
+.skills-section{
+    margin-top: 60px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    animation: fadeInUp 1s ease-out;
+}
+
+.skills-flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.group-title {
+    border-left: 4px solid var(--color-accent);
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+/*Progress bar*/
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                background-color 0.3s ease, 
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.05) translateY(-5px);
+    background-color: var(--color-ui-bg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-ui-border);
+    z-index: 10;
+}
+
+.skill-item:hover .progress-fill {
+    filter: brightness(1.5);
+    box-shadow: 0 0 10px rgba(var(--color-accent-rgb), 0.2);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: var(--color-ui-border);
+    border-radius: 15px;
+    overflow: hidden;
+}
+/*Languages and tools*/
+.html{
+    background-color: #e34c26;
+    width: 90%;
+}
+
+.js{
+    background-color: #f7df1e;
+    width: 70%; 
+}
+
+.python{
+    background-color: #3776ab;
+    width: 85%;
+}
+
+.java{
+    background-color: #ed8b00;
+    width: 70%;
+}
+
+.cpp{
+    background-color: #00599c;
+    width: 50%
+}
+
+.c{
+    background-color: #a8b9cc;
+    width: 50%;
+}
+
+.github{
+    background-color: #6e5494;
+    width: 95%;
+}
+
+.docker{
+    background-color: #2496ed;
+    width: 55%;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 15px;
+    /* Uses the slideInBar animation from utils.css */
+    animation: slideInBar 1.5s ease-out forwards;
+    transform-origin: left;
+}
+
+/*Tablet*/
+@media (min-width: 768px) {
+    .profile-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .profile-picture {
+        flex: 1;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .profile-content {
+        flex: 1.5;
+        text-align: center;
+        padding-top: 60px; 
+    }
+
+    .cv-button {
+        margin: 20px 0 0 0;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .education-stack {
+        max-width: 900px;
+    }
+
+    .education-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .profile-content .underline-effect {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+     .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 900px;
+    }
+
+    .skills-flex-container {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 50px;
+        max-width: 900px;
+    }
+}
+
+
+/*Desktop*/
+@media (min-width: 1024px) {
+
+    .profile-layout,
+    .education-stack {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .profile-layout {
+        gap: 80px;
+    }
+
+    .profile-content {
+        padding-top: 80px;
+    }
+
+    .profile-picture {
+        animation: fadeInLeft 1s ease-out;
+    }
+    
+    .profile-content {
+        animation: fadeInRight 1s ease-out;
+    }
+
+    .education-section {
+        margin-top: 80px;
+    }
+
+    .education-card {
+        width: 100%;
+        gap: 12px;
+    }
+
+     .skills-grid {
+        max-width: 1100px;
+    }
+
+    .skills-flex-container {
+        max-width: 1100px;
+        gap: 100px;
+    }
+}
+
+.underline-effect:hover::after {
+    width: 100%;
+}
