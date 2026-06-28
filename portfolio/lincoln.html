@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lincoln</title>
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/fonts.css" />
+        <link rel="stylesheet" href="../css/utils.css" />
+        <link rel="stylesheet" href="../css/portfolio-lincoln.css">
+        <script>
+            // Load saved theme on page load (carry between pages)
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <!--Mobile Version-->
+            <div class="mobile">
+                <div class="main-compartment">
+                    <a
+                        href="../home.html"
+                        class="store-name text-large text-bold text-accent"
+                        >SigmaStore</a
+                    >
+                    <button
+                        class="text-medium btn-theme"
+                        aria-label="Toggle dark mode"
+                    >
+                        🌙
+                    </button>
+                    <!--Trigger Button on Mobile-->
+                    <button
+                        class="btn-header text-large text-bold"
+                        aria-label="Open navigation menu"
+                    >
+                        ☰
+                    </button>
+                </div>
+
+                <nav class="header-dropdown">
+                    <ul class="text-large">
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../products.html"
+                                >Products</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../review.html"
+                                >Review</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../about-us.html"
+                                >About Us</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../index.html"
+                                >Sign Out</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Tablet + Laptop-->
+            <div class="non-mobile">
+                <a href="../home.html" class="text-large text-bold text-accent"
+                    >SigmaStore</a
+                >
+                <nav>
+                    <ul class="text-medium">
+                        <li>
+                            <a class="underline-effect" href="../products.html"
+                                >Products</a
+                            >
+                        </li>
+                        <li>
+                            <a class="underline-effect" href="../review.html"
+                                >Review</a
+                            >
+                        </li>
+                        <li>
+                            <a class="underline-effect" href="../about-us.html"
+                                >About Us</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <div class="right">
+                    <button
+                        class="text-medium btn-theme"
+                        aria-label="Toggle dark mode"
+                    >
+                        🌙
+                    </button>
+                    <a href="../index.html" class="text-medium sign-out"
+                        >Sign Out</a
+                    >
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <!--profile picture-->
+            <section class="profile-layout">
+                <div class="profile-picture">
+                    <h1 class="text-extra-large text-bold text-accent">Lincoln Cheng</h1>
+                    <img src="../assets/images/lincoln.jpeg" alt="Lincoln's Profile Picture" class="profile-img">
+                </div>
+
+                <!--content-->
+                <div class="profile-content">
+                    <h2 class="text-large text-semibold underline-effect">
+                        About Me
+                    </h2>
+                    <p class="text-medium">
+                        Hi, I'm Lincoln, and im a aspiring Cybersecurity Student in Sunway University.<br /> 
+                        I have been messing with networking projects such as a PI hole and Network monitoring dashboard.<br /><br />
+                        Outside of tech, i also enjoy reading, watching films and messing with cars.
+                    </p>
+                    <a class="cv-button text-medium text-bold" target="_blank" download="../assets/files/Lincoln_CV.pdf" href="../assets/files/Lincoln_CV.pdf">Download CV</a>
+                </div>
+            </section>
+
+            <!--education-->
+            <section class="education-section">
+                <h2 class="text-large text-bold section-title underline-effect">Education</h2>
+
+                <div class="education-stack">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3 class="text-medium text-bold">SMK Tropicana</h3>
+                            <p class="text-small text-light">Completed 2024</p>
+                        </div>
+                        <div class="education-body">
+                            <p class="text-small text-accent text-bold">Sijil Pelajaran Malaysia (SPM)</p>
+                            <p class="text-small">Grade: <span class="text-semibold text-accent">4A</span></p>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3 class="text-medium text-bold">Sunway College</h3>
+                            <p class="text-small text-light">2024-2025</p>
+                        </div>
+                        <div class="education-body">
+                            <p class="text-small text-accent text-bold">Foundation in Science and Technology (FIST)</p>
+                            <p class="text-small">Grade: <span class="text-semibold text-accent">CGPA 3.5</span></p>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3 class="text-medium text-bold">Sunway University</h3>
+                            <p class="text-small text-light">2025-present</p>
+                        </div>
+                        <div class="education-body">
+                            <p class="text-small text-accent text-bold">BSc (Hons) Information Technology (Computer Networking and Security)</p>
+                            <p class="text-small">Grade: <span class="text-semibold text-accent">CGPA 3.8</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Skills-->
+            <section class="skills-section">
+                <h2 class="text-large text-bold section-title underline-effect">Technical Skills</h2>
+
+                <div class="skills-flex-container">
+                    <div class="skills-column">
+                    <h3 class="text-medium text-bold group-title">Programming Languages</h3>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="text-small text-bold">HTML & CSS</span>
+                            <span class="text-small">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill html"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="text-small text-bold">JavaScript</span>
+                            <span class="text-small">70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill js"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="text-small text-bold">Python</span>
+                            <span class="text-small">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill python"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="text-small text-bold">Java</span>
+                            <span class="text-small">70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill java"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="text-small text-bold">C++</span>
+                            <span class="text-small">50%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill cpp"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="text-small text-bold">C</span>
+                            <span class="text-small">50%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill c"></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!--Tools-->
+                <div class="skills-column">
+                    <h3 class="text-medium text-bold group-title">Tools</h3>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="text-small text-bold">Github</span>
+                            <span class="text-small">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill github"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="text-small text-bold">Docker</span>
+                            <span class="text-small">55%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill docker"></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul class="text-large">
+                    <li>
+                        <a class="underline-effect" href="../products.html"
+                            >Products</a
+                        >
+                    </li>
+                    <li>
+                        <a class="underline-effect" href="../review.html"
+                            >Review</a
+                        >
+                    </li>
+                    <li>
+                        <a class="underline-effect" href="../about-us.html"
+                            >About Us</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="company-tag">
+                <!-- Main Text -->
+                <div>
+                    <a href="../home.html" class="text-large text-bold"
+                        >SigmaStore</a
+                    >
+                    <h2 class="text-medium">
+                        Bringing you the best products since 2020.
+                    </h2>
+                </div>
+
+                <!-- Copyright -->
+                <p class="text-small text-light">
+                    <em>&copy; SigmaStore, 2026</em>
+                </p>
+            </div>
+        </footer>
+        <script src="../js/theme.js"></script>
+    </body>
+</html>
