@@ -368,10 +368,6 @@
 
 /*simplify on print*/
 @media print {
-    header,
-    footer {
-        display: none;
-    }
 
     /* Avoid Choppy Elements */
     .education-container,
@@ -383,23 +379,6 @@
     /*Project Highlights header is clean now*/
     .projects h1 {
         page-break-before: always;
-    }
-
-    /* Font Sizes */
-    .text-extra-large {
-        font-size: 24px;
-    }
-
-    .text-large {
-        font-size: 18px;
-    }
-
-    .text-medium {
-        font-size: 14px;
-    }
-
-    .text-small {
-        font-size: 12px;
     }
 
     .container {

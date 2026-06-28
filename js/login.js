@@ -63,6 +63,7 @@ form.addEventListener("submit", (event) => {
 
   if (account) {
     console.log("success");
+    localStorage.setItem('login', JSON.stringify(true));
     window.location.replace("home.html");
   } else {
     console.log("fail");

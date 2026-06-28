@@ -25,9 +25,19 @@
                         class="store-name text-large text-bold text-accent"
                         >SigmaStore</a
                     >
-                    <button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
-   <!--Trigger Button on Mobile-->
-<button class="btn-header text-large text-bold" aria-label="Open navigation menu">☰</button>
+                    <button
+                        class="text-medium btn-theme"
+                        aria-label="Toggle dark mode"
+                    >
+                        🌙
+                    </button>
+                    <!--Trigger Button on Mobile-->
+                    <button
+                        class="btn-header text-large text-bold"
+                        aria-label="Open navigation menu"
+                    >
+                        ☰
+                    </button>
                 </div>
 
                 <nav class="header-dropdown">
@@ -55,8 +65,7 @@
                         </li>
                         <li>
                             <a
-                                class="text-bold underline-effect"
-                                href="../index.html"
+                                class="text-bold underline-effect js-sign-out"
                                 >Sign Out</a
                             >
                         </li>
@@ -89,8 +98,13 @@
                     </ul>
                 </nav>
                 <div class="right">
-                   <button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
-                    <a href="../index.html" class="text-medium sign-out"
+                    <button
+                        class="text-medium btn-theme"
+                        aria-label="Toggle dark mode"
+                    >
+                        🌙
+                    </button>
+                    <a class="text-medium sign-out js-sign-out"
                         >Sign Out</a
                     >
                 </div>
@@ -417,32 +431,51 @@
                 </div>
             </section>
         </main>
-
         <footer>
-            <div class="left">
+            <nav>
+                <ul class="text-large">
+                    <li>
+                        <a class="underline-effect" href="../products.html"
+                            >Products</a
+                        >
+                    </li>
+                    <li>
+                        <a class="underline-effect" href="../review.html"
+                            >Review</a
+                        >
+                    </li>
+                    <li>
+                        <a class="underline-effect" href="../about-us.html"
+                            >About Us</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="company-tag">
+                <!-- Main Text -->
                 <div>
-                    <a href="./home.html" class="text-large text-bold"
+                    <a href="../home.html" class="text-large text-bold"
                         >SigmaStore</a
                     >
                     <h2 class="text-medium">
                         Bringing you the best products since 2020.
                     </h2>
                 </div>
+
+                <!-- Copyright -->
                 <p class="text-small text-light">
                     <em>&copy; SigmaStore, 2026</em>
                 </p>
             </div>
-            <div class="right">
-                <nav>
-                    <ul class="text-large">
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="review.html">Review</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                    </ul>
-                </nav>
-            </div>
         </footer>
 
-        <script src="../js/theme.js"></script>
+                 <!-- Copyright -->
+                 <p class="text-small text-light">
+                     <em>&copy; SigmaStore, 2026</em>
+                 </p>
+             </div>
+         </footer>
+         <script src="../js/theme.js"></script>
+         <scirpt src="../js/auth.js"></scirpt>
     </body>
 </html>

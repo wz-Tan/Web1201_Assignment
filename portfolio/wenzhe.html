@@ -17,86 +17,85 @@
         </script>
     </head>
     <body>
-    <header>
-<!--Mobile Version-->
-<div class="mobile">
-    <div class="main-compartment">
-        <a
-            href="../home.html"
-            class="store-name text-large text-bold text-accent"
-            >SigmaStore</a
-        >
-       <button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
-        <!--Trigger Button on Mobile-->
-<button class="btn-header text-large text-bold" aria-label="Open navigation menu">☰</button>
-    </div>
+        <header>
+        <!--Mobile Version-->
+        <div class="mobile">
+            <div class="main-compartment">
+                <a
+                    href="../home.html"
+                    class="store-name text-large text-bold text-accent"
+                    >SigmaStore</a
+                >
+                <button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
+                <!--Trigger Button on Mobile-->
+                <button class="btn-header text-large text-bold" aria-label="Open navigation menu">☰</button>
+            </div>
 
-    <nav class="header-dropdown">
-        <ul class="text-large">
-            <li>
-                <a
-                    class="text-bold underline-effect"
-                    href="../products.html"
-                    >Products</a
-                >
-            </li>
-            <li>
-                <a
-                    class="text-bold underline-effect"
-                    href="../review.html"
-                    >Review</a
-                >
-            </li>
-            <li>
-                <a
-                    class="text-bold underline-effect"
-                    href="../about-us.html"
-                    >About Us</a
-                >
-            </li>
-            <li>
-                <a
-                    class="text-bold underline-effect"
-                    href="../index.html"
+            <nav class="header-dropdown">
+                <ul class="text-large">
+                    <li>
+                        <a
+                            class="text-bold underline-effect"
+                            href="../products.html"
+                            >Products</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="text-bold underline-effect"
+                            href="../review.html"
+                            >Review</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="text-bold underline-effect"
+                            href="../about-us.html"
+                            >About Us</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="text-bold underline-effect js-sign-out"
+                            >Sign Out</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Tablet + Laptop-->
+        <div class="non-mobile">
+            <a href="../home.html" class="text-large text-bold text-accent"
+                >SigmaStore</a
+            >
+            <nav>
+                <ul class="text-medium">
+                    <li>
+                        <a class="underline-effect" href="../products.html"
+                            >Products</a
+                        >
+                    </li>
+                    <li>
+                        <a class="underline-effect" href="../review.html"
+                            >Review</a
+                        >
+                    </li>
+                    <li>
+                        <a class="underline-effect" href="../about-us.html"
+                            >About Us</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="right">
+            <button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
+                <a class="text-medium sign-out js-sign-out"
                     >Sign Out</a
                 >
-            </li>
-        </ul>
-    </nav>
-</div>
-
-<!--Tablet + Laptop-->
-<div class="non-mobile">
-    <a href="../home.html" class="text-large text-bold text-accent"
-        >SigmaStore</a
-    >
-    <nav>
-        <ul class="text-medium">
-            <li>
-                <a class="underline-effect" href="../products.html"
-                    >Products</a
-                >
-            </li>
-            <li>
-                <a class="underline-effect" href="../review.html"
-                    >Review</a
-                >
-            </li>
-            <li>
-                <a class="underline-effect" href="../about-us.html"
-                    >About Us</a
-                >
-            </li>
-        </ul>
-    </nav>
-    <div class="right">
-       <button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
-        <a href="../index.html" class="text-medium sign-out"
-            >Sign Out</a
-        >
-    </div>
-</div>
-</header>
+            </div>
+        </div>
+        </header>
         <main class="container">
             <section class="hero ">
                 <figure class="portrait">
@@ -326,17 +325,17 @@
             <nav>
                 <ul class="text-large">
                     <li>
-                        <a class="underline-effect" href="products.html"
+                        <a class="underline-effect" href="../products.html"
                             >Products</a
                         >
                     </li>
                     <li>
-                        <a class="underline-effect" href="review.html"
+                        <a class="underline-effect" href="../review.html"
                             >Review</a
                         >
                     </li>
                     <li>
-                        <a class="underline-effect" href="about-us.html"
+                        <a class="underline-effect" href="../about-us.html"
                             >About Us</a
                         >
                     </li>
@@ -360,5 +359,6 @@
             </div>
         </footer>
         <script src="../js/theme.js"></script>
+        <script src="../js/auth.js"></script>
     </body>
 </html>

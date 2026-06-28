@@ -41,7 +41,7 @@
 						<a class="text-bold underline-effect" href="../about-us.html">About Us</a>
 					</li>
 					<li>
-						<a class="text-bold underline-effect" href="../index.html">Sign Out</a>
+						<a class="text-bold underline-effect js-sign-out">Sign Out</a>
 					</li>
 				</ul>
 			</nav>
@@ -65,7 +65,7 @@
 			</nav>
 			<div class="right">
 				<button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
-				<a href="../index.html" class="text-medium sign-out">Sign Out</a>
+				<a class="text-medium sign-out js-sign-out">Sign Out</a>
 			</div>
 		</div>
 	</header>
@@ -94,7 +94,9 @@
 						diving into React as well. I really enjoy turning idea into functional application!</p>
 				</div>
 				<div class="download-cv">
-					<button class="download-cv-button btn-primary">Download CV</button>
+					<a href="../assets/files/JenQiWen_Portfolio.pdf"	download="../assets/files/JenQiWen_Portfolio.pdf">
+						<button class="download-cv-button btn-primary">Download CV</button>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -287,30 +289,45 @@
 		</section>
 
 	</main>
-	<footer>
-		<nav>
-			<ul class="text-large">
-				<li><a href="products.html">Products</a></li>
-				<li><a href="review.html">Review</a></li>
-				<li><a href="about-us.html">About Us</a></li>
-			</ul>
-		</nav>
-		<div class="company-tag">
-			<!-- Main Text -->
-			<div>
-				<a href="../home.html" class="text-large text-bold">SigmaStore</a>
-				<h2 class="text-medium">
-					Bringing you the best products since 2020.
-				</h2>
-			</div>
+ <footer>
+            <nav>
+                <ul class="text-large">
+                    <li>
+                        <a class="underline-effect" href="../products.html"
+                            >Products</a
+                        >
+                    </li>
+                    <li>
+                        <a class="underline-effect" href="../review.html"
+                            >Review</a
+                        >
+                    </li>
+                    <li>
+                        <a class="underline-effect" href="../about-us.html"
+                            >About Us</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="company-tag">
+                <!-- Main Text -->
+                <div>
+                    <a href="../home.html" class="text-large text-bold"
+                        >SigmaStore</a
+                    >
+                    <h2 class="text-medium">
+                        Bringing you the best products since 2020.
+                    </h2>
+                </div>
 
-			<!-- Copyright -->
-			<p class="text-small text-light">
-				<em>&copy; SigmaStore, 2026</em>
-			</p>
-		</div>
-	</footer>
+                <!-- Copyright -->
+                <p class="text-small text-light">
+                    <em>&copy; SigmaStore, 2026</em>
+                </p>
+            </div>
+        </footer>
 	<script src="../js/theme.js"></script>
+	<script src="../js/auth.js"></script>
 </body>
 
 </html>
