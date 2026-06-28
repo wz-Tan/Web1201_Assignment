@@ -84,7 +84,7 @@
 /* Tablet */
 @media (min-width: 768px) {
     .hero-section {
-        min-height: 600px;
+        min-height: 100svh;
         padding: 40px 24px;
     }
 
@@ -116,7 +116,7 @@
 /* Desktop */
 @media (min-width: 1024px) {
     .hero-section {
-        min-height: 770px;
+        min-height: 100svh;
         padding: 60px 40px;
     }
 
