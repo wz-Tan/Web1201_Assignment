@@ -33,6 +33,12 @@ const dummyData = [
     }
 ]
 
+let storedReviews = localStorage.getItem("reviews");
+if (!storedReviews){
+  localStorage.setItem("reviews", JSON.stringify(dummyData));
+  storedReviews = JSON.stringify(dummyData);
+}
+
 function addReview(username, product, rating, review, imgSrc){
     const starRate = "\u2605".repeat(rating) + "\u2606".repeat(5 - rating);
 
@@ -53,9 +59,9 @@ function addReview(username, product, rating, review, imgSrc){
   reviewsList.prepend(newReview);
 }
 
-dummyData.forEach(item => {
-    addReview(item.username, item.product, item.rating, item.text, item.image)
-})
+JSON.parse(storedReviews).forEach(item => {
+    addReview(item.username, item.product, item.rating, item.text, item.image);
+});
 
 //dropdown menu
 function dropdownlist() {
@@ -118,6 +124,18 @@ reviewForm.onsubmit = function (e) {
     const rating = userRatings;
     const review = document.getElementById('review').value;
     const imgSrc = document.getElementById('product-image').src;
+
+    const newReviewObj = {
+      username: username,
+      product: product,
+      rating: rating,
+      text: review,
+      image: imgSrc
+    };
+
+    let currentData = JSON.parse(localStorage.getItem("reviews"));
+    currentData.push(newReviewObj);
+    localStorage.setItem("reviews", JSON.stringify(currentData));
 
   addReview(username, product, rating, review, imgSrc);
 
