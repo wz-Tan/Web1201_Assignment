@@ -76,7 +76,7 @@
     cursor: pointer;
 }
 
-/* Tablet */
+/* Tablet
 @media (min-width: 768px) {
     .about-container {
         padding: 30px 24px;
