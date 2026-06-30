@@ -63,6 +63,18 @@
     line-height: 1.6;
 }
 
+.team-member figure {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member figure img {
+    width: 10vh;
+    height: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .student-id {
     font-size: 10px;
     font-weight: 300;
@@ -76,7 +88,7 @@
     cursor: pointer;
 }
 
-/* Tablet
+/* Tablet */
 @media (min-width: 768px) {
     .about-container {
         padding: 30px 24px;
