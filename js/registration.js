@@ -64,17 +64,14 @@ emailInput.addEventListener("input", updateNextButton);
 passwordInput.addEventListener("input", updateNextButton);
 confirmPasswordInput.addEventListener("input", updateNextButton)
 
-function checkRepeated(inputValue) {
-  return accounts.some(account =>
-    inputValue === account.username ||
-    inputValue === account.email
-  );
+function checkRepeated(inputValue, field) {
+  return accounts.some(account => inputValue === account[field]);
 }
 
 function validateUsername() {
   let isRepeat;
   const username = usernameInput.value.trim();
-  isRepeat = checkRepeated(username)
+  isRepeat = checkRepeated(username, 'username')
   if (isRepeat) {
     usernameRepeatedMessage.classList.remove('hide');
     usernameRepeatedMessage.innerHTML = `
@@ -94,7 +91,7 @@ function validateUsername() {
 function validateEmail() {
   let isRepeat;
   const email = emailInput.value.trim();
-  isRepeat = checkRepeated(email);
+  isRepeat = checkRepeated(email, 'email');
   if (isRepeat) {
     emailRepeatedMessage.classList.remove('hide');
     emailRepeatedMessage.innerHTML = `
@@ -281,7 +278,7 @@ nextButton.addEventListener("click", () => {
       "accounts",
       JSON.stringify(accounts)
     );
-    window.location.replace("home.html");
+    window.location.replace("index.html");
   } else {
     nextStep();
   }
