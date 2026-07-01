@@ -11,6 +11,7 @@
     margin-bottom: 30px;
     padding-bottom: 10px;
     border-bottom: 3px solid var(--color-accent);
+    animation: fadeInUp 0.6s ease-out;
 }
 
 .about-container section {
@@ -27,7 +28,8 @@
     color: black;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--color-accent);
+    animation: fadeInLeft 0.6s ease-out;
 }
 
 .about-container section p {
@@ -35,6 +37,7 @@
     word-spacing: 0.05em;
     padding: 8px;
     text-align: justify;
+    animation: fadeInUp 0.6s ease-out 0.15s both;
 }
 
 /* Team Section */
@@ -55,10 +58,23 @@
     flex-direction: row;
     align-items: center;
     gap: 24px;
+    animation: fadeInUp 0.6s;
+}
+
+.team-grid .team-member:nth-child(1) { animation-delay: 0.1s; }
+.team-grid .team-member:nth-child(2) { animation-delay: 0.2s; }
+.team-grid .team-member:nth-child(3) { animation-delay: 0.3s; }
+.team-grid .team-member:nth-child(4) { animation-delay: 0.4s; }
+.team-grid .team-member:nth-child(5) { animation-delay: 0.5s; }
+.team-grid .team-member:nth-child(6) { animation-delay: 0.6s; }
+
+.team-member {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .team-member:hover {
     box-shadow: 0 4px 20px rgba(var(--color-accent-rgb), 0.4);
+    transform: scale(1.02);
     cursor: pointer;
 }
 
@@ -68,7 +84,8 @@
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid var(--color-accent);
+    border: 2px solid var(--color-accent);
+    animation: scaleIn 0.5s ease-out both;
 }
 
 .team-photo-wrap img {
