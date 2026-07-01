@@ -19,6 +19,7 @@
     flex-direction: column;
     gap: 5px;
     position: relative;
+    animation: fadeInLeft 0.5s;
 }
 
 .input-box,
@@ -28,6 +29,7 @@
     width: 100%;
     background-color: var(--color-ui-bg);
     border: 1px solid var(--color-ui-border);
+    animation: fadeInLeft 0.8s;
 }
 
 /* Product Preview Image on Mobile */
@@ -80,6 +82,7 @@
     padding: 15px;
     background-color: var(--color-ui-bg);
     border: 1px solid var(--color-ui-border);
+    animation: fadeInRight 0.5s;
 }
 
 .review-card-header {
@@ -87,6 +90,7 @@
     gap: 15px;
     align-items: center;
     margin-bottom: 10px;
+    animation: scaleIn 0.8s;
 }
 
 .review-item-img {
@@ -128,6 +132,8 @@
     background-color: var(--color-accent);
     color: var(--color-button);
     cursor: pointer;
+    animation: scaleIn 0.7s;
+
 }
 
 /*Tablet*/
@@ -135,7 +141,7 @@
     .review-grid {
         padding: 0 50px;
     }
-    
+
     .ratings {
         justify-content: flex-end;
     }
@@ -143,7 +149,7 @@
 
 /*Desktop */
 @media (min-width: 1024px) {
-    
+
     .review-grid {
         grid-template-columns: 1fr 1fr;
         gap: 100px;
