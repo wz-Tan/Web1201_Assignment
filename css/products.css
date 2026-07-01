@@ -6,6 +6,7 @@
 
 .products #title {
     margin-bottom: 5px;
+    animation: fadeInUp 0.5s;
 }
 
 /* Query Selections */
@@ -26,6 +27,7 @@
     border-radius: 5px;
     border: 0.5px var(--color-accent) solid;
     background-color: var(--color-background);
+    animation: scaleIn 0.7s;
 }
 
 /* Grid for Items */
@@ -47,6 +49,7 @@
     transition: box-shadow 0.2s ease;
     min-width: 0;
     border: 1px solid var(--color-accent);
+    animation: fadeInUp 0.7s ease;
 }
 
 .products .item:hover {
@@ -76,6 +79,7 @@
 .products .item h2,
 .products .item p {
     line-height: 1.4;
+    animation: fadeInUp 1s ease;
 }
 
 .products .items-filter {
