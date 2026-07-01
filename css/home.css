@@ -44,6 +44,7 @@
     font-size: 28px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     color: white;
+    animation: fadeInUp 0.7s ease both;
 }
 
 .hero-content > p:first-of-type {
@@ -51,6 +52,7 @@
     font-size: 18px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     color: white;
+    animation: fadeInUp 0.7s ease both 0.15s;
 }
 
 .hero-subtitle {
@@ -60,6 +62,7 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     color: white;
     line-height: 1.5;
+    animation: fadeInUp 0.7s ease both 0.30s;
 }
 
 .btn-hero {
@@ -74,11 +77,11 @@
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
+    animation: scaleIn 0.7s ease;
 }
 
 .btn-hero:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
 }
 
 /* Tablet */
