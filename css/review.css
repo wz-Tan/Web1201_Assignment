@@ -5,7 +5,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
     margin: 20px auto;
-    padding: 0 15px;
+    padding: 10 15px;
 }
 
 .review-form {
@@ -139,7 +139,7 @@
 /*Tablet*/
 @media (min-width: 768px) {
     .review-grid {
-        padding: 0 50px;
+        padding: 10 50px;
     }
 
     .ratings {
@@ -155,7 +155,7 @@
         gap: 100px;
         margin: 20px auto 40px auto;
         max-width: 1200px;
-        padding: 0;
+        padding: 10;
     }
 
     .input-box,
