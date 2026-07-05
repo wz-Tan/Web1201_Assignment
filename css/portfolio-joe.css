@@ -220,6 +220,11 @@ main.container {
     border: 1px solid #0a66c2;
 }
 
+.contact-tags span:nth-child(3) a {
+    background: #c9c9c9;
+    color: white;
+}
+
 .edu-list {
     display: flex;
     flex-direction: column;
@@ -541,5 +546,46 @@ main.container {
 
     .project-desc {
         font-size: 0.875rem;
+    }
+}
+
+@media print {
+    .profile-name-vertical {
+        display: none;
+    }
+
+    .profile-body,
+    .pfp,
+    .contact-tags span,
+    .eyebrow,
+    .section-divider,
+    .edu-row,
+    .skill-bar-fill,
+    .project-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .skill-bar-fill,
+    .skill-bar-track,
+    .contact-tags span a,
+    .project-stack .tag {
+        print-color-adjust: exact;
+    }
+
+    .edu-row,
+    .skill-group,
+    .project-card {
+        page-break-inside: avoid;
+    }
+
+    .eyebrow {
+        page-break-after: avoid;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
