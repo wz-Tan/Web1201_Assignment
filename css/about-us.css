@@ -15,28 +15,56 @@
 }
 
 .about-container section {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     line-height: 1.8;
 }
 
+/* Story / Mission / Vision cards — excludes the Our Team section below */
+.about-container section:not(:last-of-type) {
+    background-color: var(--color-ui-bg);
+    border: 2px solid var(--color-accent);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.about-container section:not(:last-of-type):hover {
+    box-shadow: 0 4px 20px rgba(var(--color-accent-rgb), 0.35);
+}
+
+.about-container section:last-of-type {
+    margin-bottom: 40px;
+}
+
 .about-container section h2 {
-    margin-bottom: 12px;
     padding: 14px;
     display: block;
     width: 100%;
     text-align: center;
-    color: black;
-    background-color: white;
+    animation: fadeInLeft 0.6s ease-out;
+}
+
+.about-container section:not(:last-of-type) h2 {
+    margin-bottom: 0;
+    color: var(--color-accent);
+    background-color: rgba(var(--color-accent-rgb), 0.1);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* Our Team heading keeps its original standalone box, now colour-matched to Our Story */
+.about-container section:last-of-type h2 {
+    margin-bottom: 12px;
+    color: var(--color-accent);
+    background-color: rgba(var(--color-accent-rgb), 0.1);
     border-radius: 10px;
     border: 2px solid var(--color-accent);
-    animation: fadeInLeft 0.6s ease-out;
 }
 
 .about-container section p {
     color: var(--color-text);
     word-spacing: 0.05em;
-    padding: 8px;
-    text-align: justify;
+    padding: 16px;
+    text-align: center;
     animation: fadeInUp 0.6s ease-out 0.15s both;
 }
 
@@ -144,13 +172,27 @@
     }
 
     .about-container section {
+        margin-bottom: 32px;
+    }
+
+    .about-container section:not(:last-of-type) {
+        border-radius: 12px;
+    }
+
+    .about-container section:last-of-type {
         margin-bottom: 50px;
     }
 
     .about-container section h2 {
-        margin-bottom: 15px;
         padding: 18px;
+    }
+
+    .about-container section:last-of-type h2 {
         border-radius: 12px;
+    }
+
+    .about-container section p {
+        padding: 20px;
     }
 
     .team-grid {
@@ -184,12 +226,27 @@
     }
 
     .about-container section {
+        margin-bottom: 40px;
+    }
+
+    .about-container section:not(:last-of-type) {
+        border-radius: 15px;
+    }
+
+    .about-container section:last-of-type {
         margin-bottom: 60px;
     }
 
     .about-container section h2 {
         padding: 20px;
+    }
+
+    .about-container section:last-of-type h2 {
         border-radius: 15px;
+    }
+
+    .about-container section p {
+        padding: 24px;
     }
 
     .team-grid {
