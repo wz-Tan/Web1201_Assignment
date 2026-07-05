@@ -64,6 +64,19 @@ emailInput.addEventListener("input", updateNextButton);
 passwordInput.addEventListener("input", updateNextButton);
 confirmPasswordInput.addEventListener("input", updateNextButton)
 
+//for firefox use
+function isFireFox() {
+    return navigator.userAgent.includes('Firefox');
+}
+
+function setItem(key, value) {
+    if (isFireFox()) {
+        window.sessionStorage.setItem(key, value);
+    } else {
+        window.localStorage.setItem(key, value);
+    }
+}
+
 function checkRepeated(inputValue, field) {
   return accounts.some(account => inputValue === account[field]);
 }
@@ -274,7 +287,7 @@ scrollToInput();
 nextButton.addEventListener("click", () => {
   if (currentStep === 4) {
     retrieveUserInput();
-    localStorage.setItem(
+    setItem(
       "accounts",
       JSON.stringify(accounts)
     );
