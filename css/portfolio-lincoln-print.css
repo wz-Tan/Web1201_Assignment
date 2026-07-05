@@ -1,0 +1,11 @@
+/* removes buttons */
+.cv-button, 
+.links {
+    display: none;
+}
+
+/* fix progress bar color */
+.progress-bar {
+    background-color: #eeeeee; 
+    print-color-adjust: exact;
+}
