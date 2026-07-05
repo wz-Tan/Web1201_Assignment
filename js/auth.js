@@ -12,7 +12,20 @@ signOut.forEach((anchor) => {
     });
 });
 
-const isLoggedIn = JSON.parse(localStorage.getItem('login')) || false;
+// for firefox
+function isFireFox() {
+    return navigator.userAgent.includes('Firefox');
+}
+
+function getItem(key) {
+    if (isFireFox()) {
+        return window.sessionStorage.getItem(key);
+    } else {
+        return window.localStorage.getItem(key);
+    }
+}
+/////////////////
+const isLoggedIn = JSON.parse(getItem('login')) || false;
 function checkAuth() {
   if (!isLoggedIn) {
     alert("Please log in first");

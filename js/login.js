@@ -43,6 +43,18 @@ function showPassword(password) {
 }
 
 ////////
+// for firefox use
+function isFireFox() {
+    return navigator.userAgent.includes('Firefox');
+}
+
+function setItem(key, value) {
+    if (isFireFox()) {
+        window.sessionStorage.setItem(key, value);
+    } else {
+        window.localStorage.setItem(key, value);
+    }
+}
 
 // compare data
 const form = document.getElementById("login-form");
