@@ -5,6 +5,9 @@ const productImage = document.getElementById("product-image");
 const reviewForm = document.getElementById("review-form");
 const reviewsList = document.getElementById("reviews-list");
 const stars = document.querySelectorAll(".ratings span");
+const reviewTextarea = document.getElementById("review");
+const charCountDisplay = document.getElementById("char-count");
+const maxChars = 200;
 
 let userRatings = 0;
 
@@ -145,4 +148,17 @@ reviewForm.onsubmit = function (e) {
   stars.forEach((s) => s.removeAttribute("data-clicked"));
   productImage.style.display = "none";
   productImage.src = "";
+  charCountDisplay.innerText = `0 / ${maxChars}`;
+  charCountDisplay.classList.remove("limit-reached");
 };
+
+reviewTextarea.addEventListener("input", () => {
+    const currentLength = reviewTextarea.value.length;
+    charCountDisplay.innerText = `${currentLength} / ${maxChars}`;
+
+    if (currentLength >= maxChars) {
+        charCountDisplay.classList.add("limit-reached");
+    } else {
+        charCountDisplay.classList.remove("limit-reached");
+    }
+});
