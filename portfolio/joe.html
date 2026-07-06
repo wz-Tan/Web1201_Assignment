@@ -8,12 +8,8 @@
         <link rel="stylesheet" href="../css/styles.css" />
         <link rel="stylesheet" href="../css/fonts.css" />
         <link rel="stylesheet" href="../css/utils.css" />
-        <script>
-            const savedTheme = localStorage.getItem("theme");
-            if (savedTheme === "dark") {
-                document.documentElement.classList.add("dark");
-            }
-        </script>
+        <!--Theme Check-->
+        <script src="../js/themePreloader.js"></script>
     </head>
     <body class="inner-page">
         <header>
@@ -137,13 +133,24 @@
                     </p>
                     <div class="contact-tags">
                         <span>
-                            <a href="https://github.com/joeow06" target="_blank">GitHub</a>
+                            <a href="https://github.com/joeow06" target="_blank"
+                                >GitHub</a
+                            >
                         </span>
                         <span>
-                            <a href="https://www.linkedin.com/in/ow-ji-joe-a3b11b343/" target="_blank">LinkedIn</a>
+                            <a
+                                href="https://www.linkedin.com/in/ow-ji-joe-a3b11b343/"
+                                target="_blank"
+                                >LinkedIn</a
+                            >
                         </span>
                         <span>
-                            <a target="_blank" download="../assets/files/OwJiJoe_Portfolio.pdf" href="../assets/files/OwJiJoe_Portfolio.pdf">Download CV</a>
+                            <a
+                                target="_blank"
+                                download="../assets/files/OwJiJoe_Portfolio.pdf"
+                                href="../assets/files/OwJiJoe_Portfolio.pdf"
+                                >Download CV</a
+                            >
                         </span>
                     </div>
                 </div>
@@ -466,7 +473,7 @@
                 </p>
             </div>
         </footer>
-         <script src="../js/theme.js"></script>
-         <script src="../js/auth.js"></script>
+        <script src="../js/theme.js"></script>
+        <script src="../js/auth.js"></script>
     </body>
 </html>

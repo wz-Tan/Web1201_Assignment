@@ -7,15 +7,14 @@
         <link rel="stylesheet" href="../css/styles.css" />
         <link rel="stylesheet" href="../css/fonts.css" />
         <link rel="stylesheet" href="../css/utils.css" />
-        <link rel="stylesheet" href="../css/portfolio-lincoln.css">
-        <link rel="stylesheet" href="../css/portfolio-lincoln-print.css" media="print"/>
-        <script>
-            // Load saved theme on page load (carry between pages)
-            const savedTheme = localStorage.getItem("theme");
-            if (savedTheme === "dark") {
-                document.documentElement.classList.add("dark");
-            }
-        </script>
+        <link rel="stylesheet" href="../css/portfolio-lincoln.css" />
+        <link
+            rel="stylesheet"
+            href="../css/portfolio-lincoln-print.css"
+            media="print"
+        />
+        <!--Theme Check-->
+        <script src="../js/themePreloader.js"></script>
     </head>
     <body class="inner-page">
         <header>
@@ -116,8 +115,14 @@
             <!--profile picture-->
             <section class="profile-layout">
                 <div class="profile-picture">
-                    <h1 class="text-extra-large text-bold text-accent">Lincoln Cheng</h1>
-                    <img src="../assets/images/lincoln.jpeg" alt="Lincoln's Profile Picture" class="profile-img">
+                    <h1 class="text-extra-large text-bold text-accent">
+                        Lincoln Cheng
+                    </h1>
+                    <img
+                        src="../assets/images/lincoln.jpeg"
+                        alt="Lincoln's Profile Picture"
+                        class="profile-img"
+                    />
                 </div>
 
                 <!--content-->
@@ -126,17 +131,28 @@
                         About Me
                     </h2>
                     <p class="text-medium">
-                        Hi, I'm Lincoln, and im a aspiring Cybersecurity Student in Sunway University.<br /> 
-                        I have been messing with networking projects such as a PI hole and Network monitoring dashboard.<br /><br />
-                        Outside of tech, i also enjoy reading, watching films and messing with cars.
+                        Hi, I'm Lincoln, and im a aspiring Cybersecurity Student
+                        in Sunway University.<br />
+                        I have been messing with networking projects such as a
+                        PI hole and Network monitoring dashboard.<br /><br />
+                        Outside of tech, i also enjoy reading, watching films
+                        and messing with cars.
                     </p>
-                    <a class="cv-button text-medium text-bold" target="_blank" download="../assets/files/Lincoln_CV.pdf" href="../assets/files/Lincoln_CV.pdf">Download CV</a>
+                    <a
+                        class="cv-button text-medium text-bold"
+                        target="_blank"
+                        download="../assets/files/Lincoln_CV.pdf"
+                        href="../assets/files/Lincoln_CV.pdf"
+                        >Download CV</a
+                    >
                 </div>
             </section>
 
             <!--education-->
             <section class="education-section">
-                <h2 class="text-large text-bold section-title underline-effect">Education</h2>
+                <h2 class="text-large text-bold section-title underline-effect">
+                    Education
+                </h2>
 
                 <div class="education-stack">
                     <div class="education-card">
@@ -145,150 +161,192 @@
                             <p class="text-small text-light">Completed 2024</p>
                         </div>
                         <div class="education-body">
-                            <p class="text-small text-bold">Sijil Pelajaran Malaysia (SPM)</p>
-                            <p class="text-small">Grade: <span class="text-semibold">4A</span></p>
+                            <p class="text-small text-bold">
+                                Sijil Pelajaran Malaysia (SPM)
+                            </p>
+                            <p class="text-small">
+                                Grade: <span class="text-semibold">4A</span>
+                            </p>
                         </div>
                     </div>
 
                     <div class="education-card">
                         <div class="education-header">
-                            <h3 class="text-medium text-bold">Sunway College</h3>
+                            <h3 class="text-medium text-bold">
+                                Sunway College
+                            </h3>
                             <p class="text-small text-light">2024-2025</p>
                         </div>
                         <div class="education-body">
-                            <p class="text-small text-bold">Foundation in Science and Technology (FIST)</p>
-                            <p class="text-small">Grade: <span class="text-semibold">CGPA 3.5</span></p>
+                            <p class="text-small text-bold">
+                                Foundation in Science and Technology (FIST)
+                            </p>
+                            <p class="text-small">
+                                Grade:
+                                <span class="text-semibold">CGPA 3.5</span>
+                            </p>
                         </div>
                     </div>
 
                     <div class="education-card">
                         <div class="education-header">
-                            <h3 class="text-medium text-bold">Sunway University</h3>
+                            <h3 class="text-medium text-bold">
+                                Sunway University
+                            </h3>
                             <p class="text-small text-light">2025-present</p>
                         </div>
                         <div class="education-body">
-                            <p class="text-small text-bold">BSc (Hons) Information Technology (Computer Networking and Security)</p>
-                            <p class="text-small">Grade: <span class="text-semibold">CGPA 3.8</span></p>
+                            <p class="text-small text-bold">
+                                BSc (Hons) Information Technology (Computer
+                                Networking and Security)
+                            </p>
+                            <p class="text-small">
+                                Grade:
+                                <span class="text-semibold">CGPA 3.8</span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
             <!--Skills-->
             <section class="skills-section">
-                <h2 class="text-large text-bold section-title underline-effect">Technical Skills</h2>
+                <h2 class="text-large text-bold section-title underline-effect">
+                    Technical Skills
+                </h2>
 
                 <div class="skills-flex-container">
                     <div class="skills-column">
-                    <h3 class="text-medium text-bold group-title">Programming Languages</h3>
+                        <h3 class="text-medium text-bold group-title">
+                            Programming Languages
+                        </h3>
 
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="text-small text-bold">HTML & CSS</span>
-                            <span class="text-small">90%</span>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="text-small text-bold"
+                                    >HTML & CSS</span
+                                >
+                                <span class="text-small">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill html"></div>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill html"></div>
-                        </div>
-                    </div>
 
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="text-small text-bold">JavaScript</span>
-                            <span class="text-small">70%</span>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="text-small text-bold"
+                                    >JavaScript</span
+                                >
+                                <span class="text-small">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill js"></div>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill js"></div>
-                        </div>
-                    </div>
 
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="text-small text-bold">Python</span>
-                            <span class="text-small">85%</span>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="text-small text-bold">Python</span>
+                                <span class="text-small">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill python"></div>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill python"></div>
-                        </div>
-                    </div>
 
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="text-small text-bold">Java</span>
-                            <span class="text-small">70%</span>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="text-small text-bold">Java</span>
+                                <span class="text-small">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill java"></div>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill java"></div>
-                        </div>
-                    </div>
 
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="text-small text-bold">C++</span>
-                            <span class="text-small">50%</span>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="text-small text-bold">C++</span>
+                                <span class="text-small">50%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill cpp"></div>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill cpp"></div>
-                        </div>
-                    </div>
 
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="text-small text-bold">C</span>
-                            <span class="text-small">50%</span>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="text-small text-bold">C</span>
+                                <span class="text-small">50%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill c"></div>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill c"></div>
-                        </div>
-                    </div>
                     </div>
 
                     <!--Tools-->
-                <div class="skills-column">
-                    <h3 class="text-medium text-bold group-title">Tools</h3>
+                    <div class="skills-column">
+                        <h3 class="text-medium text-bold group-title">Tools</h3>
 
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="text-small text-bold">Github</span>
-                            <span class="text-small">95%</span>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="text-small text-bold">Github</span>
+                                <span class="text-small">95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill github"></div>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill github"></div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="text-small text-bold">Docker</span>
+                                <span class="text-small">55%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill docker"></div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="text-small text-bold">Docker</span>
-                            <span class="text-small">55%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill docker"></div>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </section>
 
             <section class="projects-section">
-                <h2 class="text-extra-large text-bold section-title underline-effect">Projects</h2>
+                <h2
+                    class="text-extra-large text-bold section-title underline-effect"
+                >
+                    Projects
+                </h2>
 
                 <div class="project-container">
                     <div class="project-card">
                         <div class="project-info">
-                            <h3 class="text-large text-bold">Network Monitoring Dashboard</h3>
+                            <h3 class="text-large text-bold">
+                                Network Monitoring Dashboard
+                            </h3>
                             <p class="text-medium">
-                                Using Python, I have developed a real time network monitoring 
-                                system that monitors bandwidth usage and active network sockets.
+                                Using Python, I have developed a real time
+                                network monitoring system that monitors
+                                bandwidth usage and active network sockets.
                             </p>
                             <div class="links">
-                                <a href="https://github.com/Yzutei/Network_Dashboard" target="_blank" class="btn-project text-medium text-bold">
+                                <a
+                                    href="https://github.com/Yzutei/Network_Dashboard"
+                                    target="_blank"
+                                    class="btn-project text-medium text-bold"
+                                >
                                     View on Github &rarr;
                                 </a>
                             </div>
-                            </div>
+                        </div>
 
-                            <div class="project-image">
-                                <img src="../assets/images/network_dashboard.png" alt="Network Monitoring Dashbaord" class="project-img">
+                        <div class="project-image">
+                            <img
+                                src="../assets/images/network_dashboard.png"
+                                alt="Network Monitoring Dashbaord"
+                                class="project-img"
+                            />
                         </div>
                     </div>
                 </div>

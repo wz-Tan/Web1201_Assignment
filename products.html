@@ -9,14 +9,8 @@
         <link rel="stylesheet" href="./css/utils.css" />
         <link rel="stylesheet" href="./css/products.css" />
 
-        <!--Avoid Flash of Incorrect Theme-->
-        <script>
-            // Load saved theme on page load (carry between pages)
-            const savedTheme = localStorage.getItem("theme");
-            if (savedTheme === "dark") {
-                document.documentElement.classList.add("dark");
-            }
-        </script>
+        <!--Theme Check-->
+        <script src="./js/themePreloader.js"></script>
     </head>
     <body>
         <header>

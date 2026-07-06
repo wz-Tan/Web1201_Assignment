@@ -1,10 +1,18 @@
 // Purely For Theme Switching and Saving Themes
 const themeButtons = document.querySelectorAll(".btn-theme");
 
+function isFireFox() {
+  return navigator.userAgent.includes("Firefox");
+}
+
 function toggleTheme() {
   const isDark = document.documentElement.classList.toggle("dark");
   themeButtons.forEach((btn) => (btn.textContent = isDark ? "☀️" : "🌙"));
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+  if (isFireFox()) {
+    window.sessionStorage.setItem("theme", isDark ? "dark" : "light");
+  } else {
+    window.localStorage.setItem("theme", isDark ? "dark" : "light");
+  }
 }
 
 themeButtons.forEach((btn) => btn.addEventListener("click", toggleTheme));

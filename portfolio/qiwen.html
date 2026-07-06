@@ -1,295 +1,360 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jen Qi Wen</title>
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/fonts.css" />
+        <link rel="stylesheet" href="../css/utils.css" />
+        <link rel="stylesheet" href="../css/portfolio-qw.css	" />
+        <!--Theme Check-->
+        <script src="../js/themePreloader.js"></script>
+    </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Jen Qi Wen</title>
-	<link rel="stylesheet" href="../css/styles.css" />
-	<link rel="stylesheet" href="../css/fonts.css" />
-	<link rel="stylesheet" href="../css/utils.css" />
-	<link rel="stylesheet" href="../css/portfolio-qw.css	" />
-	<script>
-		// Load saved theme on page load (carry between pages)
-		const savedTheme = localStorage.getItem("theme");
-		if (savedTheme === "dark") {
-			document.documentElement.classList.add("dark");
-		}
-	</script>
-</head>
+    <body class="inner-page">
+        <header>
+            <!--Mobile Version-->
+            <div class="mobile">
+                <div class="main-compartment">
+                    <a
+                        href="../home.html"
+                        class="store-name text-large text-bold text-accent"
+                        >SigmaStore</a
+                    >
+                    <button
+                        class="text-medium btn-theme"
+                        aria-label="Toggle dark mode"
+                    >
+                        🌙
+                    </button>
+                    <!--Trigger Button on Mobile-->
+                    <button
+                        class="btn-header text-large text-bold"
+                        aria-label="Open navigation menu"
+                    >
+                        ☰
+                    </button>
+                </div>
 
-<body class="inner-page">
-	<header>
-		<!--Mobile Version-->
-		<div class="mobile">
-			<div class="main-compartment">
-				<a href="../home.html" class="store-name text-large text-bold text-accent">SigmaStore</a>
-				<button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
-				<!--Trigger Button on Mobile-->
-				<button class="btn-header text-large text-bold" aria-label="Open navigation menu">☰</button>
-			</div>
+                <nav class="header-dropdown">
+                    <ul class="text-large">
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../products.html"
+                                >Products</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../review.html"
+                                >Review</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-bold underline-effect"
+                                href="../about-us.html"
+                                >About Us</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-bold underline-effect js-sign-out inner-page"
+                                >Sign Out</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
-			<nav class="header-dropdown">
-				<ul class="text-large">
-					<li>
-						<a class="text-bold underline-effect" href="../products.html">Products</a>
-					</li>
-					<li>
-						<a class="text-bold underline-effect" href="../review.html">Review</a>
-					</li>
-					<li>
-						<a class="text-bold underline-effect" href="../about-us.html">About Us</a>
-					</li>
-					<li>
-						<a class="text-bold underline-effect js-sign-out inner-page">Sign Out</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
+            <!--Tablet + Laptop-->
+            <div class="non-mobile">
+                <a href="../home.html" class="text-large text-bold text-accent"
+                    >SigmaStore</a
+                >
+                <nav>
+                    <ul class="text-medium">
+                        <li>
+                            <a class="underline-effect" href="../products.html"
+                                >Products</a
+                            >
+                        </li>
+                        <li>
+                            <a class="underline-effect" href="../review.html"
+                                >Review</a
+                            >
+                        </li>
+                        <li>
+                            <a class="underline-effect" href="../about-us.html"
+                                >About Us</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <div class="right">
+                    <button
+                        class="text-medium btn-theme"
+                        aria-label="Toggle dark mode"
+                    >
+                        🌙
+                    </button>
+                    <a class="text-medium sign-out js-sign-out inner-page"
+                        >Sign Out</a
+                    >
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <section class="personal-bio-container">
+                <div class="profile">
+                    <div class="profile-name">
+                        <h1 class="text-bold">Jen</h1>
+                        <h1 class="text-bold">Qi</h1>
+                        <h1 class="text-bold">Wen</h1>
+                    </div>
+                    <div class="profile-picture">
+                        <img src="../assets/images/qw.jpg" class="qw-image" />
+                    </div>
+                </div>
 
-		<!--Tablet + Laptop-->
-		<div class="non-mobile">
-			<a href="../home.html" class="text-large text-bold text-accent">SigmaStore</a>
-			<nav>
-				<ul class="text-medium">
-					<li>
-						<a class="underline-effect" href="../products.html">Products</a>
-					</li>
-					<li>
-						<a class="underline-effect" href="../review.html">Review</a>
-					</li>
-					<li>
-						<a class="underline-effect" href="../about-us.html">About Us</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="right">
-				<button class="text-medium btn-theme" aria-label="Toggle dark mode">🌙</button>
-				<a class="text-medium sign-out js-sign-out inner-page">Sign Out</a>
-			</div>
-		</div>
-	</header>
-	<main class="container">
+                <div class="personal-bio">
+                    <div class="bio">
+                        <h2 class="text-large">Greetings, it's me</h2>
+                        <h1 class="text-large text-semibold">Jen Qi Wen</h1>
+                        <h2 class="text-large">
+                            And I am a
+                            <span class="text-semibold"
+                                >Computer Science Student</span
+                            >
+                        </h2>
+                        <p class="text-medium">
+                            Recently, I am learning HTML, CSS and JavaScript
+                            which helping me in web development. While free, I
+                            am diving into React as well. I really enjoy turning
+                            idea into functional application!
+                        </p>
+                    </div>
+                    <div class="download-cv">
+                        <a
+                            href="../assets/files/JenQiWen_Portfolio.pdf"
+                            download="../assets/files/JenQiWen_Portfolio.pdf"
+                        >
+                            <button class="download-cv-button btn-primary">
+                                Download CV
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-		<section class="personal-bio-container">
+            <section class="education-level-container">
+                <h1 class="text-bold">Education Level</h1>
+                <div class="education-level">
+                    <div class="secondary">
+                        <h1>Certificate: SPM</h1>
+                        <h1>School: SMK Layang-Layang</h1>
+                        <h1>Resutls: 5A+ 3A 2A-</h1>
+                    </div>
+                    <div class="logo">
+                        <img
+                            src="../assets/images/smk_layang-layang.jpg"
+                            class="school-logo"
+                        />
+                    </div>
+                </div>
+                <div class="education-level">
+                    <div class="foundation">
+                        <h1>Programme: MUFY</h1>
+                        <h1>School: Sunway College JB</h1>
+                        <h1>Resutls: 91.50% / CGPA 4.00</h1>
+                    </div>
+                    <div class="logo">
+                        <img
+                            src="../assets/images/sunway_college_jb_logo.jpg"
+                            class="school-logo"
+                        />
+                    </div>
+                </div>
+                <div class="education-level">
+                    <div class="degree">
+                        <h1>Course: Bachelor Degree in Computer Science</h1>
+                        <h1>School: Sunway University</h1>
+                        <h1>Resutls: CGPA 3.94</h1>
+                    </div>
+                    <div class="logo">
+                        <img
+                            src="../assets/images/sunway_university.png"
+                            class="school-logo"
+                        />
+                    </div>
+                </div>
+            </section>
 
-			<div class="profile">
-				<div class="profile-name">
-					<h1 class="text-bold">Jen</h1>
-					<h1 class="text-bold">Qi</h1>
-					<h1 class="text-bold">Wen</h1>
-				</div>
-				<div class="profile-picture">
-					<img src="../assets/images/qw.jpg" class="qw-image" />
-				</div>
-			</div>
+            <section class="technical-skills-container">
+                <h1 class="text-bold">Technical Skills</h1>
+                <div class="technical-skills">
+                    <div class="technical-skills-header">
+                        <img
+                            src="../assets/icons/code-icon-img.png"
+                            class="code-icon"
+                        />
+                        <p class="text-semibold coding-text">Coding Skills</p>
+                    </div>
 
-			<div class="personal-bio">
-				<div class="bio">
-					<h2 class="text-large">Greetings, it's me</h2>
-					<h1 class="text-large text-semibold">Jen Qi Wen</h1>
-					<h2 class="text-large">And I am a <span class="text-semibold">Computer Science Student</span></h2>
-					<p class="text-medium">Recently, I am learning HTML, CSS and JavaScript which helping me in web development.
-						While free, I am
-						diving into React as well. I really enjoy turning idea into functional application!</p>
-				</div>
-				<div class="download-cv">
-					<a href="../assets/files/JenQiWen_Portfolio.pdf"	download="../assets/files/JenQiWen_Portfolio.pdf">
-						<button class="download-cv-button btn-primary">Download CV</button>
-					</a>
-				</div>
-			</div>
-		</section>
+                    <div class="technical-skill">
+                        <div class="programming-language">
+                            <img src="../assets/icons/python-icon.png" />
+                            <div class="level-progress-section">
+                                <p class="text-bold">Python</p>
+                                <p class="text-semibold">88%</p>
+                                <div class="level-progress-bar">
+                                    <div
+                                        class="level-progress-fill python"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
 
-		<section class="education-level-container">
-			<h1 class="text-bold">Education Level</h1>
-			<div class="education-level">
-				<div class="secondary">
-					<h1>
-						Certificate: SPM
-					</h1>
-					<h1>
-						School: SMK Layang-Layang
-					</h1>
-					<h1>
-						Resutls: 5A+ 3A 2A-
-					</h1>
-				</div>
-				<div class="logo">
-					<img src="../assets/images/smk_layang-layang.jpg" class="school-logo" />
-				</div>
-			</div>
-			<div class="education-level">
-				<div class="foundation">
-					<h1>
-						Programme: MUFY
-					</h1>
-					<h1>
-						School: Sunway College JB
-					</h1>
-					<h1>
-						Resutls: 91.50% / CGPA 4.00
-					</h1>
-				</div>
-				<div class="logo">
-					<img src="../assets/images/sunway_college_jb_logo.jpg" class="school-logo" />
-				</div>
-			</div>
-			<div class="education-level">
-				<div class="degree">
-					<h1>
-						Course: Bachelor Degree in Computer Science
-					</h1>
-					<h1>
-						School: Sunway University
-					</h1>
-					<h1>
-						Resutls: CGPA 3.94
-					</h1>
-				</div>
-				<div class="logo"><img src="../assets/images/sunway_university.png" class="school-logo"></div>
-			</div>
-		</section>
+                        <div class="programming-language">
+                            <img src="../assets/icons/javascript-icon.png" />
+                            <div class="level-progress-section">
+                                <p class="text-bold">JavaScript</p>
+                                <p class="text-semibold">80%</p>
+                                <div class="level-progress-bar">
+                                    <div
+                                        class="level-progress-fill javascript"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
 
-		<section class="technical-skills-container">
-			<h1 class="text-bold">Technical Skills</h1>
-			<div class="technical-skills">
-				<div class="technical-skills-header">
-					<img src="../assets/icons/code-icon-img.png" class="code-icon">
-					<p class="text-semibold coding-text">Coding Skills</p>
-				</div>
+                        <div class="programming-language">
+                            <img src="../assets/icons/html-icon.png" />
+                            <div class="level-progress-section">
+                                <p class="text-bold">HTML</p>
+                                <p class="text-semibold">75%</p>
+                                <div class="level-progress-bar">
+                                    <div class="level-progress-fill html"></div>
+                                </div>
+                            </div>
+                        </div>
 
-				<div class="technical-skill">
-					<div class="programming-language">
-						<img src="../assets/icons/python-icon.png">
-						<div class="level-progress-section">
-							<p class="text-bold">Python</p>
-							<p class="text-semibold">88%</p>
-							<div class="level-progress-bar">
-								<div class="level-progress-fill python"></div>
-							</div>
-						</div>
-					</div>
+                        <div class="programming-language">
+                            <img src="../assets/icons/git-icon.png" />
+                            <div class="level-progress-section">
+                                <p class="text-bold">Git</p>
+                                <p class="text-semibold">75%</p>
+                                <div class="level-progress-bar">
+                                    <div class="level-progress-fill git"></div>
+                                </div>
+                            </div>
+                        </div>
 
-					<div class="programming-language">
-						<img src="../assets/icons/javascript-icon.png">
-						<div class="level-progress-section">
-							<p class="text-bold">JavaScript</p>
-							<p class="text-semibold">80%</p>
-							<div class="level-progress-bar">
-								<div class="level-progress-fill javascript"></div>
-							</div>
-						</div>
-					</div>
+                        <div class="programming-language">
+                            <img src="../assets/icons/css-icon.png" />
+                            <div class="level-progress-section">
+                                <p class="text-bold">CSS</p>
+                                <p class="text-semibold">60%</p>
+                                <div class="level-progress-bar">
+                                    <div class="level-progress-fill css"></div>
+                                </div>
+                            </div>
+                        </div>
 
-					<div class="programming-language">
-						<img src="../assets/icons/html-icon.png">
-						<div class="level-progress-section">
-							<p class="text-bold">HTML</p>
-							<p class="text-semibold">75%</p>
-							<div class="level-progress-bar">
-								<div class="level-progress-fill html"></div>
-							</div>
-						</div>
-					</div>
+                        <div class="programming-language">
+                            <img src="../assets/icons/react-icon.png" />
+                            <div class="level-progress-section">
+                                <p class="text-bold">ReactJs</p>
+                                <p class="text-semibold">55%</p>
+                                <div class="level-progress-bar">
+                                    <div
+                                        class="level-progress-fill react"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
 
-					<div class="programming-language">
-						<img src="../assets/icons/git-icon.png">
-						<div class="level-progress-section">
-							<p class="text-bold">Git</p>
-							<p class="text-semibold">75%</p>
-							<div class="level-progress-bar">
-								<div class="level-progress-fill git"></div>
-							</div>
-						</div>
-					</div>
+                        <div class="programming-language">
+                            <img src="../assets/icons/typescript-icon.png" />
+                            <div class="level-progress-section">
+                                <p class="text-bold">TypeScript</p>
+                                <p class="text-semibold">50%</p>
+                                <div class="level-progress-bar">
+                                    <div
+                                        class="level-progress-fill typescript"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
 
-					<div class="programming-language">
-						<img src="../assets/icons/css-icon.png">
-						<div class="level-progress-section">
-							<p class="text-bold">CSS</p>
-							<p class="text-semibold">60%</p>
-							<div class="level-progress-bar">
-								<div class="level-progress-fill css"></div>
-							</div>
-						</div>
-					</div>
+                        <div class="programming-language">
+                            <img src="../assets/icons/java-icon.png" />
+                            <div class="level-progress-section java">
+                                <p class="text-bold">Java</p>
+                                <p class="text-semibold">45%</p>
+                                <div class="level-progress-bar">
+                                    <div class="level-progress-fill java"></div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="programming-language">
+                            <img src="../assets/icons/cpp-icon.png" />
+                            <div class="level-progress-section">
+                                <p class="text-bold">C++</p>
+                                <p class="text-semibold">30%</p>
+                                <div class="level-progress-bar">
+                                    <div class="level-progress-fill cpp"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-					<div class="programming-language">
-						<img src="../assets/icons/react-icon.png">
-						<div class="level-progress-section">
-							<p class="text-bold">ReactJs</p>
-							<p class="text-semibold">55%</p>
-							<div class="level-progress-bar">
-								<div class="level-progress-fill react"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="programming-language">
-						<img src="../assets/icons/typescript-icon.png">
-						<div class="level-progress-section">
-							<p class="text-bold">TypeScript</p>
-							<p class="text-semibold">50%</p>
-							<div class="level-progress-bar">
-								<div class="level-progress-fill typescript"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="programming-language">
-						<img src="../assets/icons/java-icon.png">
-						<div class="level-progress-section java">
-							<p class="text-bold">Java</p>
-							<p class="text-semibold">45%</p>
-							<div class="level-progress-bar">
-								<div class="level-progress-fill java"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="programming-language">
-						<img src="../assets/icons/cpp-icon.png">
-						<div class="level-progress-section">
-							<p class="text-bold">C++</p>
-							<p class="text-semibold">30%</p>
-							<div class="level-progress-bar">
-								<div class="level-progress-fill cpp"></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-		</section>
-
-		<section class="featured-projects-container">
-			<h1 class="text-bold">Featured Projects</h1>
-			<div class="featured-project">
-				<div class="project-description">
-					<div class="text-semibold text-medium description">
-						Developed a responsive e-commerce web application using React to simulate
-						an online shopping experience. The application allows users to browse products, search product, and
-						manage items in a shopping cart through dynamic state management.
-					</div>
-					<div class="text-semibold text-medium skills">Skills: HTML, CSS, JSX, TSX</div>
-					<div class="link-to-project">
-						<a href="http://ecommerce-project-react-env-1.eba-bmnvp4nk.ap-southeast-2.elasticbeanstalk.com/">
-							<button class="btn-primary link-to-project-button">Ecommerce
-								Project</button></a>
-					</div>
-				</div>
-				<div class="project-overview">
-					<img src="../assets/images/qw-project-home.png" class="project-picture" />
-					<img src="../assets/images/qw-project-cart.png" class="project-picture" />
-				</div>
-			</div>
-		</section>
-
-	</main>
- <footer>
+            <section class="featured-projects-container">
+                <h1 class="text-bold">Featured Projects</h1>
+                <div class="featured-project">
+                    <div class="project-description">
+                        <div class="text-semibold text-medium description">
+                            Developed a responsive e-commerce web application
+                            using React to simulate an online shopping
+                            experience. The application allows users to browse
+                            products, search product, and manage items in a
+                            shopping cart through dynamic state management.
+                        </div>
+                        <div class="text-semibold text-medium skills">
+                            Skills: HTML, CSS, JSX, TSX
+                        </div>
+                        <div class="link-to-project">
+                            <a
+                                href="http://ecommerce-project-react-env-1.eba-bmnvp4nk.ap-southeast-2.elasticbeanstalk.com/"
+                            >
+                                <button
+                                    class="btn-primary link-to-project-button"
+                                >
+                                    Ecommerce Project
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="project-overview">
+                        <img
+                            src="../assets/images/qw-project-home.png"
+                            class="project-picture"
+                        />
+                        <img
+                            src="../assets/images/qw-project-cart.png"
+                            class="project-picture"
+                        />
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
             <nav>
                 <ul class="text-large">
                     <li>
@@ -326,8 +391,7 @@
                 </p>
             </div>
         </footer>
-	<script src="../js/theme.js"></script>
-	<script src="../js/auth.js"></script>
-</body>
-
+        <script src="../js/theme.js"></script>
+        <script src="../js/auth.js"></script>
+    </body>
 </html>

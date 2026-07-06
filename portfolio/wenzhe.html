@@ -9,13 +9,9 @@
         <link rel="stylesheet" href="../css/utils.css" />
         <link rel="stylesheet" href="../css/portfolio-wz.css" />
         <link rel="stylesheet" href="../css/portfolio-wz-print.css" media="print"/>
-        <script>
-            // Load saved theme on page load (carry between pages)
-            const savedTheme = localStorage.getItem("theme");
-            if (savedTheme === "dark") {
-                document.documentElement.classList.add("dark");
-            }
-        </script>
+
+        <!--Theme Check-->
+        <script src="../js/themePreloader.js"></script>
     </head>
     <body class="inner-page">
         <header>
