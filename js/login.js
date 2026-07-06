@@ -83,7 +83,8 @@ form.addEventListener("submit", (event) => {
 
   if (account) {
     console.log("success");
-    setItem('login', JSON.stringify(true));
+    // setItem('login', JSON.stringify(true));
+    setItem('loginAccount', JSON.stringify(account));
     window.location.replace("home.html");
   } else {
     console.log("fail");

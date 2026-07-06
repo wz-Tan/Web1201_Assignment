@@ -3,7 +3,7 @@ signOut.forEach((anchor) => {
     isInner = anchor.classList.contains('inner-page');
     anchor.addEventListener('click', () => {
       alert('Signing out...');
-      removeItem('login');
+      removeItem('loginAccount');
       window.location.replace(
        isInner
        ? "../index.html" 
@@ -34,7 +34,7 @@ function removeItem(key) {
 }
 /////////////////
 function checkAuth() {
-  const isLoggedIn = JSON.parse(getItem('login')) || false;
+  const isLoggedIn = JSON.parse(getItem('loginAccount')) || false;
   if (!isLoggedIn) {
     alert("Please log in first");
     window.location.replace(
