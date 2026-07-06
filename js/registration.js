@@ -11,8 +11,30 @@ const showConfirmPasswordButton = document.querySelector(".js-show-confirm-passw
 const usernameRepeatedMessage = document.querySelector(".js-repeated-message-username");
 const emailRepeatedMessage = document.querySelector(".js-repeated-message-email");
 
-//accounts = { username, email, password }
 
+//for firefox use
+function isFireFox() {
+    return navigator.userAgent.includes('Firefox');
+}
+
+function setItem(key, value) {
+    if (isFireFox()) {
+        window.sessionStorage.setItem(key, value);
+    } else {
+        window.localStorage.setItem(key, value);
+    }
+}
+
+function getItem(key) {
+    if (isFireFox()) {
+        return window.sessionStorage.getItem(key);
+    } else {
+        return window.localStorage.getItem(key);
+    }
+}
+////////
+
+//accounts = { username, email, password }
 const accounts = JSON.parse(getItem('accounts')) || [
   {
     username: "username",
@@ -64,27 +86,6 @@ emailInput.addEventListener("input", updateNextButton);
 passwordInput.addEventListener("input", updateNextButton);
 confirmPasswordInput.addEventListener("input", updateNextButton)
 
-//for firefox use
-function isFireFox() {
-    return navigator.userAgent.includes('Firefox');
-}
-
-function setItem(key, value) {
-    if (isFireFox()) {
-        window.sessionStorage.setItem(key, value);
-    } else {
-        window.localStorage.setItem(key, value);
-    }
-}
-
-function getItem(key) {
-    if(isFireFox()) {
-        window.sessionStorage.setItem(key);
-    } else {
-        window.localStorage.setItem(key);
-    }
-}
-////////
 function checkRepeated(inputValue, field) {
   return accounts.some(account => inputValue === account[field]);
 }
@@ -296,7 +297,7 @@ nextButton.addEventListener("click", () => {
   if (currentStep === 4) {
     retrieveUserInput();
     setItem(
-      "accounts",
+      'accounts',
       JSON.stringify(accounts)
     );
     window.location.replace("index.html");

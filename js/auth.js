@@ -27,9 +27,9 @@ function getItem(key) {
 
 function removeItem(key) {
   if (isFireFox()) {
-        return window.sessionStorage.removeItem(key);
+        window.sessionStorage.removeItem(key);
     } else {
-        return window.localStorage.removeItem(key);
+        window.localStorage.removeItem(key);
     }
 }
 /////////////////
