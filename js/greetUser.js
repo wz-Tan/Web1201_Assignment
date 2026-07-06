@@ -1,7 +1,7 @@
 const greetingTextElement = document.querySelector(".greeting-text");
 const account = JSON.parse(getItem('loginAccount'));
 const username = account.username;
-greetingTextElement.textContent = `Welcome to SigmaStore, ${username}`;
+greetingTextElement.textContent = `Welcome back, ${username}`;
 
 // for firefox use
 function isFireFox() {
