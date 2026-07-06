@@ -1,6 +1,6 @@
 // dummy data
 const accounts =
-  JSON.parse(localStorage.getItem('accounts')) || [
+  JSON.parse(getItem('accounts')) || [
     {
       username: "username",
       email: "email@gmail.com",
@@ -56,6 +56,14 @@ function setItem(key, value) {
     }
 }
 
+function getItem(key) {
+    if (isFireFox()) {
+        return window.sessionStorage.getItem(key);
+    } else {
+        return window.localStorage.getItem(key);
+    }
+}
+//////////////
 // compare data
 const form = document.getElementById("login-form");
 
