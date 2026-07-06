@@ -13,7 +13,7 @@ const emailRepeatedMessage = document.querySelector(".js-repeated-message-email"
 
 //accounts = { username, email, password }
 
-const accounts = JSON.parse(localStorage.getItem('accounts')) || [
+const accounts = JSON.parse(getItem('accounts')) || [
   {
     username: "username",
     email: "email@gmail.com",
@@ -77,6 +77,14 @@ function setItem(key, value) {
     }
 }
 
+function getItem(key) {
+    if(isFireFox()) {
+        window.sessionStorage.setItem(key);
+    } else {
+        window.localStorage.setItem(key);
+    }
+}
+////////
 function checkRepeated(inputValue, field) {
   return accounts.some(account => inputValue === account[field]);
 }

@@ -3,7 +3,7 @@ signOut.forEach((anchor) => {
     isInner = anchor.classList.contains('inner-page');
     anchor.addEventListener('click', () => {
       alert('Signing out...');
-      localStorage.removeItem('login');
+      removeItem('login');
       window.location.replace(
        isInner
        ? "../index.html" 
@@ -24,9 +24,17 @@ function getItem(key) {
         return window.localStorage.getItem(key);
     }
 }
+
+function removeItem(key) {
+  if (isFireFox()) {
+        return window.sessionStorage.removeItem(key);
+    } else {
+        return window.localStorage.removeItem(key);
+    }
+}
 /////////////////
-const isLoggedIn = JSON.parse(getItem('login')) || false;
 function checkAuth() {
+  const isLoggedIn = JSON.parse(getItem('login')) || false;
   if (!isLoggedIn) {
     alert("Please log in first");
     window.location.replace(
