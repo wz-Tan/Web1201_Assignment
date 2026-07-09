@@ -28,7 +28,6 @@ loginButton.disabled = !(passwordInput.value && usernameEmailInput.value);
 const inputElements = document.querySelectorAll("input");
 inputElements.forEach(input => {
   input.addEventListener("input", () => {
-    console.log(!(passwordInput.value ||usernameEmailInput.value))
     loginButton.disabled = !(passwordInput.value && usernameEmailInput.value);
   });
 });
@@ -101,12 +100,10 @@ form.addEventListener("submit", (event) => {
   );
 
   if (account) {
-    console.log("success");
     // setItem('login', JSON.stringify(true));
     setItem('loginAccount', JSON.stringify(account));
     window.location.replace("home.html");
   } else {
-    console.log("fail");
     const loginFailMessage = document.querySelector(".js-login-fail-message");
     loginFailMessage.classList.add("show");
     const loginFailButton = document.querySelector(".js-login-fail-button");
@@ -115,6 +112,7 @@ form.addEventListener("submit", (event) => {
     });
 
     form.reset();
+    loginButton.disabled = !(passwordInput.value && usernameEmailInput.value);
   }
 });
 
