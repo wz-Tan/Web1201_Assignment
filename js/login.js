@@ -19,17 +19,17 @@ const showPasswordButton = document.querySelector(".js-show-password-button");
 const usernameEmailInput = document.getElementById("username-email");
 const loginButton = document.querySelector(".js-login-button");
 
-//disable login button for the empty form
+//disable login button for the incomplete form
 
 //run for the first time entering the page
-loginButton.disabled = !(passwordInput.value || usernameEmailInput.value);
+loginButton.disabled = !(passwordInput.value && usernameEmailInput.value);
 
 //keep tracking user input to enable/disable the login button
 const inputElements = document.querySelectorAll("input");
 inputElements.forEach(input => {
   input.addEventListener("input", () => {
     console.log(!(passwordInput.value ||usernameEmailInput.value))
-    loginButton.disabled = !(passwordInput.value || usernameEmailInput.value);
+    loginButton.disabled = !(passwordInput.value && usernameEmailInput.value);
   });
 });
 
