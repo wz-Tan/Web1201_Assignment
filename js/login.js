@@ -16,9 +16,19 @@ const accounts =
 
 const passwordInput = document.getElementById("password");
 const showPasswordButton = document.querySelector(".js-show-password-button");
+const usernameEmailInput = document.getElementById("username-email");
+const loginButton = document.querySelector(".js-login-button");
+
+//disable login button for the empty form
+const inputElements = document.querySelectorAll("input");
+inputElements.forEach(input => {
+  input.addEventListener("input", () => {
+    console.log(!(passwordInput.value ||usernameEmailInput.value))
+    loginButton.disabled = !(passwordInput.value || usernameEmailInput.value);
+  });
+});
 
 //show password
-
 showPasswordButton.addEventListener("click", () => {
   changeButtonText(showPasswordButton);
   showPassword(passwordInput);
@@ -41,6 +51,10 @@ function showPassword(password) {
     password.type = "password";
   }
 }
+
+//disable the button for the empty form
+
+
 
 ////////
 // for firefox use

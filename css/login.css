@@ -188,6 +188,11 @@
   border: none;
 }
 
+.login-button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
 .index.login-button:hover {
   opacity: 0.8;
 }
