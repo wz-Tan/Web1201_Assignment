@@ -11,152 +11,161 @@
     </head>
 
     <body>
-        <div class="fullscreen-container registration-flexbox registration">
-            <div class="registration-card registration">
-                <div class="login-side registration">
-                    <h2 class="text-large text-bold">
-                        Welcome to Sigma Store!
-                    </h2>
-                    <p class="text-small">
-                        Already have an account? Log in now!
-                    </p>
-                    <a href="index.html">
-                        <button
-                            class="btn-primary login-button registration text-semibold js-login-button"
-                        >
-                            Log in
-                        </button>
-                    </a>
+    <main class="fullscreen-container registration-flexbox registration">
+        <div class="registration-card registration">
+
+            <!-- Left side: redirect to login for existing users -->
+            <section class="login-side registration">
+                <h2 class="text-large text-bold">
+                    Welcome to Sigma Store!
+                </h2>
+                <p class="text-small">
+                    Already have an account? Log in now!
+                </p>
+                <a href="index.html">
+                    <button
+                        class="btn-primary login-button registration text-semibold js-login-button"
+                    >
+                        Log in
+                    </button>
+                </a>
+            </section>
+
+            <!-- Right side: multi-step account creation form -->
+            <section class="create-side">
+                <h2 class="text-large text-bold create-text">
+                    Create new account
+                </h2>
+
+                <!-- progress bar -->
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                    <div class="steps step-1 active">
+                        <div class="steps-circle">1</div>
+                        <span>Username</span>
+                    </div>
+
+                    <div class="steps step-2">
+                        <div class="steps-circle">2</div>
+                        <span>Email</span>
+                    </div>
+
+                    <div class="steps step-3">
+                        <div class="steps-circle">3</div>
+                        <span>Password</span>
+                    </div>
+
+                    <div class="steps step-4">
+                        <div class="steps-circle">✓</div>
+                        <span>Create</span>
+                    </div>
                 </div>
-                <div class="create-side">
-                    <!-- <div class="home">
-                        <a href="/products.html">
-                            <button class="btn-primary js-home-button">
-                                &#8962;
+
+                <!-- Step 1: Username input -->
+                <div class="userinfo">
+                    <div class="input-group user-step active" id="step-1">
+                        <label for="username">Username</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter your username"
+                        />
+                        <span class="validation">
+                            *username must be at least 4 characters without
+                            space
+                        </span>
+                        <br />
+                        <span class="repeated-message js-repeated-message-username hide">
+                        </span>
+                    </div>
+
+                    <!-- Step 2: Email input -->
+                    <div class="input-group user-step" id="step-2">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                        />
+                        <span class="validation"
+                            >*email addresses must include an '@' symbol and
+                            a valid domain extension like '.com</span
+                        >
+                        <br />
+                        <span class="repeated-message js-repeated-message-email hide">
+                        </span>
+                    </div>
+
+                    <!-- Step 3: Password + confirm password -->
+                    <div class="input-group user-step" id="step-3">
+                        <label for="password">Password</label>
+                        <div class="password-container">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                            />
+
+                            <button
+                                type="button"
+                                class="show-password-button js-show-password-button"
+                            >
+                                Show
                             </button>
-                        </a>
-                        <span>Home Page</span>
-                    </div> -->
-                    <h2 class="text-large text-bold create-text">
-                        Create new account
-                    </h2>
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
-                        <div class="steps step-1 active">
-                            <div class="steps-circle">1</div>
-                            <span>Username</span>
                         </div>
-
-                        <div class="steps step-2">
-                            <div class="steps-circle">2</div>
-                            <span>Email</span>
-                        </div>
-
-                        <div class="steps step-3">
-                            <div class="steps-circle">3</div>
-                            <span>Password</span>
-                        </div>
-
-                        <div class="steps step-4">
-                            <div class="steps-circle">✓</div>
-                            <span>Create</span>
-                        </div>
-                    </div>
-                    <div class="userinfo">
-                        <div class="input-group user-step active" id="step-1">
-                            <label for="username">Username</label>
-                            <input
-                                type="text"
-                                id="username"
-                                name="username"
-                                placeholder="Enter your username"
-                            />
-                            <span class="validation">
-                                *username must be at least 4 characters without
-                                space
-                            </span>
-                            <br />
-                            <span class="repeated-message js-repeated-message-username hide">
-                            </span>
-                        </div>
-                        <div class="input-group user-step" id="step-2">
-                            <label for="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Enter your email"
-                            />
-                            <span class="validation"
-                                >*email addresses must include an '@' symbol and
-                                a valid domain extension like '.com</span
-                            >
-                            <br />
-                            <span class="repeated-message js-repeated-message-email hide">
-                            </span>
-                        </div>
-                        <div class="input-group user-step" id="step-3">
-                            <label for="password">Password</label>
-                            <div class="password-container">
-                                <input
-                                    type="password"
-                                    id="password"
-                                    name="password"
-                                    placeholder="Enter your password"
-                                />
-
-                                <button
-                                    type="button"
-                                    class="show-password-button js-show-password-button"
-                                >
-                                    Show
-                                </button>
-                            </div>
-                            <p class="validation">
-                                *password must contain at least 8 characters, at
-                                least 1 number, at least 1 symbol, and at least
-                                one upper case and lower case
-                            </p>
-                            <label for="confirm-password"
-                                >Confirm Password</label
-                            >
-                            <div class="password-container">
-                                <input
-                                    type="password"
-                                    id="confirm-password"
-                                    name="confirm-password"
-                                    placeholder="Enter your confirm-password"
-                                />
-                                <button
-                                    type="button"
-                                    class="show-confirm-password-button js-show-confirm-password-button"
-                                >
-                                    Show
-                                </button>
-                            </div>
-                        </div>
-                        <div class="input-group user-step" id="step-4">
-                            <p
-                                class="text-large text-semibold create-account-message"
-                            >
-                                You have done. Create your account now!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="js-previous-next-buttons">
-                        <button
-                            class="btn-primary previous-button hide js-previous-button"
+                        <p class="validation">
+                            *password must contain at least 8 characters, at
+                            least 1 number, at least 1 symbol, and at least
+                            one upper case and lower case
+                        </p>
+                        <label for="confirm-password"
+                            >Confirm Password</label
                         >
-                            Previous
-                        </button>
-                        <button class="btn-primary next-button js-next-button">
-                            Next
-                        </button>
+                        <div class="password-container">
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirm-password"
+                                placeholder="Enter your confirm-password"
+                            />
+                            <button
+                                type="button"
+                                class="show-confirm-password-button js-show-confirm-password-button"
+                            >
+                                Show
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Confirmation before account creation -->
+                    <div class="input-group user-step" id="step-4">
+                        <p
+                            class="text-large text-semibold create-account-message"
+                        >
+                            You have done. Create your account now!
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <script src="./js/registration.js"></script>
-    </body>
+                <!-- Navigation controls for multi-step form -->
+                <div class="js-previous-next-buttons">
+                    <button
+                        class="btn-primary previous-button hide js-previous-button"
+                    >
+                        Previous
+                    </button>
+                    <button class="btn-primary next-button js-next-button">
+                        Next
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="./js/registration.js"></script>
+</body>
 </html>

@@ -13,59 +13,60 @@
 
 <body>
     <main class="fullscreen-container registration-flexbox">
-        <div class="registration-card">
-            <div class="welcome-side">
-                <h2 class="text-large text-bold">
-                    Welcome Back to Sigma Store!
-                </h2>
-                <p class="text-small">Your next favorite find is here!</p>
-                <p>Don't have an account?</p>
-                <a href="./registration.html">
-                    <button class="btn-primary sign-in-button text-semibold">
-                        Sign Up
-                    </button>
-                </a>
+    <div class="registration-card">
+
+        <!-- Left side: redirect to sign up for new users -->
+        <section class="welcome-side">
+            <h2 class="text-large text-bold">
+                Welcome Back to Sigma Store!
+            </h2>
+            <p class="text-small">Your next favorite find is here!</p>
+            <p>Don't have an account?</p>
+            <a href="./registration.html">
+                <button class="btn-primary sign-in-button text-semibold">
+                    Sign Up
+                </button>
+            </a>
+        </section>
+
+        <!-- Right side: login form -->
+        <section class="login-side">
+            <h2 class="text-large text-bold create-text">
+                Login to your account
+            </h2>
+
+            <!-- Error message shown on failed login attempt -->
+            <div class="js-login-fail-message login-fail-message">
+                <span>Incorrect email or password</span>
+                <button class="js-login-fail-button" type="button">
+                    x
+                </button>
             </div>
-            <div class="login-side">
-                <!-- <div class="home">
-                    <a href="/home.html">
-                        <button class="btn-primary js-home-button">
-                            &#8962;
-                        </button>
-                    </a>
-                    <span>Home Page</span>
-                </div> -->
-                <h2 class="text-large text-bold create-text">
-                    Login to your account
-                </h2>
-                <div class="js-login-fail-message login-fail-message">
-                    <span>Incorrect email or password</span>
-                    <button class="js-login-fail-button" type="button">
-                        ×
-                    </button>
+
+            <!-- Login form: username/email + password -->
+            <form class="userinfo" id="login-form">
+                <div class="input-group">
+                    <label for="username-email">Username or Email</label>
+                    <input type="text" id="username-email" name="username-email"
+                        placeholder="Enter your username or email" />
                 </div>
-                <form class="userinfo" id="login-form">
-                    <div class="input-group">
-                        <label for="username-email">Username or Email</label>
-                        <input type="text" id="username-email" name="username-email"
-                            placeholder="Enter your username or email" />
+                <div class="input-group">
+                    <div class="password-container">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" />
+                        <button type="button" class="show-password-button js-show-password-button">
+                            Show
+                        </button>
                     </div>
-                    <div class="input-group">
-                        <div class="password-container">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Enter your password" />
-                            <button type="button" class="show-password-button js-show-password-button">
-                                Show
-                            </button>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-primary index login-button js-login-button">
-                        Log in
-                    </button>
-                </form>
-            </div>
-        </div>
-    </main>
+                </div>
+                <button type="submit" class="btn-primary index login-button js-login-button">
+                    Log in
+                </button>
+            </form>
+        </section>
+
+    </div>
+</main>
 
     <script src="./js/login.js"></script>
 </body>
