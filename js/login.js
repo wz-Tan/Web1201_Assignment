@@ -13,7 +13,7 @@ const accounts =
     },
   ];
 
-
+//get all variables needed including the input and button elements
 const passwordInput = document.getElementById("password");
 const showPasswordButton = document.querySelector(".js-show-password-button");
 const usernameEmailInput = document.getElementById("username-email");
@@ -21,7 +21,7 @@ const loginButton = document.querySelector(".js-login-button");
 
 //disable login button for the incomplete form
 
-//run for the first time entering the page
+//Init for the first time
 loginButton.disabled = !(passwordInput.value && usernameEmailInput.value);
 
 //keep tracking user input to enable/disable the login button
@@ -38,6 +38,7 @@ showPasswordButton.addEventListener("click", () => {
   showPassword(passwordInput);
 });
 
+//change the text between Hide and Show
 function changeButtonText(buttonElement) {
   let buttonText = buttonElement.innerHTML;
   if (buttonText.trim() === "Show") {
@@ -48,6 +49,7 @@ function changeButtonText(buttonElement) {
   buttonElement.innerHTML = buttonText;
 }
 
+//change the input type
 function showPassword(password) {
   if (password.type === "password") {
     password.type = "text";
@@ -56,12 +58,7 @@ function showPassword(password) {
   }
 }
 
-//disable the button for the empty form
-
-
-
-////////
-// for firefox use
+// for firefox used
 function isFireFox() {
     return navigator.userAgent.includes('Firefox');
 }
@@ -93,12 +90,15 @@ form.addEventListener("submit", (event) => {
   const usernameEmail = formData.get("username-email").trim();
   const password = formData.get("password").trim();
 
+  //the first input can be either username or email
   const account = accounts.find(
     (user) =>
       (user.username === usernameEmail || user.email === usernameEmail) &&
       user.password === password,
   );
 
+  //successfully login store the loginAccount
+  //else an error message will be displayed
   if (account) {
     // setItem('login', JSON.stringify(true));
     setItem('loginAccount', JSON.stringify(account));
@@ -111,11 +111,13 @@ form.addEventListener("submit", (event) => {
       loginFailMessage.classList.remove("show");
     });
 
+    //reset the form anyway and check for the button availablity again
     form.reset();
     loginButton.disabled = !(passwordInput.value && usernameEmailInput.value);
   }
 });
 
+//scroll to the input field smoothly if screen is not enough height to display the entire page
 document.querySelector(".userinfo").scrollIntoView({
   behavior: "smooth",
   block: "start",

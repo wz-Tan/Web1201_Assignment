@@ -1,18 +1,24 @@
+//get all variables needed including all buttons and inputs
+//every steps needed
 let currentStep = 1;
 const previousButton = document.querySelector(".js-previous-button");
 const nextButton = document.querySelector(".js-next-button");
 const progressFill = document.querySelector(".progress-fill");
+////////////////////////
+//username step
 const usernameInput = document.getElementById("username");
+const usernameRepeatedMessage = document.querySelector(".js-repeated-message-username");
+//email step
 const emailInput = document.getElementById("email");
+const emailRepeatedMessage = document.querySelector(".js-repeated-message-email");
+//password step
 const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirm-password");
 const showPasswordButton = document.querySelector(".js-show-password-button");
 const showConfirmPasswordButton = document.querySelector(".js-show-confirm-password-button");
-const usernameRepeatedMessage = document.querySelector(".js-repeated-message-username");
-const emailRepeatedMessage = document.querySelector(".js-repeated-message-email");
+///////////////////////
 
-
-//for firefox use
+//for firefox used
 function isFireFox() {
     return navigator.userAgent.includes('Firefox');
 }
@@ -35,6 +41,7 @@ function getItem(key) {
 ////////
 
 //accounts = { username, email, password }
+//load accounts from storage, if not then assign some dummy values
 const accounts = JSON.parse(getItem('accounts')) || [
   {
     username: "username",
@@ -50,7 +57,7 @@ const accounts = JSON.parse(getItem('accounts')) || [
 
 
 //show password
-
+//make sure password and confirm password work independently
 showPasswordButton.addEventListener("click", () => {
   changeButtonText(showPasswordButton);
   showPassword(passwordInput);
@@ -60,6 +67,7 @@ showConfirmPasswordButton.addEventListener("click", () => {
   showPassword(confirmPasswordInput);
 });
 
+//change the text between Hide and Show
 function changeButtonText(buttonElement) {
   let buttonText = buttonElement.innerHTML;
   if (buttonText.trim() === "Show") {
@@ -70,6 +78,7 @@ function changeButtonText(buttonElement) {
   buttonElement.innerHTML = buttonText;
 }
 
+//change the input type
 function showPassword(password) {
   if (password.type === "password") {
     password.type = "text";
@@ -79,13 +88,15 @@ function showPassword(password) {
 }
 
 /////////////
-//validation
 
+//validation
+//tracking the inputs so next button state update on live
 usernameInput.addEventListener("input", updateNextButton);
 emailInput.addEventListener("input", updateNextButton);
 passwordInput.addEventListener("input", updateNextButton);
 confirmPasswordInput.addEventListener("input", updateNextButton)
 
+//return true if input value matches stored accounts
 function checkRepeated(inputValue, field) {
   return accounts.some(account => inputValue === account[field]);
 }
@@ -155,7 +166,7 @@ function validatePassword() {
 
 
 //show previous button
-
+//only showing previous button after the 1st step
 function showPreviousButton() {
   if (currentStep === 1) {
     previousButton.classList.add("hide");
@@ -168,7 +179,7 @@ function showPreviousButton() {
 
 
 //for user input steps
-
+//inactivate current step while moving forward/backward
 function removeActiveStep() {
   const activeStepProgress = document.querySelector(`.step-${currentStep}`)
   const activeStep = document.getElementById(`step-${currentStep}`);
@@ -176,6 +187,7 @@ function removeActiveStep() {
   activeStep.classList.remove("active");
 }
 
+//activate next or previous step while moving rward/backward
 function addActiveStep() {
   const activeStepProgress = document.querySelector(`.step-${currentStep}`);
   const activeStep = document.getElementById(`step-${currentStep}`);
@@ -186,7 +198,7 @@ function addActiveStep() {
 //////////////
 
 //for progress bar
-
+//done step circle(s) display in green colour
 function addDoneStep() {
   const activeStep = document.querySelector(`.step-${currentStep}`);
   activeStep.classList.add("done");
@@ -197,6 +209,7 @@ function removeDoneStep() {
   activeStep.classList.remove("done");
 }
 
+//progress bar is filled with 0%, 33.33%, 66.66%, 100%
 function updateProgressBar() {
   const percentage = ((currentStep - 1) / 3) * 100;
 
@@ -207,8 +220,8 @@ function updateProgressBar() {
 
 
 //rendering the page
-
 function nextStep() {
+  //validating each input before moving next
   if (currentStep >= 4) return;
 
   if (currentStep === 1 && !validateUsername()) {
@@ -226,7 +239,7 @@ function nextStep() {
   addDoneStep();
 
   currentStep++;
-
+  //for the last (4th) step, "Next" is changed to "Create Account"
   if (currentStep === 4) {
     nextButton.textContent = "Create Account";
   };
@@ -239,8 +252,6 @@ function nextStep() {
   updateProgressBar();
   updateNextButton();
 }
-
-
 
 function previousStep() {
   if (currentStep <= 1) return;
@@ -263,6 +274,7 @@ function previousStep() {
   updateNextButton();
 }
 
+//return the results of validation accordingly
 function getCurrentStepValue() {
   switch (currentStep) {
     case 1:
@@ -280,6 +292,7 @@ function updateNextButton() {
   nextButton.disabled = !getCurrentStepValue();
 };
 
+//scroll to the input field smoothly if screen is not enough height to display the entire page
 function scrollToInput() {
   document
     .getElementById(`step-${currentStep}`)
@@ -289,6 +302,7 @@ function scrollToInput() {
     });
 }
 
+//Init the elements rendering
 showPreviousButton();
 updateNextButton();
 scrollToInput();
@@ -315,7 +329,7 @@ previousButton.addEventListener("click", () => {
 
 
 //creating an new account
-
+//final check before storing the account
 function retrieveUserInput() {
   const username = validateUsername();
   const email = validateEmail();
