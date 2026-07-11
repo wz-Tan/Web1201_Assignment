@@ -1,5 +1,4 @@
-// Keeps the hero exactly one viewport tall by accounting for the real,
-// breakpoint-dependent height of the sticky header above it
+// Calculate header height
 function setHeaderHeightVar() {
     const header = document.querySelector("header");
     if (header) {
@@ -11,16 +10,19 @@ function setHeaderHeightVar() {
 }
 
 setHeaderHeightVar();
+// Reset variable whener screen size changes
 window.addEventListener("resize", setHeaderHeightVar);
 
-// Animated Counter
+// Animated stat counter
 const statNumbers = document.querySelectorAll(".stat-number");
-const speed = 60;
+const speed = 60; // Lower value = higher speed
 
+// Loop through each stat counter
 statNumbers.forEach((counter) => {
     const target = Number(counter.dataset.target);
     const suffix = counter.dataset.suffix || "";
 
+    // Increments counter until target
     const updateCount = () => {
         const count = Number(counter.innerText.replace(/\D/g, ""));
         const increment = target / speed;
@@ -28,9 +30,12 @@ statNumbers.forEach((counter) => {
         if (count < target) {
             counter.innerText = Math.ceil(count + increment) + suffix;
             setTimeout(updateCount, 20);
-        } else {
+        }
+        // Once hit, lock in the exact value
+        else {
             counter.innerText = target.toLocaleString() + suffix;
         }
     };
+    // Kick off the animation for this counter
     updateCount();
 });
