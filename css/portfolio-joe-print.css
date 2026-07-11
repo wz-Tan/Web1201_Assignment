@@ -1,0 +1,40 @@
+@media print {
+    .profile-name-vertical {
+        display: none;
+    }
+
+    .profile-body,
+    .pfp,
+    .contact-tags span,
+    .eyebrow,
+    .section-divider,
+    .edu-row,
+    .skill-bar-fill,
+    .project-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .skill-bar-fill,
+    .skill-bar-track,
+    .contact-tags span a,
+    .project-stack .tag {
+        print-color-adjust: exact;
+    }
+
+    .edu-row,
+    .skill-group,
+    .project-card {
+        page-break-inside: avoid;
+    }
+
+    .eyebrow {
+        page-break-after: avoid;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
