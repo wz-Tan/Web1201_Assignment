@@ -4,7 +4,6 @@ let currentStep = 1;
 const previousButton = document.querySelector(".js-previous-button");
 const nextButton = document.querySelector(".js-next-button");
 const progressFill = document.querySelector(".progress-fill");
-////////////////////////
 //username step
 const usernameInput = document.getElementById("username");
 const usernameRepeatedMessage = document.querySelector(".js-repeated-message-username");
@@ -16,7 +15,6 @@ const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirm-password");
 const showPasswordButton = document.querySelector(".js-show-password-button");
 const showConfirmPasswordButton = document.querySelector(".js-show-confirm-password-button");
-///////////////////////
 
 //for firefox used
 function isFireFox() {
@@ -38,7 +36,6 @@ function getItem(key) {
         return window.localStorage.getItem(key);
     }
 }
-////////
 
 //accounts = { username, email, password }
 //load accounts from storage, if not then assign some dummy values
@@ -87,7 +84,6 @@ function showPassword(password) {
   };
 }
 
-/////////////
 
 //validation
 //tracking the inputs so next button state update on live
@@ -162,7 +158,6 @@ function validatePassword() {
   );
 };
 
-///////////////////////
 
 
 //show previous button
@@ -175,7 +170,6 @@ function showPreviousButton() {
   };
 };
 
-//////////////////////
 
 
 //for user input steps
@@ -195,7 +189,6 @@ function addActiveStep() {
   activeStep.classList.add("active");
 }
 
-//////////////
 
 //for progress bar
 //done step circle(s) display in green colour
@@ -216,7 +209,6 @@ function updateProgressBar() {
   progressFill.style.width = `${percentage}%`;
 }
 
-//////////////////////
 
 
 //rendering the page
@@ -325,7 +317,6 @@ previousButton.addEventListener("click", () => {
 });
 
 
-////////////
 
 
 //creating an new account
@@ -346,4 +337,3 @@ function createAccount(username, email, password) {
     });
   }
 }
-///////////////////////////

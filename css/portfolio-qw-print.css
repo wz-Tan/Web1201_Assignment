@@ -1,0 +1,142 @@
+/* print stylesheet */
+@page {
+  size: A4;
+  margin: 1.5cm;
+}
+
+html,
+body {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+header,
+footer,
+.btn-theme,
+.btn-header,
+.header-dropdown,
+nav,
+.download-cv,
+.js-sign-out {
+  display: none !important;
+}
+
+section * {
+  animation: none !important;
+  opacity: 1 !important;
+}
+
+.education-level,
+.programming-language {
+  transform: none !important;
+}
+
+.personal-bio-container,
+.education-level,
+.programming-language,
+.featured-project {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+section>h1.text-bold {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+.bio p {
+  font-size: 1.15em;
+  line-height: 1.5;
+}
+
+.technical-skills-container {
+  page-break-before: always;
+  break-before: page;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.technical-skill {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16pt !important;
+}
+
+.programming-language {
+  padding: 16pt !important;
+  gap: 14pt !important;
+}
+
+.technical-skill img,
+.programming-language img {
+  width: 48pt !important;
+  height: 48pt !important;
+}
+
+.technical-skills-header {
+  margin-bottom: 14pt !important;
+  padding: 10pt 16pt !important;
+}
+
+.code-icon {
+  height: 50pt !important;
+  width: 54pt !important;
+}
+
+.coding-text {
+  font-size: 1.2em;
+}
+
+.level-progress-section p {
+  font-size: 1.1em;
+}
+
+.level-progress-section p.text-semibold {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.level-progress-bar {
+  display: none !important;
+}
+
+.featured-projects-container {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.project-description .description {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.link-to-project-button {
+  display: none !important;
+}
+
+.link-to-project a {
+  color: #000 !important;
+  text-decoration: underline;
+  font-size: 0.9em;
+}
+
+.link-to-project a::after {
+  content: " (" attr(href) ")";
+  font-size: 0.8em;
+  color: #444;
+}
+
+.project-overview {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto !important;
+  gap: 10pt !important;
+  place-items: center;
+}
+
+.project-picture {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 180pt;
+  object-fit: contain;
+}

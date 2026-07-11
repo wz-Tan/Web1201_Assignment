@@ -35,7 +35,6 @@ function removeItem(key) {
         window.localStorage.removeItem(key);
     }
 }
-/////////////////
 
 //Authentication guard
 //prevent user from access to the web without login

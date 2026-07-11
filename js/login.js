@@ -78,7 +78,6 @@ function getItem(key) {
         return window.localStorage.getItem(key);
     }
 }
-//////////////
 // compare data
 const form = document.getElementById("login-form");
 
