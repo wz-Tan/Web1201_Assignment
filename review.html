@@ -105,13 +105,13 @@
         </header>
 
         <main class="container review-grid">
-            <!--left side -->
+            <!--left side: review submission form -->
             <section>
                 <h2 class="text-extra-large text-bold text-accent">
                     Submit a Review
                 </h2>
                 <form class="review-form" id="review-form" autocomplete="off">
-                    <!--dropdown-->
+                    <!--dropdown for product selection-->
                     <div class="input-group">
                         <label class="text-large text-semibold"
                             >Search Product</label
@@ -129,7 +129,7 @@
                         <img id="product-image" />
                     </div>
 
-                    <!--ratings-->
+                    <!--star rating-->
                     <div class="input-group">
                         <label class="text-medium text-semibold"
                             >Your Rating</label
@@ -145,7 +145,7 @@
                         </div>
                     </div>
 
-                    <!--Username-->
+                    <!--Username input-->
                     <div class="input-group">
                         <label class="text-medium text-semibold"
                             >Username</label
@@ -160,7 +160,7 @@
                         />
                     </div>
 
-                    <!--comment-->
+                    <!--comment input-->
                     <div class="input-group">
                         <label class="text-medium text-semibold">Review</label>
                         <textarea
@@ -173,14 +173,14 @@
                         <div id="char-count" class="text-small">0 / 200</div>
                     </div>
 
-                    <!--button-->
+                    <!--submission button-->
                     <button type="submit" class="text-medium text-bold">
                         Submit
                     </button>
                 </form>
             </section>
 
-            <!--right side-->
+            <!--right side: review display section-->
             <section>
                 <h2 class="text-extra-large text-bold">Recent Reviews</h2>
                 <div id="reviews-list"></div>

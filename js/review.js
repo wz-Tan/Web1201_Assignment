@@ -1,4 +1,4 @@
-//initialize
+//initialization
 const input = document.getElementById("product-input");
 const list = document.getElementById("dropdown");
 const productImage = document.getElementById("product-image");
@@ -11,7 +11,7 @@ const maxChars = 200;
 
 let userRatings = 0;
 
-//dummy data for review
+//dummy data for review display
 const dummyData = [
     {
         username: "Alan_Tan",
@@ -42,12 +42,14 @@ if (!storedReviews){
   storedReviews = JSON.stringify(dummyData);
 }
 
+//adding review to display function
 function addReview(username, product, rating, review, imgSrc){
     const starRate = "\u2605".repeat(rating) + "\u2606".repeat(5 - rating);
 
   const newReview = document.createElement("div");
   newReview.className = "review-card";
 
+  // review card design
   newReview.innerHTML = `
         <div class="review-card-header">
             <img src="${imgSrc}" class="review-item-img">
@@ -66,7 +68,7 @@ JSON.parse(storedReviews).forEach(item => {
     addReview(item.username, item.product, item.rating, item.text, item.image);
 });
 
-//dropdown menu
+//products dropdown menu
 function dropdownlist() {
   list.innerHTML = "";
   allProducts.forEach((p) => {
@@ -84,7 +86,7 @@ function dropdownlist() {
 }
 dropdownlist();
 
-//search bar
+//products search bar 
 input.onfocus = () => (list.style.display = "block");
 input.oninput = (e) => {
   const val = e.target.value.toLowerCase();
@@ -102,7 +104,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// ratings
+// ratings system
 for (let star of stars) {
   star.addEventListener("click", function () {
     stars.forEach((s) => s.removeAttribute("data-clicked"));
@@ -116,13 +118,13 @@ for (let star of stars) {
 reviewForm.onsubmit = function (e) {
   e.preventDefault(); //this prevent website reset DO NOT REMOVE AGAIN
     if(userRatings === 0){
-      alert("Please select a rating 1-5");
+      alert("Please select a rating 1-5"); // prevents user from submitting review with no stars
       return
     }
     const product = document.getElementById('product-input').value;
     const exist = allProducts.some(p => p.name === product);
         if (!exist){
-            alert("please select a valid option");
+            alert("please select a valid option"); //prevents user from submitting review of product that doesnt exist
             return;
         }
 
@@ -155,6 +157,7 @@ reviewForm.onsubmit = function (e) {
   charCountDisplay.classList.remove("limit-reached");
 };
 
+//max length limit for review box
 reviewTextarea.addEventListener("input", () => {
     const currentLength = reviewTextarea.value.length;
     charCountDisplay.innerText = `${currentLength} / ${maxChars}`;
