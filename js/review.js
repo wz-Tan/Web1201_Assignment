@@ -115,7 +115,10 @@ for (let star of stars) {
 // form submission
 reviewForm.onsubmit = function (e) {
   e.preventDefault(); //this prevent website reset DO NOT REMOVE AGAIN
-
+    if(userRatings === 0){
+      alert("Please select a rating 1-5");
+      return
+    }
     const product = document.getElementById('product-input').value;
     const exist = allProducts.some(p => p.name === product);
         if (!exist){
